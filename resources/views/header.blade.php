@@ -127,7 +127,7 @@
 								<div class="cart-item" style="padding: 10px;">
 									<div class="media" style="padding: 0px;">
 										<div class="media-body" style="padding: 5px;">
-											<span style="text-align: center;">Bạn chưa mua cái lồn gì cả</span>
+											<span style="text-align: center;">Bạn chưa mua cái gì cả</span>
 											<span class="cart-item-options"></span>
 											<span class="cart-item-amount"></span>
 										</div>
