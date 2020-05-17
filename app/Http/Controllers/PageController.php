@@ -213,7 +213,7 @@ class PageController extends Controller
                 'name'=>'".$item->name."',<br>";
             foreach($utf8 as $ascii=>$uni) $item->name = preg_replace("/($uni)/i",$ascii,$item->name);
             echo "
-                'name2'=>'".$item->name."',<br>";
+                'name2'=>'".strtolower($item->name)."',<br>";
             echo "
                 'description'=>'".$item->description."',<br>";
             echo "
@@ -232,7 +232,7 @@ class PageController extends Controller
         }
     }
     public function getSearch(Request $req){
-        $key_name = $req->key;
+        $key_name = strtolower($req->key);
         $utf8 = array(
 
             'a'=>'á|à|ả|ã|ạ|ă|ắ|ặ|ằ|ẳ|ẵ|â|ấ|ầ|ẩ|ẫ|ậ|Á|À|Ả|Ã|Ạ|Ă|Ắ|Ặ|Ằ|Ẳ|Ẵ|Â|Ấ|Ầ|Ẩ|Ẫ|Ậ',
@@ -248,7 +248,6 @@ class PageController extends Controller
             'u'=>'ú|ù|ủ|ũ|ụ|ư|ứ|ừ|ử|ữ|ự|Ú|Ù|Ủ|Ũ|Ụ|Ư|Ứ|Ừ|Ử|Ữ|Ự',
 
             'y'=>'ý|ỳ|ỷ|ỹ|ỵ|Ý|Ỳ|Ỷ|Ỹ|Ỵ',
-
         );
             foreach($utf8 as $ascii=>$uni) $key_name = preg_replace("/($uni)/i",$ascii,$key_name);
         $namep = $req->key;
