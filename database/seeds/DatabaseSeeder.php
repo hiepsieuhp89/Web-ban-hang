@@ -76,615 +76,688 @@ class DatabaseSeeder extends Seeder
 			],
         ]);
         DB::table('products')->insert([
-			[ 'name'=>'Bánh Crepe Sầu riêng',
+			[
+			'name'=>'Bánh Crepe Sầu riêng',
+			'name2'=>'Banh Crepe Sau rieng',
 			'description'=>'Không làm mà đòi có ăn thì chỉ có cà ví mà mua thôi!',
 			'id_type'=>'5',
 			'unit_price'=>'150000',
 			'promotion_price'=>'120000',
 			'image'=>'1430967449-pancake-sau-rieng-6.jpg',
 			'unit'=>'hộp',
-			'new'=>'1' ,
+			'new'=>'1'
 			],
-
-			[ 'name'=>'Bánh Crepe Chocolate',
+			[
+			'name'=>'Bánh Crepe Chocolate',
+			'name2'=>'Banh Crepe Chocolate',
 			'description'=>'Không làm mà đòi có ăn thì chỉ có cà ví mà mua thôi!',
 			'id_type'=>'6',
 			'unit_price'=>'180000',
 			'promotion_price'=>'160000',
 			'image'=>'crepe-chocolate.jpg',
 			'unit'=>'hộp',
-			'new'=>'1' ,
+			'new'=>'1'
 			],
-
-			[ 'name'=>'Bánh Crepe Sầu riêng - Chuối',
+			[
+			'name'=>'Bánh Crepe Sầu riêng - Chuối',
+			'name2'=>'Banh Crepe Sau rieng - Chuoi',
 			'description'=>'Không làm mà đòi có ăn thì chỉ có cà ví mà mua thôi!',
 			'id_type'=>'5',
 			'unit_price'=>'150000',
 			'promotion_price'=>'120000',
 			'image'=>'crepe-chuoi.jpg',
 			'unit'=>'hộp',
-			'new'=>'0' ,
+			'new'=>'0'
 			],
-
-			[ 'name'=>'Bánh Crepe Đào',
+			[
+			'name'=>'Bánh Crepe Đào',
+			'name2'=>'Banh Crepe dao',
 			'description'=>'Không làm mà đòi có ăn thì chỉ có cà ví mà mua thôi!',
 			'id_type'=>'5',
 			'unit_price'=>'160000',
 			'promotion_price'=>'0',
 			'image'=>'crepe-dao.jpg',
 			'unit'=>'hộp',
-			'new'=>'0' ,
+			'new'=>'0'
 			],
-
-			[ 'name'=>'Bánh Crepe Dâu',
+			[
+			'name'=>'Bánh Crepe Dâu',
+			'name2'=>'Banh Crepe Dau',
 			'description'=>'Không làm mà đòi có ăn thì chỉ có cà ví mà mua thôi!',
 			'id_type'=>'5',
 			'unit_price'=>'160000',
 			'promotion_price'=>'0',
 			'image'=>'crepedau.jpg',
 			'unit'=>'hộp',
-			'new'=>'0' ,
+			'new'=>'0'
 			],
-
-			[ 'name'=>'Bánh Crepe Pháp',
+			[
+			'name'=>'Bánh Crepe Pháp',
+			'name2'=>'Banh Crepe Phap',
 			'description'=>'Không làm mà đòi có ăn thì chỉ có cà ví mà mua thôi!',
 			'id_type'=>'5',
 			'unit_price'=>'200000',
 			'promotion_price'=>'180000',
 			'image'=>'crepe-phap.jpg',
 			'unit'=>'hộp',
-			'new'=>'0' ,
+			'new'=>'0'
 			],
-
-			[ 'name'=>'Bánh Crepe Táo',
+			[
+			'name'=>'Bánh Crepe Táo',
+			'name2'=>'Banh Crepe Tao',
 			'description'=>'Không làm mà đòi có ăn thì chỉ có cà ví mà mua thôi!',
 			'id_type'=>'5',
 			'unit_price'=>'160000',
 			'promotion_price'=>'0',
 			'image'=>'crepe-tao.jpg',
 			'unit'=>'hộp',
-			'new'=>'1' ,
+			'new'=>'1'
 			],
-
-			[ 'name'=>'Bánh Crepe Trà xanh',
+			[
+			'name'=>'Bánh Crepe Trà xanh',
+			'name2'=>'Banh Crepe Tra xanh',
 			'description'=>'Không làm mà đòi có ăn thì chỉ có cà ví mà mua thôi!',
 			'id_type'=>'5',
 			'unit_price'=>'160000',
 			'promotion_price'=>'150000',
 			'image'=>'crepe-traxanh.jpg',
 			'unit'=>'hộp',
-			'new'=>'0' ,
+			'new'=>'0'
 			],
-
-			[ 'name'=>'Bánh Crepe Sầu riêng và Dứa',
+			[
+			'name'=>'Bánh Crepe Sầu riêng và Dứa',
+			'name2'=>'Banh Crepe Sau rieng va Dua',
 			'description'=>'Không làm mà đòi có ăn thì chỉ có cà ví mà mua thôi!',
 			'id_type'=>'5',
 			'unit_price'=>'160000',
 			'promotion_price'=>'150000',
 			'image'=>'saurieng-dua.jpg',
 			'unit'=>'hộp',
-			'new'=>'0' ,
+			'new'=>'0'
 			],
-
-			[ 'name'=>'Bánh Gato Trái cây Việt Quất',
+			[
+			'name'=>'Bánh Gato Trái cây Việt Quất',
+			'name2'=>'Banh Gato Trai cay Viet Quat',
 			'description'=>'Không làm mà đòi có ăn thì chỉ có cà ví mà mua thôi!',
 			'id_type'=>'3',
 			'unit_price'=>'250000',
 			'promotion_price'=>'0',
 			'image'=>'544bc48782741.png',
 			'unit'=>'cái',
-			'new'=>'0' ,
+			'new'=>'0'
 			],
-
-			[ 'name'=>'Bánh sinh nhật rau câu trái cây',
+			[
+			'name'=>'Bánh sinh nhật rau câu trái cây',
+			'name2'=>'Banh sinh nhat rau cau trai cay',
 			'description'=>'Không làm mà đòi có ăn thì chỉ có cà ví mà mua thôi!',
 			'id_type'=>'3',
 			'unit_price'=>'200000',
 			'promotion_price'=>'180000',
 			'image'=>'210215-banh-sinh-nhat-rau-cau-body- (6).jpg',
 			'unit'=>'cái',
-			'new'=>'0' ,
+			'new'=>'0'
 			],
-
-			[ 'name'=>'Bánh kem Chocolate Dâu',
+			[
+			'name'=>'Bánh kem Chocolate Dâu',
+			'name2'=>'Banh kem Chocolate Dau',
 			'description'=>'Không làm mà đòi có ăn thì chỉ có cà ví mà mua thôi!',
 			'id_type'=>'3',
 			'unit_price'=>'300000',
 			'promotion_price'=>'280000',
 			'image'=>'banh kem sinh nhat.jpg',
 			'unit'=>'cái',
-			'new'=>'1' ,
+			'new'=>'1'
 			],
-
-			[ 'name'=>'Bánh kem Dâu III',
+			[
+			'name'=>'Bánh kem Dâu III',
+			'name2'=>'Banh kem Dau III',
 			'description'=>'Không làm mà đòi có ăn thì chỉ có cà ví mà mua thôi!',
 			'id_type'=>'3',
 			'unit_price'=>'300000',
 			'promotion_price'=>'280000',
 			'image'=>'Banh-kem (6).jpg',
 			'unit'=>'cái',
-			'new'=>'0' ,
+			'new'=>'0'
 			],
-
-			[ 'name'=>'Bánh kem Dâu I',
+			[
+			'name'=>'Bánh kem Dâu I',
+			'name2'=>'Banh kem Dau I',
 			'description'=>'Không làm mà đòi có ăn thì chỉ có cà ví mà mua thôi!',
 			'id_type'=>'3',
 			'unit_price'=>'350000',
 			'promotion_price'=>'320000',
 			'image'=>'banhkem-dau.jpg',
 			'unit'=>'cái',
-			'new'=>'1' ,
+			'new'=>'1'
 			],
-
-			[ 'name'=>'Bánh trái cây II',
+			[
+			'name'=>'Bánh trái cây II',
+			'name2'=>'Banh trai cay II',
 			'description'=>'Không làm mà đòi có ăn thì chỉ có cà ví mà mua thôi!',
 			'id_type'=>'3',
 			'unit_price'=>'150000',
 			'promotion_price'=>'120000',
 			'image'=>'banhtraicay.jpg',
 			'unit'=>'hộp',
-			'new'=>'0' ,
+			'new'=>'0'
 			],
-
-			[ 'name'=>'Apple Cake',
+			[
+			'name'=>'Apple Cake',
+			'name2'=>'Apple Cake',
 			'description'=>'Không làm mà đòi có ăn thì chỉ có cà ví mà mua thôi!',
 			'id_type'=>'3',
 			'unit_price'=>'250000',
 			'promotion_price'=>'240000',
 			'image'=>'Fruit-Cake_7979.jpg',
 			'unit'=>'cái',
-			'new'=>'0' ,
+			'new'=>'0'
 			],
-
-			[ 'name'=>'Bánh ngọt nhân cream táo',
+			[
+			'name'=>'Bánh ngọt nhân cream táo',
+			'name2'=>'Banh ngot nhan cream tao',
 			'description'=>'Không làm mà đòi có ăn thì chỉ có cà ví mà mua thôi!',
 			'id_type'=>'2',
 			'unit_price'=>'180000',
 			'promotion_price'=>'0',
 			'image'=>'20131108144733.jpg',
 			'unit'=>'hộp',
-			'new'=>'0' ,
+			'new'=>'0'
 			],
-
-			[ 'name'=>'Bánh Chocolate Trái cây',
+			[
+			'name'=>'Bánh Chocolate Trái cây',
+			'name2'=>'Banh Chocolate Trai cay',
 			'description'=>'Không làm mà đòi có ăn thì chỉ có cà ví mà mua thôi!',
 			'id_type'=>'2',
 			'unit_price'=>'150000',
 			'promotion_price'=>'0',
 			'image'=>'Fruit-Cake_7976.jpg',
 			'unit'=>'hộp',
-			'new'=>'1' ,
+			'new'=>'1'
 			],
-
-			[ 'name'=>'Bánh Chocolate Trái cây II',
+			[
+			'name'=>'Bánh Chocolate Trái cây II',
+			'name2'=>'Banh Chocolate Trai cay II',
 			'description'=>'Không làm mà đòi có ăn thì chỉ có cà ví mà mua thôi!',
 			'id_type'=>'2',
 			'unit_price'=>'150000',
 			'promotion_price'=>'0',
 			'image'=>'Fruit-Cake_7981.jpg',
 			'unit'=>'hộp',
-			'new'=>'0' ,
+			'new'=>'0'
 			],
-
-			[ 'name'=>'Peach Cake',
+			[
+			'name'=>'Peach Cake',
+			'name2'=>'Peach Cake',
 			'description'=>'Không làm mà đòi có ăn thì chỉ có cà ví mà mua thôi!',
 			'id_type'=>'2',
 			'unit_price'=>'160000',
 			'promotion_price'=>'150000',
 			'image'=>'Peach-Cake_3294.jpg',
 			'unit'=>'cái',
-			'new'=>'0' ,
+			'new'=>'0'
 			],
-
-			[ 'name'=>'Bánh bông lan trứng muối I',
+			[
+			'name'=>'Bánh bông lan trứng muối I',
+			'name2'=>'Banh bong lan trung muoi I',
 			'description'=>'Không làm mà đòi có ăn thì chỉ có cà ví mà mua thôi!',
 			'id_type'=>'1',
 			'unit_price'=>'160000',
 			'promotion_price'=>'150000',
 			'image'=>'banhbonglantrung.jpg',
 			'unit'=>'hộp',
-			'new'=>'1' ,
+			'new'=>'1'
 			],
-
-			[ 'name'=>'Bánh bông lan trứng muối II',
+			[
+			'name'=>'Bánh bông lan trứng muối II',
+			'name2'=>'Banh bong lan trung muoi II',
 			'description'=>'Không làm mà đòi có ăn thì chỉ có cà ví mà mua thôi!',
 			'id_type'=>'1',
 			'unit_price'=>'180000',
 			'promotion_price'=>'0',
 			'image'=>'banhbonglantrungmuoi.jpg',
 			'unit'=>'hộp',
-			'new'=>'0' ,
+			'new'=>'0'
 			],
-
-			[ 'name'=>'Bánh French',
+			[
+			'name'=>'Bánh French',
+			'name2'=>'Banh French',
 			'description'=>'Không làm mà đòi có ăn thì chỉ có cà ví mà mua thôi!',
 			'id_type'=>'1',
 			'unit_price'=>'180000',
 			'promotion_price'=>'0',
 			'image'=>'banh-man-thu-vi-nhat-1.jpg',
 			'unit'=>'hộp',
-			'new'=>'0' ,
+			'new'=>'0'
 			],
-
-			[ 'name'=>'Bánh mì Australia',
+			[
+			'name'=>'Bánh mì Australia',
+			'name2'=>'Banh mi Australia',
 			'description'=>'Không làm mà đòi có ăn thì chỉ có cà ví mà mua thôi!',
 			'id_type'=>'1',
 			'unit_price'=>'80000',
 			'promotion_price'=>'70000',
 			'image'=>'dung-khoai-tay-lam-banh-gato-man-cuc-ngon.jpg',
 			'unit'=>'hộp',
-			'new'=>'0' ,
+			'new'=>'0'
 			],
-
-			[ 'name'=>'Bánh mặn thập cẩm',
+			[
+			'name'=>'Bánh mặn thập cẩm',
+			'name2'=>'Banh man thap cam',
 			'description'=>'Không làm mà đòi có ăn thì chỉ có cà ví mà mua thôi!',
 			'id_type'=>'1',
 			'unit_price'=>'50000',
 			'promotion_price'=>'0',
 			'image'=>'Fruit-Cake.png',
 			'unit'=>'hộp',
-			'new'=>'0' ,
+			'new'=>'0'
 			],
-
-			[ 'name'=>'Bánh Muffins trứng',
+			[
+			'name'=>'Bánh Muffins trứng',
+			'name2'=>'Banh Muffins trung',
 			'description'=>'Không làm mà đòi có ăn thì chỉ có cà ví mà mua thôi!',
 			'id_type'=>'1',
 			'unit_price'=>'100000',
 			'promotion_price'=>'80000',
 			'image'=>'maxresdefault.jpg',
 			'unit'=>'hộp',
-			'new'=>'0' ,
+			'new'=>'0'
 			],
-
-			[ 'name'=>'Bánh Scone Peach Cake',
+			[
+			'name'=>'Bánh Scone Peach Cake',
+			'name2'=>'Banh Scone Peach Cake',
 			'description'=>'Không làm mà đòi có ăn thì chỉ có cà ví mà mua thôi!',
 			'id_type'=>'1',
 			'unit_price'=>'120000',
 			'promotion_price'=>'0',
 			'image'=>'Peach-Cake_3300.jpg',
 			'unit'=>'hộp',
-			'new'=>'1' ,
+			'new'=>'1'
 			],
-
-			[ 'name'=>'Bánh mì Loaf I',
+			[
+			'name'=>'Bánh mì Loaf I',
+			'name2'=>'Banh mi Loaf I',
 			'description'=>'Không làm mà đòi có ăn thì chỉ có cà ví mà mua thôi!',
 			'id_type'=>'1',
 			'unit_price'=>'100000',
 			'promotion_price'=>'0',
 			'image'=>'sli12.jpg',
 			'unit'=>'hộp',
-			'new'=>'0' ,
+			'new'=>'0'
 			],
-
-			[ 'name'=>'Bánh kem Chocolate Dâu I',
+			[
+			'name'=>'Bánh kem Chocolate Dâu I',
+			'name2'=>'Banh kem Chocolate Dau I',
 			'description'=>'Không làm mà đòi có ăn thì chỉ có cà ví mà mua thôi!',
 			'id_type'=>'4',
 			'unit_price'=>'380000',
 			'promotion_price'=>'350000',
 			'image'=>'sli12.jpg',
 			'unit'=>'cái',
-			'new'=>'1' ,
+			'new'=>'1'
 			],
-
-			[ 'name'=>'Bánh kem Trái cây I',
+			[
+			'name'=>'Bánh kem Trái cây I',
+			'name2'=>'Banh kem Trai cay I',
 			'description'=>'Không làm mà đòi có ăn thì chỉ có cà ví mà mua thôi!',
 			'id_type'=>'4',
 			'unit_price'=>'380000',
 			'promotion_price'=>'350000',
 			'image'=>'Fruit-Cake.jpg',
 			'unit'=>'cái',
-			'new'=>'0' ,
+			'new'=>'0'
 			],
-
-			[ 'name'=>'Bánh kem Trái cây II',
+			[
+			'name'=>'Bánh kem Trái cây II',
+			'name2'=>'Banh kem Trai cay II',
 			'description'=>'Không làm mà đòi có ăn thì chỉ có cà ví mà mua thôi!',
 			'id_type'=>'4',
 			'unit_price'=>'380000',
 			'promotion_price'=>'350000',
 			'image'=>'Fruit-Cake_7971.jpg',
 			'unit'=>'cái',
-			'new'=>'0' ,
+			'new'=>'0'
 			],
-
-			[ 'name'=>'Bánh kem Doraemon',
+			[
+			'name'=>'Bánh kem Doraemon',
+			'name2'=>'Banh kem Doraemon',
 			'description'=>'Không làm mà đòi có ăn thì chỉ có cà ví mà mua thôi!',
 			'id_type'=>'4',
 			'unit_price'=>'280000',
 			'promotion_price'=>'250000',
 			'image'=>'p1392962167_banh74.jpg',
 			'unit'=>'cái',
-			'new'=>'1' ,
+			'new'=>'1'
 			],
-
-			[ 'name'=>'Bánh kem Caramen Pudding',
+			[
+			'name'=>'Bánh kem Caramen Pudding',
+			'name2'=>'Banh kem Caramen Pudding',
 			'description'=>'Không làm mà đòi có ăn thì chỉ có cà ví mà mua thôi!',
 			'id_type'=>'4',
 			'unit_price'=>'280000',
 			'promotion_price'=>'0',
 			'image'=>'Caramen-pudding636099031482099583.jpg',
 			'unit'=>'cái',
-			'new'=>'1' ,
+			'new'=>'1'
 			],
-
-			[ 'name'=>'Bánh kem Chocolate Fruit',
+			[
+			'name'=>'Bánh kem Chocolate Fruit',
+			'name2'=>'Banh kem Chocolate Fruit',
 			'description'=>'Không làm mà đòi có ăn thì chỉ có cà ví mà mua thôi!',
 			'id_type'=>'4',
 			'unit_price'=>'320000',
 			'promotion_price'=>'300000',
 			'image'=>'chocolate-fruit636098975917921990.jpg',
 			'unit'=>'cái',
-			'new'=>'1' ,
+			'new'=>'1'
 			],
-
-			[ 'name'=>'Bánh kem Coffee Chocolate GH6',
+			[
+			'name'=>'Bánh kem Coffee Chocolate GH6',
+			'name2'=>'Banh kem Coffee Chocolate GH6',
 			'description'=>'Không làm mà đòi có ăn thì chỉ có cà ví mà mua thôi!',
 			'id_type'=>'4',
 			'unit_price'=>'320000',
 			'promotion_price'=>'300000',
 			'image'=>'COFFE-CHOCOLATE636098977566220885.jpg',
 			'unit'=>'cái',
-			'new'=>'0' ,
+			'new'=>'0'
 			],
-
-			[ 'name'=>'Bánh kem Mango Mouse',
+			[
+			'name'=>'Bánh kem Mango Mouse',
+			'name2'=>'Banh kem Mango Mouse',
 			'description'=>'Không làm mà đòi có ăn thì chỉ có cà ví mà mua thôi!',
 			'id_type'=>'4',
 			'unit_price'=>'320000',
 			'promotion_price'=>'300000',
 			'image'=>'mango-mousse-cake.jpg',
 			'unit'=>'cái',
-			'new'=>'1' ,
+			'new'=>'1'
 			],
-
-			[ 'name'=>'Bánh kem Matcha Mouse',
+			[
+			'name'=>'Bánh kem Matcha Mouse',
+			'name2'=>'Banh kem Matcha Mouse',
 			'description'=>'Không làm mà đòi có ăn thì chỉ có cà ví mà mua thôi!',
 			'id_type'=>'4',
 			'unit_price'=>'350000',
 			'promotion_price'=>'330000',
 			'image'=>'MATCHA-MOUSSE.jpg',
 			'unit'=>'cái',
-			'new'=>'0' ,
+			'new'=>'0'
 			],
-
-			[ 'name'=>'Bánh kem Flower Fruit',
+			[
+			'name'=>'Bánh kem Flower Fruit',
+			'name2'=>'Banh kem Flower Fruit',
 			'description'=>'Không làm mà đòi có ăn thì chỉ có cà ví mà mua thôi!',
 			'id_type'=>'4',
 			'unit_price'=>'350000',
 			'promotion_price'=>'330000',
 			'image'=>'flower-fruits636102461981788938.jpg',
 			'unit'=>'cái',
-			'new'=>'0' ,
+			'new'=>'0'
 			],
-
-			[ 'name'=>'Bánh kem Strawberry Delight',
+			[
+			'name'=>'Bánh kem Strawberry Delight',
+			'name2'=>'Banh kem Strawberry Delight',
 			'description'=>'Không làm mà đòi có ăn thì chỉ có cà ví mà mua thôi!',
 			'id_type'=>'4',
 			'unit_price'=>'350000',
 			'promotion_price'=>'330000',
 			'image'=>'strawberry-delight636102445035635173.jpg',
 			'unit'=>'cái',
-			'new'=>'0' ,
+			'new'=>'0'
 			],
-
-			[ 'name'=>'Bánh kem Raspberry Delight',
+			[
+			'name'=>'Bánh kem Raspberry Delight',
+			'name2'=>'Banh kem Raspberry Delight',
 			'description'=>'Không làm mà đòi có ăn thì chỉ có cà ví mà mua thôi!',
 			'id_type'=>'4',
 			'unit_price'=>'350000',
 			'promotion_price'=>'330000',
 			'image'=>'raspberry.jpg',
 			'unit'=>'cái',
-			'new'=>'0' ,
+			'new'=>'0'
 			],
-
-			[ 'name'=>'Beefy Pizza',
+			[
+			'name'=>'Beefy Pizza',
+			'name2'=>'Beefy Pizza',
 			'description'=>'Không làm mà đòi có ăn thì chỉ có cà ví mà mua thôi!',
 			'id_type'=>'6',
 			'unit_price'=>'150000',
 			'promotion_price'=>'130000',
 			'image'=>'40819_food_pizza.jpg',
 			'unit'=>'cái',
-			'new'=>'0' ,
+			'new'=>'0'
 			],
-
-			[ 'name'=>'Hawaii Pizza',
+			[
+			'name'=>'Hawaii Pizza',
+			'name2'=>'Hawaii Pizza',
 			'description'=>'Không làm mà đòi có ăn thì chỉ có cà ví mà mua thôi!',
 			'id_type'=>'6',
 			'unit_price'=>'120000',
 			'promotion_price'=>'0',
 			'image'=>'hawaiian paradise_large-900x900.jpg',
 			'unit'=>'cái',
-			'new'=>'1' ,
+			'new'=>'1'
 			],
-
-			[ 'name'=>'Smoke Chicken Pizza',
+			[
+			'name'=>'Smoke Chicken Pizza',
+			'name2'=>'Smoke Chicken Pizza',
 			'description'=>'Không làm mà đòi có ăn thì chỉ có cà ví mà mua thôi!',
 			'id_type'=>'6',
 			'unit_price'=>'120000',
 			'promotion_price'=>'0',
 			'image'=>'chicken black pepper_large-900x900.jpg',
 			'unit'=>'cái',
-			'new'=>'0' ,
+			'new'=>'0'
 			],
-
-			[ 'name'=>'Sausage Pizza',
+			[
+			'name'=>'Sausage Pizza',
+			'name2'=>'Sausage Pizza',
 			'description'=>'Không làm mà đòi có ăn thì chỉ có cà ví mà mua thôi!',
 			'id_type'=>'6',
 			'unit_price'=>'120000',
 			'promotion_price'=>'0',
 			'image'=>'pizza-miami.jpg',
 			'unit'=>'cái',
-			'new'=>'0' ,
+			'new'=>'0'
 			],
-
-			[ 'name'=>'Ocean Pizza',
+			[
+			'name'=>'Ocean Pizza',
+			'name2'=>'Ocean Pizza',
 			'description'=>'Không làm mà đòi có ăn thì chỉ có cà ví mà mua thôi!',
 			'id_type'=>'6',
 			'unit_price'=>'120000',
 			'promotion_price'=>'0',
 			'image'=>'seafood curry_large-900x900.jpg',
 			'unit'=>'cái',
-			'new'=>'0' ,
+			'new'=>'0'
 			],
-
-			[ 'name'=>'All Meaty Pizza',
+			[
+			'name'=>'All Meaty Pizza',
+			'name2'=>'All Meaty Pizza',
 			'description'=>'Không làm mà đòi có ăn thì chỉ có cà ví mà mua thôi!',
 			'id_type'=>'6',
 			'unit_price'=>'140000',
 			'promotion_price'=>'0',
 			'image'=>'all1).jpg',
 			'unit'=>'cái',
-			'new'=>'0' ,
+			'new'=>'0'
 			],
-
-			[ 'name'=>'Tuna Pizza',
+			[
+			'name'=>'Tuna Pizza',
+			'name2'=>'Tuna Pizza',
 			'description'=>'Không làm mà đòi có ăn thì chỉ có cà ví mà mua thôi!',
 			'id_type'=>'6',
 			'unit_price'=>'140000',
 			'promotion_price'=>'0',
 			'image'=>'54eaf93713081_-_07-germany-tuna.jpg',
 			'unit'=>'cái',
-			'new'=>'0' ,
+			'new'=>'0'
 			],
-
-			[ 'name'=>'Bánh su kem nhân dừa',
+			[
+			'name'=>'Bánh su kem nhân dừa',
+			'name2'=>'Banh su kem nhan dua',
 			'description'=>'Không làm mà đòi có ăn thì chỉ có cà ví mà mua thôi!',
 			'id_type'=>'7',
 			'unit_price'=>'120000',
 			'promotion_price'=>'100000',
 			'image'=>'maxresdefault.jpg',
 			'unit'=>'cái',
-			'new'=>'0' ,
+			'new'=>'0'
 			],
-
-			[ 'name'=>'Bánh su kem sữa tươi',
+			[
+			'name'=>'Bánh su kem sữa tươi',
+			'name2'=>'Banh su kem sua tuoi',
 			'description'=>'Không làm mà đòi có ăn thì chỉ có cà ví mà mua thôi!',
 			'id_type'=>'7',
 			'unit_price'=>'120000',
 			'promotion_price'=>'100000',
 			'image'=>'sukem.jpg',
 			'unit'=>'cái',
-			'new'=>'0' ,
+			'new'=>'0'
 			],
-
-			[ 'name'=>'Bánh su kem sữa tươi chiên giòn',
+			[
+			'name'=>'Bánh su kem sữa tươi chiên giòn',
+			'name2'=>'Banh su kem sua tuoi chien gion',
 			'description'=>'Không làm mà đòi có ăn thì chỉ có cà ví mà mua thôi!',
 			'id_type'=>'7',
 			'unit_price'=>'150000',
 			'promotion_price'=>'0',
 			'image'=>'1434429117-banh-su-kem-chien-20.jpg',
 			'unit'=>'hộp',
-			'new'=>'0' ,
+			'new'=>'0'
 			],
-
-			[ 'name'=>'Bánh su kem dâu sữa tươi',
+			[
+			'name'=>'Bánh su kem dâu sữa tươi',
+			'name2'=>'Banh su kem dau sua tuoi',
 			'description'=>'Không làm mà đòi có ăn thì chỉ có cà ví mà mua thôi!',
 			'id_type'=>'7',
 			'unit_price'=>'150000',
 			'promotion_price'=>'0',
 			'image'=>'sukemdau.jpg',
 			'unit'=>'hộp',
-			'new'=>'0' ,
+			'new'=>'0'
 			],
-
-			[ 'name'=>'Bánh su kem bơ sữa tươi',
+			[
+			'name'=>'Bánh su kem bơ sữa tươi',
+			'name2'=>'Banh su kem bo sua tuoi',
 			'description'=>'Không làm mà đòi có ăn thì chỉ có cà ví mà mua thôi!',
 			'id_type'=>'7',
 			'unit_price'=>'150000',
 			'promotion_price'=>'0',
 			'image'=>'He-Thong-Banh-Su-Singapore-Chewy-Junior.jpg',
 			'unit'=>'hộp',
-			'new'=>'0' ,
+			'new'=>'0'
 			],
-
-			[ 'name'=>'Bánh su kem nhân trái cây sữa tươi',
+			[
+			'name'=>'Bánh su kem nhân trái cây sữa tươi',
+			'name2'=>'Banh su kem nhan trai cay sua tuoi',
 			'description'=>'Không làm mà đòi có ăn thì chỉ có cà ví mà mua thôi!',
 			'id_type'=>'7',
 			'unit_price'=>'150000',
 			'promotion_price'=>'0',
 			'image'=>'foody-banh-su-que-635930347896369908.jpg',
 			'unit'=>'hộp',
-			'new'=>'1' ,
+			'new'=>'1'
 			],
-
-			[ 'name'=>'Bánh su kem cà phê',
+			[
+			'name'=>'Bánh su kem cà phê',
+			'name2'=>'Banh su kem ca phe',
 			'description'=>'Không làm mà đòi có ăn thì chỉ có cà ví mà mua thôi!',
 			'id_type'=>'7',
 			'unit_price'=>'150000',
 			'promotion_price'=>'0',
 			'image'=>'banh-su-kem-ca-phe-1.jpg',
 			'unit'=>'hộp',
-			'new'=>'0' ,
+			'new'=>'0'
 			],
-
-			[ 'name'=>'Bánh su kem phô mai',
+			[
+			'name'=>'Bánh su kem phô mai',
+			'name2'=>'Banh su kem pho mai',
 			'description'=>'Không làm mà đòi có ăn thì chỉ có cà ví mà mua thôi!',
 			'id_type'=>'7',
 			'unit_price'=>'150000',
 			'promotion_price'=>'0',
 			'image'=>'50020041-combo-20-banh-su-que-pho-mai-9.jpg',
 			'unit'=>'hộp',
-			'new'=>'0' ,
+			'new'=>'0'
 			],
-
-			[ 'name'=>'Bánh su kem sữa tươi chocolate',
+			[
+			'name'=>'Bánh su kem sữa tươi chocolate',
+			'name2'=>'Banh su kem sua tuoi chocolate',
 			'description'=>'Không làm mà đòi có ăn thì chỉ có cà ví mà mua thôi!',
 			'id_type'=>'7',
 			'unit_price'=>'150000',
 			'promotion_price'=>'0',
 			'image'=>'combo-20-banh-su-que-kem-sua-tuoi-phu-socola.jpg',
 			'unit'=>'hộp',
-			'new'=>'1' ,
+			'new'=>'1'
 			],
-
-			[ 'name'=>'Bánh Macaron Pháp',
+			[
+			'name'=>'Bánh Macaron Pháp',
+			'name2'=>'Banh Macaron Phap',
 			'description'=>'Không làm mà đòi có ăn thì chỉ có cà ví mà mua thôi!',
 			'id_type'=>'2',
 			'unit_price'=>'200000',
 			'promotion_price'=>'180000',
 			'image'=>'Macaron9.jpg',
 			'unit'=>'',
-			'new'=>'0' ,
+			'new'=>'0'
 			],
-
-			[ 'name'=>'Bánh Tiramisu - Italia',
+			[
+			'name'=>'Bánh Tiramisu - Italia',
+			'name2'=>'Banh Tiramisu - Italia',
 			'description'=>'Không làm mà đòi có ăn thì chỉ có cà ví mà mua thôi!',
 			'id_type'=>'2',
 			'unit_price'=>'200000',
 			'promotion_price'=>'0',
 			'image'=>'234.jpg',
 			'unit'=>'',
-			'new'=>'0' ,
+			'new'=>'0'
 			],
-
-			[ 'name'=>'Bánh Táo - Mỹ',
+			[
+			'name'=>'Bánh Táo - Mỹ',
+			'name2'=>'Banh Tao - My',
 			'description'=>'Không làm mà đòi có ăn thì chỉ có cà ví mà mua thôi!',
 			'id_type'=>'2',
 			'unit_price'=>'200000',
 			'promotion_price'=>'0',
 			'image'=>'1234.jpg',
 			'unit'=>'',
-			'new'=>'0' ,
+			'new'=>'0'
 			],
-
-			[ 'name'=>'Bánh Cupcake - Anh Quốc',
+			[
+			'name'=>'Bánh Cupcake - Anh Quốc',
+			'name2'=>'Banh Cupcake - Anh Quoc',
 			'description'=>'Không làm mà đòi có ăn thì chỉ có cà ví mà mua thôi!',
 			'id_type'=>'6',
 			'unit_price'=>'150000',
 			'promotion_price'=>'120000',
 			'image'=>'cupcake.jpg',
 			'unit'=>'cái',
-			'new'=>'1' ,
+			'new'=>'1'
 			],
-
-			[ 'name'=>'Bánh Sachertorte',
+			[
+			'name'=>'Bánh Sachertorte',
+			'name2'=>'Banh Sachertorte',
 			'description'=>'Không làm mà đòi có ăn thì chỉ có cà ví mà mua thôi!',
 			'id_type'=>'6',
 			'unit_price'=>'250000',
 			'promotion_price'=>'220000',
 			'image'=>'111.jpg',
 			'unit'=>'cái',
-			'new'=>'0' ,
-			]
+			'new'=>'0'
+			],
+			[
+			'name'=>'',
+			'name2'=>'',
+			'description'=>'',
+			'id_type'=>'0',
+			'unit_price'=>'0',
+			'promotion_price'=>'0',
+			'image'=>'',
+			'unit'=>'',
+			'new'=>'0'
+			],
         ]);
     }
 }

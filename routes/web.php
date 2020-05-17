@@ -90,7 +90,10 @@ Route::get('search',[
 	'uses'=>'PageController@getSearch'
 ]);
 
-
+Route::get('seed',[
+	'as'=>'Seed',
+	'uses'=>'PageController@Seed'
+]);
 
 Auth::routes();
 
@@ -98,3 +101,4 @@ Route::get('home',[
 	'as'=>'HomePage',
 	'uses'=>'PageController@getHomePage'
 ]);
+
