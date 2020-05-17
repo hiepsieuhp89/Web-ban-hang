@@ -77,7 +77,6 @@ class DatabaseSeeder extends Seeder
         ]);
         DB::table('products')->insert([
 			[
-			[
 'name'=>'Bánh Crepe Sầu riêng',
 'name2'=>'banh crepe sau rieng',
 'description'=>'Không làm mà đòi có ăn thì chỉ có cà ví mà mua thôi!',
@@ -747,7 +746,7 @@ class DatabaseSeeder extends Seeder
 'image'=>'111.jpg',
 'unit'=>'cái',
 'new'=>'0'
-]
+],
         ]);
     }
 }
