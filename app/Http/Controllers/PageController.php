@@ -253,7 +253,7 @@ class PageController extends Controller
             
         $namep = $req->key;
         $slide = Slide::all();
-        $product = Product::WHERE('name2','LIKE','%' .$namep. '%')->paginate(16);
+        $product = Product::WHERE('name2','LIKE','%' .$key_name. '%')->paginate(16);
         return view('page.Search',compact('slide','product','namep'));
     }
     public function check(Request $request)
