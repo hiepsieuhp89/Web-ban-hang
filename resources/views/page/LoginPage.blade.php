@@ -22,9 +22,9 @@
 							<label style="margin-top: 5px;font-size: 20px; font-weight: 500" for="email">Email của bạn</label>
 							<input style="margin-top: 5px;" type="email" class="form-control @error('email') is-invalid @enderror" value="{{ old('email') }}" required autocomplete="email" autofocus id="email" name="email">
 							@error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
+                                    <p class="text-danger" role="alert">
+                                        {{ $message }}
+                                    </p>
                             @enderror
 						</div>
 						<div class="form-block">
