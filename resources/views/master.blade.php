@@ -27,6 +27,7 @@
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="source/assets/vendor/select2/select2.min.css">
 <!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="source/assets/dest/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="source/assets/vendor/daterangepicker/daterangepicker.css">
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="source/assets/dest/css/util.css">

@@ -11,7 +11,7 @@
 					</span>
 
 					<a href="{{ url('/auth/redirect/facebook') }}" class="btn-face m-b-20">
-						<i class="fa fa-facebook-official"></i>
+						<i class="fa fa-facebook-official" style="color: white;"></i>
 						Facebook
 					</a>
 
