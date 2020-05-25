@@ -101,4 +101,6 @@ Route::get('home',[
 	'as'=>'HomePage',
 	'uses'=>'PageController@getHomePage'
 ]);
+Route::get('/auth/redirect/{provider}', 'SocialAuthController@redirect');
+Route::get('/home/callback/{provider}', 'SocialAuthController@callback');
 

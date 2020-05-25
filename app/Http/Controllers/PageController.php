@@ -156,10 +156,10 @@ class PageController extends Controller
     public function postSignup(Request $req){
         $validatedate = $req->validate(
             [
-                'email'=>'required|email|unique:users,email',
-                'password'=>'required|min:6|max:30', 
-                'username'=>'required',
-                'password_confirmation'=>'required|same:password'
+                'email'=>'bail|required|email|unique:users,email',
+                'password'=>'bail|required|min:6|max:30', 
+                'username'=>'bail|required',
+                'password_confirmation'=>'bail|required|same:password'
             ],
             [
                 'username.required'=>'Không có tên à em',
