@@ -24,7 +24,7 @@ class SocialAuthController extends Controller
 		    return redirect()->to('/home');
 	 	}
 	function createUser($getInfo,$provider){
-	$user = User::where('provider_id', $getInfo->id)->first();
+	$user = User::where('provider_id', $getInfo->id)->orwhere('email',$getInfo->email)->first();
 	if (!$user) {
 	    $user = User::create([
 	         'name'     => $getInfo->name,
