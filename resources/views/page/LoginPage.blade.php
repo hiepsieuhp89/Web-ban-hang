@@ -15,7 +15,7 @@
 						Facebook
 					</a>
 
-					<a href="#" class="btn-google m-b-20">
+					<a href="{{ url('/auth/redirect/google') }}" class="btn-google m-b-20">
 						<img src="source/image/icons/icon-google.png" alt="GOOGLE">
 						Google
 					</a>
