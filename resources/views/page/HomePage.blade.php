@@ -414,6 +414,9 @@
                   <div class="row large-columns-5 medium-columns-3 small-columns-2 row-collapse slider row-slider slider-nav-simple slider-nav-push" data-flickity-options='{"imagesLoaded": true, "groupCells": "100%", "dragThreshold" : 5, "cellAlign": "left","wrapAround": true,"prevNextButtons": true,"percentPosition": true,"pageDots": false, "rightToLeft": false, "autoPlay" : false}'>
                      <!--list start-->
                      @foreach($samsung as $phone)
+                     <?php
+                                    $name = preg_replace('/\//', '-', $phone->name); 
+                                ?> 
                      <div class="col">
                         <div class="col-inner">
                            <div class="badge-container absolute left top z-1">
@@ -424,7 +427,7 @@
                            <div class="product-small box has-hover box-normal box-text-bottom">
                               <div class="box-image">
                                  <div class="image-overlay-add image-zoom image-cover" style="padding-top:100%;">
-                                    <a href="{{route('ProductDetail',$params = ['type' => 'dtdd','name' => $phone->name])}}">
+                                    <a href="{{route('ProductDetail',$params = ['type' => 'dtdd','name' => $name])}}">
                                     <img width="358" height="358" src="wp-content\themes\flatsome\assets\img\lazy.png" data-src="{{$phone->image}}" class="lazy-load attachment-original size-original" alt="">									</a>
                                     <div class="overlay fill" style="background-color: rgba(255, 255, 255, 0.26)"></div>
                                  </div>
@@ -551,6 +554,9 @@
                   <div class="row large-columns-5 medium-columns-3 small-columns-2 row-collapse slider row-slider slider-nav-simple slider-nav-push" data-flickity-options='{"imagesLoaded": true, "groupCells": "100%", "dragThreshold" : 5, "cellAlign": "left","wrapAround": true,"prevNextButtons": true,"percentPosition": true,"pageDots": false, "rightToLeft": false, "autoPlay" : false}'>
                      <!--list start-->
                      @foreach($iphone as $phone)
+                     <?php
+                                    $name = preg_replace('/\//', '-', $phone->name); 
+                                ?> 
                      <div class="col">
                         <div class="col-inner">
                            <div class="badge-container absolute left top z-1">
@@ -561,7 +567,7 @@
                            <div class="product-small box has-hover box-normal box-text-bottom">
                               <div class="box-image">
                                  <div class="image-overlay-add image-zoom image-cover" style="padding-top:100%;">
-                                    <a href="{{route('ProductDetail',$params = ['type' => 'dtdd','name' => $phone->name])}}">
+                                    <a href="{{route('ProductDetail',$params = ['type' => 'dtdd','name' => $name])}}">
                                     <img width="358" height="358" src="wp-content\themes\flatsome\assets\img\lazy.png" data-src="{{$phone->image}}" class="lazy-load attachment-original size-original" alt="">									</a>
                                     <div class="overlay fill" style="background-color: rgba(255, 255, 255, 0.26)"></div>
                                  </div>
@@ -701,9 +707,7 @@
                                     $name = preg_replace('/\//', '-', $phone->name); 
                                 ?> 
                                  <div class="image-overlay-add image-zoom image-cover" style="padding-top:100%;">
-                                    <a href="{{route('ProductDetail',$params = ['type' => 'dtdd','name' => $name
-          
-                                    	])}}">
+                                    <a href="{{route('ProductDetail',$params = ['type' => 'dtdd','name' => $name])}}">
                                     <img width="358" height="358" src="wp-content\themes\flatsome\assets\img\lazy.png" data-src="{{$phone->image}}" class="lazy-load attachment-original size-original" alt="">									</a>
                                     <div class="overlay fill" style="background-color: rgba(255, 255, 255, 0.26)"></div>
                                  </div>

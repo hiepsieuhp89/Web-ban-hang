@@ -11,6 +11,7 @@ use App\Bill;
 use App\BillDetail;
 use App\User;
 use Hash;
+use DB;
 use Auth;
 use Session;
 use Illuminate\Http\Request;
@@ -57,11 +58,16 @@ class PageController extends Controller
     public function getProductDetail(Request $req){
         $name = preg_replace('/\-/', '/', $req->name);
         $product = Product::WHERE('name',$req->name)->ORWHERE('name',$name)->first();
+        //lay ngau nhien 8 san pham moi: 
+        $new_product = Product::WHERE('new','1')->ORDERBY(DB::raw('RAND()'))->paginate(8);
+        //lay ngau nhien 10 san pham cung loai:
+        $other_product = Product::WHERE('id_brand',$product->id_brand)->ORDERBY(DB::raw('RAND()'))->paginate(10);
+        $sale = (1-($product->promotion_price/$product->unit_price))*100;
         $product->promotion_price = number_format($product->promotion_price, 0, '.', '.' );
         $product->unit_price = number_format($product->unit_price, 0, '.', '.' );
         $type = $req->type;
         $brand = Brand::all();
-        return view('page.Product_detail',compact('product','type','brand'));
+        return view('page.Product_detail',compact('product','type','brand','sale','new_product','other_product'));
     }
 
     public function getContact(){

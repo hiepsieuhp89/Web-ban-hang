@@ -96,54 +96,23 @@
                      <span class="widget-title shop-sidebar">Sản phẩm mới cập nhật</span>
                      <div class="is-divider small"></div>
                      <ul class="product_list_widget">
+                     	<!-- new product here -->
+                     	@foreach($new_product as $key)
+                     	<?php 
+                     	$name = preg_replace('/\//', '-', $key->name);
+                     	?>
                         <li>
-                           <a href="..\son-li-maybelline-chilli-nude-3-9g-color-sensational-inti-matte-nudes-lipstick\index.htm">
-                           <img width="100" height="100" src="wp-content\uploads\2019\02\son-li-maybelline-chilli-nude-3-9g-650x580-100x100.jpg" class="attachment-woocommerce_gallery_thumbnail size-woocommerce_gallery_thumbnail" alt="" srcset="wp-content\uploads\2019\02\son-li-maybelline-chilli-nude-3-9g-650x580-100x100.jpg 100w, wp-content\uploads\2019\02\son-li-maybelline-chilli-nude-3-9g-650x580-150x150.jpg 150w, wp-content\uploads\2019\02\son-li-maybelline-chilli-nude-3-9g-650x580-300x300.jpg 300w" sizes="(max-width: 100px) 100vw, 100px">		<span class="product-title">Son Lì Maybelline Chilli Nude 3.9g Color Sensational Inti-Matte Nudes Lipstick</span>
+                           <a href="{{route('ProductDetail',$params = ['type' => 'dtdd','name' => $name])}}">
+                           <img width="100" height="100" src="{{$key->image}}" class="attachment-woocommerce_gallery_thumbnail size-woocommerce_gallery_thumbnail" alt="" srcset="{{$key->image}} 100w, {{$key->image}} 150w, {{$key->image}} 300w" sizes="(max-width: 100px) 100vw, 100px">		<span class="product-title">{{$key->name}}</span>
                            </a>
-                           <del><span class="woocommerce-Price-amount amount">119.000<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></del> <ins><span class="woocommerce-Price-amount amount">100.000<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></ins>
+                           @if($product->promotion_price != 0)
+                                 <del><span class="woocommerce-Price-amount amount">{{$product->unit_price}}<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></del> <ins><span class="woocommerce-Price-amount amount">{{$product->promotion_price}}<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></ins>
+								@else 
+								<del></del> <ins><span class="woocommerce-Price-amount amount">{{$product->unit_price}}<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></ins>
+                                 @endif
                         </li>
-                        <li>
-                           <a href="..\mat-na-melano-cc-duong-sang-da-ho-tro-lam-mo-tham-nam-20-mieng\index.htm">
-                           <img width="100" height="100" src="wp-content\uploads\2019\02\images-100x100.jpg" class="attachment-woocommerce_gallery_thumbnail size-woocommerce_gallery_thumbnail" alt="" srcset="wp-content\uploads\2019\02\images-100x100.jpg 100w, wp-content\uploads\2019\02\images-150x150.jpg 150w" sizes="(max-width: 100px) 100vw, 100px">		<span class="product-title">Mặt Nạ Melano CC Dưỡng Sáng Da, Hỗ Trợ Làm Mờ Thâm Nám 20 Miếng</span>
-                           </a>
-                           <del><span class="woocommerce-Price-amount amount">163.000<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></del> <ins><span class="woocommerce-Price-amount amount">130.000<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></ins>
-                        </li>
-                        <li>
-                           <a href="index.htm">
-                           <img width="100" height="100" src="wp-content\uploads\2019\02\tải-xuống-2-100x100.jpg" class="attachment-woocommerce_gallery_thumbnail size-woocommerce_gallery_thumbnail" alt="" srcset="wp-content\uploads\2019\02\tải-xuống-2-100x100.jpg 100w, wp-content\uploads\2019\02\tải-xuống-2-150x150.jpg 150w, wp-content\uploads\2019\02\tải-xuống-2.jpg 225w" sizes="(max-width: 100px) 100vw, 100px">		<span class="product-title">Kem Nền Mịn Lì Fit Me Maybelline 130 Buff Beige 30ml Fit Me Matte + Poreless Foundation</span>
-                           </a>
-                           <del><span class="woocommerce-Price-amount amount">163.000<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></del> <ins><span class="woocommerce-Price-amount amount">140.000<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></ins>
-                        </li>
-                        <li>
-                           <a href="..\combo-2-son-kem-li-2-dau-lemonade-01-sugar-05-tea-perfect-couple-lip\index.htm">
-                           <img width="100" height="100" src="wp-content\uploads\2019\02\son-kem-li-2-dau-lemonade-mau-nau-cam-dat-01-sugar_img_358x358_843626_fit_center-100x100.jpg" class="attachment-woocommerce_gallery_thumbnail size-woocommerce_gallery_thumbnail" alt="" srcset="wp-content\uploads\2019\02\son-kem-li-2-dau-lemonade-mau-nau-cam-dat-01-sugar_img_358x358_843626_fit_center-100x100.jpg 100w, wp-content\uploads\2019\02\son-kem-li-2-dau-lemonade-mau-nau-cam-dat-01-sugar_img_358x358_843626_fit_center-150x150.jpg 150w, wp-content\uploads\2019\02\son-kem-li-2-dau-lemonade-mau-nau-cam-dat-01-sugar_img_358x358_843626_fit_center-300x300.jpg 300w, wp-content\uploads\2019\02\son-kem-li-2-dau-lemonade-mau-nau-cam-dat-01-sugar_img_358x358_843626_fit_center.jpg 358w" sizes="(max-width: 100px) 100vw, 100px">		<span class="product-title">Combo 2 Son Kem Lì 2 Đầu LEMONADE 01 Sugar + 05 Tea Perfect Couple Lip</span>
-                           </a>
-                           <del><span class="woocommerce-Price-amount amount">163.000<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></del> <ins><span class="woocommerce-Price-amount amount">150.000<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></ins>
-                        </li>
-                        <li>
-                           <a href="..\mascara-lam-day-va-toi-mi-maybelline-lash-sensational-10ml-lash-sensational-waterproof-mascara\index.htm">
-                           <img width="100" height="100" src="wp-content\uploads\2019\02\mascara-maybelline-lam-day-va-toi-mi-10ml_1__img_358x358_843626_fit_center-100x100.jpg" class="attachment-woocommerce_gallery_thumbnail size-woocommerce_gallery_thumbnail" alt="" srcset="wp-content\uploads\2019\02\mascara-maybelline-lam-day-va-toi-mi-10ml_1__img_358x358_843626_fit_center-100x100.jpg 100w, wp-content\uploads\2019\02\mascara-maybelline-lam-day-va-toi-mi-10ml_1__img_358x358_843626_fit_center-150x150.jpg 150w, wp-content\uploads\2019\02\mascara-maybelline-lam-day-va-toi-mi-10ml_1__img_358x358_843626_fit_center-300x300.jpg 300w, wp-content\uploads\2019\02\mascara-maybelline-lam-day-va-toi-mi-10ml_1__img_358x358_843626_fit_center.jpg 358w" sizes="(max-width: 100px) 100vw, 100px">		<span class="product-title">Mascara Làm Dày Và Tơi Mi Maybelline Lash Sensational 10ml Lash Sensational Waterproof Mascara</span>
-                           </a>
-                           <del><span class="woocommerce-Price-amount amount">148.000<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></del> <ins><span class="woocommerce-Price-amount amount">120.000<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></ins>
-                        </li>
-                        <li>
-                           <a href="..\kem-lot-trang-diem-maybelline-baby-skin-22ml-baby-skin-pore-eraser\index.htm">
-                           <img width="100" height="100" src="wp-content\uploads\2019\02\kem-lot-trang-diem-maybelline-baby-skin-22ml_img_358x358_843626_fit_center-100x100.jpg" class="attachment-woocommerce_gallery_thumbnail size-woocommerce_gallery_thumbnail" alt="" srcset="wp-content\uploads\2019\02\kem-lot-trang-diem-maybelline-baby-skin-22ml_img_358x358_843626_fit_center-100x100.jpg 100w, wp-content\uploads\2019\02\kem-lot-trang-diem-maybelline-baby-skin-22ml_img_358x358_843626_fit_center-150x150.jpg 150w, wp-content\uploads\2019\02\kem-lot-trang-diem-maybelline-baby-skin-22ml_img_358x358_843626_fit_center-300x300.jpg 300w, wp-content\uploads\2019\02\kem-lot-trang-diem-maybelline-baby-skin-22ml_img_358x358_843626_fit_center.jpg 358w" sizes="(max-width: 100px) 100vw, 100px">		<span class="product-title">Kem Lót Trang Điểm Maybelline Baby Skin 22ml Baby Skin Pore Eraser</span>
-                           </a>
-                           <del><span class="woocommerce-Price-amount amount">360.000<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></del> <ins><span class="woocommerce-Price-amount amount">250.000<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></ins>
-                        </li>
-                        <li>
-                           <a href="..\gel-sua-chong-nang-senka-spf50-pa-80g-perfect-uv-gel\index.htm">
-                           <img width="100" height="100" src="wp-content\uploads\2019\02\gel-sua-chong-nang-spf50-senka-80g-100x100.jpg" class="attachment-woocommerce_gallery_thumbnail size-woocommerce_gallery_thumbnail" alt="" srcset="wp-content\uploads\2019\02\gel-sua-chong-nang-spf50-senka-80g-100x100.jpg 100w, wp-content\uploads\2019\02\gel-sua-chong-nang-spf50-senka-80g-150x150.jpg 150w, wp-content\uploads\2019\02\gel-sua-chong-nang-spf50-senka-80g-300x300.jpg 300w, wp-content\uploads\2019\02\gel-sua-chong-nang-spf50-senka-80g.jpg 600w" sizes="(max-width: 100px) 100vw, 100px">		<span class="product-title">Gel Sữa Chống Nắng Senka SPF50/PA++++ 80g Perfect UV Gel</span>
-                           </a>
-                           <del><span class="woocommerce-Price-amount amount">36.000<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></del> <ins><span class="woocommerce-Price-amount amount">25.000<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></ins>
-                        </li>
-                        <li>
-                           <a href="..\nuoc-tay-trang-tuoi-mat-loreal-3-in-1-danh-cho-da-dau-da-hon-hop-400ml\index.htm">
-                           <img width="100" height="100" src="wp-content\uploads\2019\02\Hinh-5-nuoc-tay-trang-LOreal-Paris-3-in-1-Micellar-Water-100x100.jpg" class="attachment-woocommerce_gallery_thumbnail size-woocommerce_gallery_thumbnail" alt="" srcset="wp-content\uploads\2019\02\Hinh-5-nuoc-tay-trang-LOreal-Paris-3-in-1-Micellar-Water-100x100.jpg 100w, wp-content\uploads\2019\02\Hinh-5-nuoc-tay-trang-LOreal-Paris-3-in-1-Micellar-Water-150x150.jpg 150w, wp-content\uploads\2019\02\Hinh-5-nuoc-tay-trang-LOreal-Paris-3-in-1-Micellar-Water-300x300.jpg 300w" sizes="(max-width: 100px) 100vw, 100px">		<span class="product-title">Nước Tẩy Trang Tươi Mát L'Oreal 3-in-1 Dành Cho Da Dầu &amp; Da Hỗn Hợp 400ml</span>
-                           </a>
-                           <del><span class="woocommerce-Price-amount amount">149.000<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></del> <ins><span class="woocommerce-Price-amount amount">96.000<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></ins>
-                        </li>
+                        @endforeach
+                        <!-- new product end here -->
                      </ul>
                   </aside>
                   <aside id="flatsome_recent_posts-2" class="widget flatsome_recent_posts">
@@ -211,7 +180,7 @@
                                  <div class="woocommerce-product-gallery woocommerce-product-gallery--with-images woocommerce-product-gallery--columns-4 images relative mb-half has-hover" data-columns="4">
                                     <div class="badge-container is-larger absolute left top z-1">
                                        <div class="callout badge badge-square">
-                                          <div class="badge-inner secondary on-sale"><span class="onsale">-14%</span></div>
+                                          <div class="badge-inner secondary on-sale"><span class="onsale">-{{$sale}}%</span></div>
                                        </div>
                                     </div>
                                     <div class="image-tools absolute top show-on-hover right z-3">
@@ -292,16 +261,20 @@
                               <div class="sticky-add-to-cart-wrapper">
                                  <div class="sticky-add-to-cart">
                                     <div class="sticky-add-to-cart__product">
-                                       <img src="wp-content\uploads\2019\02\tải-xuống-2-100x100.jpg" class="sticky-add-to-cart-img">
-                                       <div class="product-title-small hide-for-small"><strong>Kem Nền Mịn Lì Fit Me Maybelline 130 Buff Beige 30ml Fit Me Matte + Poreless Foundation</strong></div>
+                                       <img src="{{$product->image}}" class="sticky-add-to-cart-img">
+                                       <div class="product-title-small hide-for-small"><strong>Điện thoại {{$product->name}}</strong></div>
                                        <div class="price-wrapper">
                                           <p class="price product-page-price price-on-sale">
-                                             <del><span class="woocommerce-Price-amount amount">163.000<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></del> <ins><span class="woocommerce-Price-amount amount">140.000<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></ins>
+                                             @if($product->promotion_price != 0)
+                                 <del><span class="woocommerce-Price-amount amount">{{$product->unit_price}}<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></del> <ins><span class="woocommerce-Price-amount amount">{{$product->promotion_price}}<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></ins>
+								@else 
+								<del></del> <ins><span class="woocommerce-Price-amount amount">{{$product->unit_price}}<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></ins>
+                                 @endif
                                           </p>
                                        </div>
                                     </div>
                                     <div class="quantity buttons_added">
-                                       <input type="button" value="-" class="minus button is-form">		<label class="screen-reader-text" for="quantity_5e8ab1c64e79d">Kem Nền Mịn Lì Fit Me Maybelline 130 Buff Beige 30ml Fit Me Matte + Poreless Foundation số lượng</label>
+                                       <input type="button" value="-" class="minus button is-form">		<label class="screen-reader-text" for="quantity_5e8ab1c64e79d">{{$product->name}} số lượng</label>
                                        <input type="number" id="quantity_5e8ab1c64e79d" class="input-text qty text" step="1" min="1" max="9999" name="quantity" value="1" title="SL" size="4" inputmode="numeric">
                                        <input type="button" value="+" class="plus button is-form">	
                                     </div>
@@ -384,7 +357,7 @@
                                     <div id="review_form" class="col-inner">
                                        <div class="review-form-inner has-border">
                                           <div id="respond" class="comment-respond">
-                                             <h3 id="reply-title" class="comment-reply-title">Hãy là người đầu tiên nhận xét &ldquo;Kem Nền Mịn Lì Fit Me Maybelline 130 Buff Beige 30ml Fit Me Matte + Poreless Foundation&rdquo; <small><a rel="nofollow" id="cancel-comment-reply-link" href="index.htm#respond" style="display:none;">Hủy</a></small></h3>
+                                             <h3 id="reply-title" class="comment-reply-title">Hãy là người đầu tiên nhận xét {{$product->name}} <small><a rel="nofollow" id="cancel-comment-reply-link" href="index.htm#respond" style="display:none;">Hủy</a></small></h3>
                                              <form action="https://shoplamdep.haiphongweb.com/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate="">
                                                 <div class="comment-form-rating">
                                                    <label for="rating">Đánh giá của bạn</label>
@@ -423,18 +396,23 @@
                            Sản phẩm tương tự    
                         </h3>
                         <div class="row large-columns-5 medium-columns-3 small-columns-2 row-small slider row-slider slider-nav-reveal slider-nav-push" data-flickity-options='{"imagesLoaded": true, "groupCells": "100%", "dragThreshold" : 5, "cellAlign": "left","wrapAround": true,"prevNextButtons": true,"percentPosition": true,"pageDots": false, "rightToLeft": false, "autoPlay" : false}'>
+                        @foreach($other_product as $key)
+                        	<?php 
+                        	$name = preg_replace('/\//', '-', $key->name);
+                        	$sale = (1-($key->promotion_price/$key->unit_price))*100;
+                        	?>
                            <div class="product-small col has-hover product type-product post-279 status-publish instock product_cat-cham-soc-toc product_cat-trang-diem has-post-thumbnail sale shipping-taxable purchasable product-type-simple">
                               <div class="col-inner">
-                                 <div class="badge-container absolute left top z-1">
-                                    <div class="callout badge badge-square">
-                                       <div class="badge-inner secondary on-sale"><span class="onsale">-8%</span></div>
+                                 <div class="badge-container absolute left top z-1" style="margin-top:10px;">
+                                    <div class="callout badge badge-square" style="height: 30px;">
+                                       <div class="badge-inner secondary on-sale" style="background-color:red;border-radius: 5px;"><span class="onsale">-{{$sale}}%</span></div>
                                     </div>
                                  </div>
                                  <div class="product-small box ">
                                     <div class="box-image">
                                        <div class="image-zoom">
-                                          <a href="..\combo-2-son-kem-li-2-dau-lemonade-01-sugar-05-tea-perfect-couple-lip\index.htm">
-                                          <img width="300" height="300" src="wp-content\uploads\2019\02\son-kem-li-2-dau-lemonade-mau-nau-cam-dat-01-sugar_img_358x358_843626_fit_center-300x300.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" srcset="wp-content\uploads\2019\02\son-kem-li-2-dau-lemonade-mau-nau-cam-dat-01-sugar_img_358x358_843626_fit_center-300x300.jpg 300w, wp-content\uploads\2019\02\son-kem-li-2-dau-lemonade-mau-nau-cam-dat-01-sugar_img_358x358_843626_fit_center-150x150.jpg 150w, wp-content\uploads\2019\02\son-kem-li-2-dau-lemonade-mau-nau-cam-dat-01-sugar_img_358x358_843626_fit_center-100x100.jpg 100w, wp-content\uploads\2019\02\son-kem-li-2-dau-lemonade-mau-nau-cam-dat-01-sugar_img_358x358_843626_fit_center.jpg 358w" sizes="(max-width: 300px) 100vw, 300px">				</a>
+                                          <a href="{{route('ProductDetail',$params = ['type' => 'dtdd','name' => $name])}}">
+                                          <img width="300" height="300" src="{{$key->image}}" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" srcset="{{$key->image}} 300w, {{$key->image}} 150w, {{$key->image}} 100w, {{$key->image}} 358w" sizes="(max-width: 300px) 100vw, 300px">				</a>
                                        </div>
                                        <div class="image-tools is-small top right show-on-hover">
                                        </div>
@@ -444,16 +422,23 @@
                                        </div>
                                     </div>
                                     <!-- box-image -->
-                                    <div class="box-text box-text-products">
-                                       <div class="title-wrapper">
-                                          <p class="category uppercase is-smaller no-text-overflow product-cat op-7">
-                                             Chăm sóc tóc		
-                                          </p>
-                                          <p class="name product-title"><a href="..\combo-2-son-kem-li-2-dau-lemonade-01-sugar-05-tea-perfect-couple-lip\index.htm">Combo 2 Son Kem Lì 2 Đầu LEMONADE 01 Sugar + 05 Tea Perfect Couple Lip</a></p>
+                                    <div class="box-text box-text-products" style="text-align: center;">
+                                       <div class="title-wrapper" style="height: 40px;">
+                                          <p class="name product-title"><a href="..\combo-2-son-kem-li-2-dau-lemonade-01-sugar-05-tea-perfect-couple-lip\index.htm">{{$key->name}}</a></p>
                                        </div>
                                        <div class="price-wrapper">
-                                          <div class="pwb-brands-in-loop"><span><a href="thuong-hieu\agapan\index.htm"><img width="120" height="60" src="wp-content\uploads\2019\02\1471419239agapan-logo_img_120x60_63ea52_fit_center.jpg" class="attachment-thumbnail size-thumbnail" alt=""></a></span></div>
-                                          <span class="price"><del><span class="woocommerce-Price-amount amount">163.000<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></del> <ins><span class="woocommerce-Price-amount amount">150.000<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></ins></span>
+                                          <div class="pwb-brands-in-loop"><span><a href="thuong-hieu\agapan\index.htm"><img width="120" height="60" src="
+                                       @foreach($brand as $type)
+                                       @if ($type->id == $key->id_brand)
+                                       {{$type->image}}
+                                       @endif
+                                       @endforeach
+                                       " class="attachment-thumbnail size-thumbnail" alt=""></a></span></div>
+                                          @if($product->promotion_price != 0)
+                                 <del><span class="woocommerce-Price-amount amount">{{$product->unit_price}}<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></del> <ins><span class="woocommerce-Price-amount amount" style="color: red;">{{$product->promotion_price}}<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></ins>
+								@else 
+								<del></del> <ins><span class="woocommerce-Price-amount amount" style="color: red;">{{$product->unit_price}}<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></ins>
+                                 @endif
                                        </div>
                                     </div>
                                     <!-- box-text -->
@@ -462,367 +447,8 @@
                               </div>
                               <!-- .col-inner -->
                            </div>
-                           <!-- col -->
-                           <div class="product-small col has-hover product type-product post-269 status-publish instock product_cat-cham-soc-da-mat product_tag-melano-cc has-post-thumbnail sale shipping-taxable purchasable product-type-simple">
-                              <div class="col-inner">
-                                 <div class="badge-container absolute left top z-1">
-                                    <div class="callout badge badge-square">
-                                       <div class="badge-inner secondary on-sale"><span class="onsale">-14%</span></div>
-                                    </div>
-                                 </div>
-                                 <div class="product-small box ">
-                                    <div class="box-image">
-                                       <div class="image-zoom">
-                                          <a href="..\tinh-chat-melano-cc-mo-tham-nam-tan-nhang-20ml-serum-vitamin-c\index.htm">
-                                          <img width="300" height="300" src="wp-content\uploads\2019\02\57-34-300x300.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" srcset="wp-content\uploads\2019\02\57-34-300x300.jpg 300w, wp-content\uploads\2019\02\57-34-150x150.jpg 150w, wp-content\uploads\2019\02\57-34-100x100.jpg 100w, wp-content\uploads\2019\02\57-34.jpg 400w" sizes="(max-width: 300px) 100vw, 300px">				</a>
-                                       </div>
-                                       <div class="image-tools is-small top right show-on-hover">
-                                       </div>
-                                       <div class="image-tools is-small hide-for-small bottom left show-on-hover">
-                                       </div>
-                                       <div class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover">
-                                       </div>
-                                    </div>
-                                    <!-- box-image -->
-                                    <div class="box-text box-text-products">
-                                       <div class="title-wrapper">
-                                          <p class="category uppercase is-smaller no-text-overflow product-cat op-7">
-                                             Chăm sóc da mặt		
-                                          </p>
-                                          <p class="name product-title"><a href="..\tinh-chat-melano-cc-mo-tham-nam-tan-nhang-20ml-serum-vitamin-c\index.htm">Tinh Chất Melano CC Mờ Thâm, Nám Tàn Nhang 20ml Serum Vitamin C</a></p>
-                                       </div>
-                                       <div class="price-wrapper">
-                                          <div class="pwb-brands-in-loop"><span><a href="thuong-hieu\cetaphil\index.htm"><img width="120" height="60" src="wp-content\uploads\2019\02\1467278639logo_cetaphil_img_120x60_63ea52_fit_center.jpg" class="attachment-thumbnail size-thumbnail" alt=""></a></span></div>
-                                          <span class="price"><del><span class="woocommerce-Price-amount amount">300.000<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></del> <ins><span class="woocommerce-Price-amount amount">259.000<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></ins></span>
-                                       </div>
-                                    </div>
-                                    <!-- box-text -->
-                                 </div>
-                                 <!-- box -->
-                              </div>
-                              <!-- .col-inner -->
-                           </div>
-                           <!-- col -->
-                           <div class="product-small col has-hover product type-product post-267 status-publish last instock product_cat-cham-soc-da-mat product_tag-bnbg has-post-thumbnail sale shipping-taxable purchasable product-type-simple">
-                              <div class="col-inner">
-                                 <div class="badge-container absolute left top z-1">
-                                    <div class="callout badge badge-square">
-                                       <div class="badge-inner secondary on-sale"><span class="onsale">-14%</span></div>
-                                    </div>
-                                 </div>
-                                 <div class="product-small box ">
-                                    <div class="box-image">
-                                       <div class="image-zoom">
-                                          <a href="..\mat-na-bnbg-duong-sang-da-vitamin-c-vita-genic-whitening-jelly-mask\index.htm">
-                                          <img width="300" height="300" src="wp-content\uploads\2019\02\mat-na-duong-san-chac-da-banobagi-vita-genic-jelly-mask-30ml-300x300.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" srcset="wp-content\uploads\2019\02\mat-na-duong-san-chac-da-banobagi-vita-genic-jelly-mask-30ml-300x300.jpg 300w, wp-content\uploads\2019\02\mat-na-duong-san-chac-da-banobagi-vita-genic-jelly-mask-30ml-150x150.jpg 150w, wp-content\uploads\2019\02\mat-na-duong-san-chac-da-banobagi-vita-genic-jelly-mask-30ml-100x100.jpg 100w" sizes="(max-width: 300px) 100vw, 300px">				</a>
-                                       </div>
-                                       <div class="image-tools is-small top right show-on-hover">
-                                       </div>
-                                       <div class="image-tools is-small hide-for-small bottom left show-on-hover">
-                                       </div>
-                                       <div class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover">
-                                       </div>
-                                    </div>
-                                    <!-- box-image -->
-                                    <div class="box-text box-text-products">
-                                       <div class="title-wrapper">
-                                          <p class="category uppercase is-smaller no-text-overflow product-cat op-7">
-                                             Chăm sóc da mặt		
-                                          </p>
-                                          <p class="name product-title"><a href="..\mat-na-bnbg-duong-sang-da-vitamin-c-vita-genic-whitening-jelly-mask\index.htm">Mặt Nạ BNBG Dưỡng Sáng Da Vitamin C Vita Genic Whitening Jelly Mask</a></p>
-                                       </div>
-                                       <div class="price-wrapper">
-                                          <div class="pwb-brands-in-loop"><span><a href="thuong-hieu\anessa\index.htm"><img width="120" height="60" src="wp-content\uploads\2019\02\1517211235anessa_img_120x60_63ea52_fit_center.jpg" class="attachment-thumbnail size-thumbnail" alt=""></a></span></div>
-                                          <span class="price"><del><span class="woocommerce-Price-amount amount">43.000<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></del> <ins><span class="woocommerce-Price-amount amount">37.000<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></ins></span>
-                                       </div>
-                                    </div>
-                                    <!-- box-text -->
-                                 </div>
-                                 <!-- box -->
-                              </div>
-                              <!-- .col-inner -->
-                           </div>
-                           <!-- col -->
-                           <div class="product-small col has-hover product type-product post-275 status-publish first instock product_cat-cham-soc-da-mat product_tag-maybelline has-post-thumbnail sale shipping-taxable purchasable product-type-simple">
-                              <div class="col-inner">
-                                 <div class="badge-container absolute left top z-1">
-                                    <div class="callout badge badge-square">
-                                       <div class="badge-inner secondary on-sale"><span class="onsale">-31%</span></div>
-                                    </div>
-                                 </div>
-                                 <div class="product-small box ">
-                                    <div class="box-image">
-                                       <div class="image-zoom">
-                                          <a href="..\kem-lot-trang-diem-maybelline-baby-skin-22ml-baby-skin-pore-eraser\index.htm">
-                                          <img width="300" height="300" src="wp-content\uploads\2019\02\kem-lot-trang-diem-maybelline-baby-skin-22ml_img_358x358_843626_fit_center-300x300.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" srcset="wp-content\uploads\2019\02\kem-lot-trang-diem-maybelline-baby-skin-22ml_img_358x358_843626_fit_center-300x300.jpg 300w, wp-content\uploads\2019\02\kem-lot-trang-diem-maybelline-baby-skin-22ml_img_358x358_843626_fit_center-150x150.jpg 150w, wp-content\uploads\2019\02\kem-lot-trang-diem-maybelline-baby-skin-22ml_img_358x358_843626_fit_center-100x100.jpg 100w, wp-content\uploads\2019\02\kem-lot-trang-diem-maybelline-baby-skin-22ml_img_358x358_843626_fit_center.jpg 358w" sizes="(max-width: 300px) 100vw, 300px">				</a>
-                                       </div>
-                                       <div class="image-tools is-small top right show-on-hover">
-                                       </div>
-                                       <div class="image-tools is-small hide-for-small bottom left show-on-hover">
-                                       </div>
-                                       <div class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover">
-                                       </div>
-                                    </div>
-                                    <!-- box-image -->
-                                    <div class="box-text box-text-products">
-                                       <div class="title-wrapper">
-                                          <p class="category uppercase is-smaller no-text-overflow product-cat op-7">
-                                             Chăm sóc da mặt		
-                                          </p>
-                                          <p class="name product-title"><a href="..\kem-lot-trang-diem-maybelline-baby-skin-22ml-baby-skin-pore-eraser\index.htm">Kem Lót Trang Điểm Maybelline Baby Skin 22ml Baby Skin Pore Eraser</a></p>
-                                       </div>
-                                       <div class="price-wrapper">
-                                          <div class="pwb-brands-in-loop"><span><a href="thuong-hieu\colly\index.htm"><img width="120" height="60" src="wp-content\uploads\2019\02\1504580537colly_img_120x60_63ea52_fit_center.jpg" class="attachment-thumbnail size-thumbnail" alt=""></a></span></div>
-                                          <span class="price"><del><span class="woocommerce-Price-amount amount">360.000<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></del> <ins><span class="woocommerce-Price-amount amount">250.000<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></ins></span>
-                                       </div>
-                                    </div>
-                                    <!-- box-text -->
-                                 </div>
-                                 <!-- box -->
-                              </div>
-                              <!-- .col-inner -->
-                           </div>
-                           <!-- col -->
-                           <div class="product-small col has-hover product type-product post-264 status-publish instock product_cat-cham-soc-da-mat product_tag-byphasse has-post-thumbnail sale shipping-taxable purchasable product-type-simple">
-                              <div class="col-inner">
-                                 <div class="badge-container absolute left top z-1">
-                                    <div class="callout badge badge-square">
-                                       <div class="badge-inner secondary on-sale"><span class="onsale">-53%</span></div>
-                                    </div>
-                                 </div>
-                                 <div class="product-small box ">
-                                    <div class="box-image">
-                                       <div class="image-zoom">
-                                          <a href="..\nuoc-tay-trang-byphasse-cho-moi-loai-da-500ml-solution-micerallaire-face\index.htm">
-                                          <img width="300" height="300" src="wp-content\uploads\2019\02\sdferere-300x300.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" srcset="wp-content\uploads\2019\02\sdferere-300x300.jpg 300w, wp-content\uploads\2019\02\sdferere-150x150.jpg 150w, wp-content\uploads\2019\02\sdferere-100x100.jpg 100w" sizes="(max-width: 300px) 100vw, 300px">				</a>
-                                       </div>
-                                       <div class="image-tools is-small top right show-on-hover">
-                                       </div>
-                                       <div class="image-tools is-small hide-for-small bottom left show-on-hover">
-                                       </div>
-                                       <div class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover">
-                                       </div>
-                                    </div>
-                                    <!-- box-image -->
-                                    <div class="box-text box-text-products">
-                                       <div class="title-wrapper">
-                                          <p class="category uppercase is-smaller no-text-overflow product-cat op-7">
-                                             Chăm sóc da mặt		
-                                          </p>
-                                          <p class="name product-title"><a href="..\nuoc-tay-trang-byphasse-cho-moi-loai-da-500ml-solution-micerallaire-face\index.htm">Nước Tẩy Trang Byphasse Cho Mọi Loại Da 500ml Solution Micerallaire Face</a></p>
-                                       </div>
-                                       <div class="price-wrapper">
-                                          <div class="pwb-brands-in-loop"><span><a href="thuong-hieu\deborah-milano\index.htm"><img width="120" height="60" src="wp-content\uploads\2019\02\1506650932deborahmilano_img_120x60_63ea52_fit_center.jpg" class="attachment-thumbnail size-thumbnail" alt=""></a></span></div>
-                                          <span class="price"><del><span class="woocommerce-Price-amount amount">191.000<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></del> <ins><span class="woocommerce-Price-amount amount">89.000<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></ins></span>
-                                       </div>
-                                    </div>
-                                    <!-- box-text -->
-                                 </div>
-                                 <!-- box -->
-                              </div>
-                              <!-- .col-inner -->
-                           </div>
-                           <!-- col -->
-                           <div class="product-small col has-hover product type-product post-273 status-publish instock product_cat-cham-soc-da-mat has-post-thumbnail sale shipping-taxable purchasable product-type-simple">
-                              <div class="col-inner">
-                                 <div class="badge-container absolute left top z-1">
-                                    <div class="callout badge badge-square">
-                                       <div class="badge-inner secondary on-sale"><span class="onsale">-31%</span></div>
-                                    </div>
-                                 </div>
-                                 <div class="product-small box ">
-                                    <div class="box-image">
-                                       <div class="image-zoom">
-                                          <a href="..\gel-sua-chong-nang-senka-spf50-pa-80g-perfect-uv-gel\index.htm">
-                                          <img width="300" height="300" src="wp-content\uploads\2019\02\gel-sua-chong-nang-spf50-senka-80g-300x300.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" srcset="wp-content\uploads\2019\02\gel-sua-chong-nang-spf50-senka-80g-300x300.jpg 300w, wp-content\uploads\2019\02\gel-sua-chong-nang-spf50-senka-80g-150x150.jpg 150w, wp-content\uploads\2019\02\gel-sua-chong-nang-spf50-senka-80g.jpg 600w, wp-content\uploads\2019\02\gel-sua-chong-nang-spf50-senka-80g-100x100.jpg 100w" sizes="(max-width: 300px) 100vw, 300px">				</a>
-                                       </div>
-                                       <div class="image-tools is-small top right show-on-hover">
-                                       </div>
-                                       <div class="image-tools is-small hide-for-small bottom left show-on-hover">
-                                       </div>
-                                       <div class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover">
-                                       </div>
-                                    </div>
-                                    <!-- box-image -->
-                                    <div class="box-text box-text-products">
-                                       <div class="title-wrapper">
-                                          <p class="category uppercase is-smaller no-text-overflow product-cat op-7">
-                                             Chăm sóc da mặt		
-                                          </p>
-                                          <p class="name product-title"><a href="..\gel-sua-chong-nang-senka-spf50-pa-80g-perfect-uv-gel\index.htm">Gel Sữa Chống Nắng Senka SPF50/PA++++ 80g Perfect UV Gel</a></p>
-                                       </div>
-                                       <div class="price-wrapper">
-                                          <div class="pwb-brands-in-loop"><span><a href="thuong-hieu\aleda\index.htm"><img width="120" height="60" src="wp-content\uploads\2019\02\1538456535ALEDA_img_120x60_63ea52_fit_center.jpg" class="attachment-thumbnail size-thumbnail" alt=""></a></span></div>
-                                          <span class="price"><del><span class="woocommerce-Price-amount amount">36.000<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></del> <ins><span class="woocommerce-Price-amount amount">25.000<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></ins></span>
-                                       </div>
-                                    </div>
-                                    <!-- box-text -->
-                                 </div>
-                                 <!-- box -->
-                              </div>
-                              <!-- .col-inner -->
-                           </div>
-                           <!-- col -->
-                           <div class="product-small col has-hover product type-product post-262 status-publish last instock product_cat-trang-diem product_tag-maybelline has-post-thumbnail sale shipping-taxable purchasable product-type-simple">
-                              <div class="col-inner">
-                                 <div class="badge-container absolute left top z-1">
-                                    <div class="callout badge badge-square">
-                                       <div class="badge-inner secondary on-sale"><span class="onsale">-40%</span></div>
-                                    </div>
-                                 </div>
-                                 <div class="product-small box ">
-                                    <div class="box-image">
-                                       <div class="image-zoom">
-                                          <a href="..\kem-che-khuyet-diem-maybelline-110-fair-6ml-instant-age-rewind-eraser-dark-circles-treatment-concealer\index.htm">
-                                          <img width="300" height="300" src="wp-content\uploads\2019\02\che-khuyet-diem-130-medium-6ml-5-300x300.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" srcset="wp-content\uploads\2019\02\che-khuyet-diem-130-medium-6ml-5-300x300.jpg 300w, wp-content\uploads\2019\02\che-khuyet-diem-130-medium-6ml-5-150x150.jpg 150w, wp-content\uploads\2019\02\che-khuyet-diem-130-medium-6ml-5-100x100.jpg 100w" sizes="(max-width: 300px) 100vw, 300px">				</a>
-                                       </div>
-                                       <div class="image-tools is-small top right show-on-hover">
-                                       </div>
-                                       <div class="image-tools is-small hide-for-small bottom left show-on-hover">
-                                       </div>
-                                       <div class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover">
-                                       </div>
-                                    </div>
-                                    <!-- box-image -->
-                                    <div class="box-text box-text-products">
-                                       <div class="title-wrapper">
-                                          <p class="category uppercase is-smaller no-text-overflow product-cat op-7">
-                                             Trang điểm		
-                                          </p>
-                                          <p class="name product-title"><a href="..\kem-che-khuyet-diem-maybelline-110-fair-6ml-instant-age-rewind-eraser-dark-circles-treatment-concealer\index.htm">Kem Che Khuyết Điểm Maybelline 110 Fair 6ml Instant Age Rewind Eraser Dark Circles Treatment Co...</a></p>
-                                       </div>
-                                       <div class="price-wrapper">
-                                          <div class="pwb-brands-in-loop"><span><a href="thuong-hieu\carenel\index.htm"><img width="120" height="60" src="wp-content\uploads\2019\02\1487066928carenel-logo_img_120x60_63ea52_fit_center.jpg" class="attachment-thumbnail size-thumbnail" alt=""></a></span></div>
-                                          <span class="price"><del><span class="woocommerce-Price-amount amount">195.000<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></del> <ins><span class="woocommerce-Price-amount amount">117.000<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></ins></span>
-                                       </div>
-                                    </div>
-                                    <!-- box-text -->
-                                 </div>
-                                 <!-- box -->
-                              </div>
-                              <!-- .col-inner -->
-                           </div>
-                           <!-- col -->
-                           <div class="product-small col has-hover product type-product post-277 status-publish first instock product_cat-cham-soc-da-mat product_cat-trang-diem has-post-thumbnail sale shipping-taxable purchasable product-type-simple">
-                              <div class="col-inner">
-                                 <div class="badge-container absolute left top z-1">
-                                    <div class="callout badge badge-square">
-                                       <div class="badge-inner secondary on-sale"><span class="onsale">-19%</span></div>
-                                    </div>
-                                 </div>
-                                 <div class="product-small box ">
-                                    <div class="box-image">
-                                       <div class="image-zoom">
-                                          <a href="..\mascara-lam-day-va-toi-mi-maybelline-lash-sensational-10ml-lash-sensational-waterproof-mascara\index.htm">
-                                          <img width="300" height="300" src="wp-content\uploads\2019\02\mascara-maybelline-lam-day-va-toi-mi-10ml_1__img_358x358_843626_fit_center-300x300.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" srcset="wp-content\uploads\2019\02\mascara-maybelline-lam-day-va-toi-mi-10ml_1__img_358x358_843626_fit_center-300x300.jpg 300w, wp-content\uploads\2019\02\mascara-maybelline-lam-day-va-toi-mi-10ml_1__img_358x358_843626_fit_center-150x150.jpg 150w, wp-content\uploads\2019\02\mascara-maybelline-lam-day-va-toi-mi-10ml_1__img_358x358_843626_fit_center-100x100.jpg 100w, wp-content\uploads\2019\02\mascara-maybelline-lam-day-va-toi-mi-10ml_1__img_358x358_843626_fit_center.jpg 358w" sizes="(max-width: 300px) 100vw, 300px">				</a>
-                                       </div>
-                                       <div class="image-tools is-small top right show-on-hover">
-                                       </div>
-                                       <div class="image-tools is-small hide-for-small bottom left show-on-hover">
-                                       </div>
-                                       <div class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover">
-                                       </div>
-                                    </div>
-                                    <!-- box-image -->
-                                    <div class="box-text box-text-products">
-                                       <div class="title-wrapper">
-                                          <p class="category uppercase is-smaller no-text-overflow product-cat op-7">
-                                             Chăm sóc da mặt		
-                                          </p>
-                                          <p class="name product-title"><a href="..\mascara-lam-day-va-toi-mi-maybelline-lash-sensational-10ml-lash-sensational-waterproof-mascara\index.htm">Mascara Làm Dày Và Tơi Mi Maybelline Lash Sensational 10ml Lash Sensational Waterproof Mascara</a></p>
-                                       </div>
-                                       <div class="price-wrapper">
-                                          <div class="pwb-brands-in-loop"><span><a href="thuong-hieu\aleda\index.htm"><img width="120" height="60" src="wp-content\uploads\2019\02\1538456535ALEDA_img_120x60_63ea52_fit_center.jpg" class="attachment-thumbnail size-thumbnail" alt=""></a></span></div>
-                                          <span class="price"><del><span class="woocommerce-Price-amount amount">148.000<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></del> <ins><span class="woocommerce-Price-amount amount">120.000<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></ins></span>
-                                       </div>
-                                    </div>
-                                    <!-- box-text -->
-                                 </div>
-                                 <!-- box -->
-                              </div>
-                              <!-- .col-inner -->
-                           </div>
-                           <!-- col -->
-                           <div class="product-small col has-hover product type-product post-283 status-publish instock product_cat-clinic-spa product_cat-giam-beo product_cat-triet-long product_tag-melano-cc has-post-thumbnail sale shipping-taxable purchasable product-type-simple">
-                              <div class="col-inner">
-                                 <div class="badge-container absolute left top z-1">
-                                    <div class="callout badge badge-square">
-                                       <div class="badge-inner secondary on-sale"><span class="onsale">-20%</span></div>
-                                    </div>
-                                 </div>
-                                 <div class="product-small box ">
-                                    <div class="box-image">
-                                       <div class="image-zoom">
-                                          <a href="..\mat-na-melano-cc-duong-sang-da-ho-tro-lam-mo-tham-nam-20-mieng\index.htm">
-                                          <img width="212" height="238" src="wp-content\uploads\2019\02\images.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="">				</a>
-                                       </div>
-                                       <div class="image-tools is-small top right show-on-hover">
-                                       </div>
-                                       <div class="image-tools is-small hide-for-small bottom left show-on-hover">
-                                       </div>
-                                       <div class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover">
-                                       </div>
-                                    </div>
-                                    <!-- box-image -->
-                                    <div class="box-text box-text-products">
-                                       <div class="title-wrapper">
-                                          <p class="category uppercase is-smaller no-text-overflow product-cat op-7">
-                                             Clinic &amp; Spa		
-                                          </p>
-                                          <p class="name product-title"><a href="..\mat-na-melano-cc-duong-sang-da-ho-tro-lam-mo-tham-nam-20-mieng\index.htm">Mặt Nạ Melano CC Dưỡng Sáng Da, Hỗ Trợ Làm Mờ Thâm Nám 20 Miếng</a></p>
-                                       </div>
-                                       <div class="price-wrapper">
-                                          <div class="pwb-brands-in-loop"><span><a href="thuong-hieu\3w-clinic\index.htm"><img width="120" height="60" src="wp-content\uploads\2019\02\14963736243w-clinic-logo_img_120x60_63ea52_fit_center.png" class="attachment-thumbnail size-thumbnail" alt=""></a></span></div>
-                                          <span class="price"><del><span class="woocommerce-Price-amount amount">163.000<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></del> <ins><span class="woocommerce-Price-amount amount">130.000<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></ins></span>
-                                       </div>
-                                    </div>
-                                    <!-- box-text -->
-                                 </div>
-                                 <!-- box -->
-                              </div>
-                              <!-- .col-inner -->
-                           </div>
-                           <!-- col -->
-                           <div class="product-small col has-hover product type-product post-526 status-publish instock product_cat-trang-diem has-post-thumbnail sale shipping-taxable purchasable product-type-simple">
-                              <div class="col-inner">
-                                 <div class="badge-container absolute left top z-1">
-                                    <div class="callout badge badge-square">
-                                       <div class="badge-inner secondary on-sale"><span class="onsale">-16%</span></div>
-                                    </div>
-                                 </div>
-                                 <div class="product-small box ">
-                                    <div class="box-image">
-                                       <div class="image-zoom">
-                                          <a href="..\son-li-maybelline-chilli-nude-3-9g-color-sensational-inti-matte-nudes-lipstick\index.htm">
-                                          <img width="300" height="300" src="wp-content\uploads\2019\02\son-li-maybelline-chilli-nude-3-9g-650x580-300x300.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" srcset="wp-content\uploads\2019\02\son-li-maybelline-chilli-nude-3-9g-650x580-300x300.jpg 300w, wp-content\uploads\2019\02\son-li-maybelline-chilli-nude-3-9g-650x580-150x150.jpg 150w, wp-content\uploads\2019\02\son-li-maybelline-chilli-nude-3-9g-650x580-100x100.jpg 100w" sizes="(max-width: 300px) 100vw, 300px">				</a>
-                                       </div>
-                                       <div class="image-tools is-small top right show-on-hover">
-                                       </div>
-                                       <div class="image-tools is-small hide-for-small bottom left show-on-hover">
-                                       </div>
-                                       <div class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover">
-                                       </div>
-                                    </div>
-                                    <!-- box-image -->
-                                    <div class="box-text box-text-products">
-                                       <div class="title-wrapper">
-                                          <p class="category uppercase is-smaller no-text-overflow product-cat op-7">
-                                             Trang điểm		
-                                          </p>
-                                          <p class="name product-title"><a href="..\son-li-maybelline-chilli-nude-3-9g-color-sensational-inti-matte-nudes-lipstick\index.htm">Son Lì Maybelline Chilli Nude 3.9g Color Sensational Inti-Matte Nudes Lipstick</a></p>
-                                       </div>
-                                       <div class="price-wrapper">
-                                          <div class="pwb-brands-in-loop"><span><a href="thuong-hieu\3w-clinic\index.htm"><img width="120" height="60" src="wp-content\uploads\2019\02\14963736243w-clinic-logo_img_120x60_63ea52_fit_center.png" class="attachment-thumbnail size-thumbnail" alt=""></a></span></div>
-                                          <span class="price"><del><span class="woocommerce-Price-amount amount">119.000<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></del> <ins><span class="woocommerce-Price-amount amount">100.000<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></ins></span>
-                                       </div>
-                                    </div>
-                                    <!-- box-text -->
-                                 </div>
-                                 <!-- box -->
-                              </div>
-                              <!-- .col-inner -->
-                           </div>
-                           <!-- col -->
+                        @endforeach
+                           <!-- col --> 
                         </div>
                      </div>
                   </div>
@@ -851,15 +477,19 @@
                                  <div class="sticky-add-to-cart">
                                     <div class="sticky-add-to-cart__product">
                                        <img src="wp-content\uploads\2019\02\tải-xuống-2-100x100.jpg" class="sticky-add-to-cart-img">
-                                       <div class="product-title-small hide-for-small"><strong>Kem Nền Mịn Lì Fit Me Maybelline 130 Buff Beige 30ml Fit Me Matte + Poreless Foundation</strong></div>
+                                       <div class="product-title-small hide-for-small"><strong>Điện thoại {{$product->name}}</strong></div>
                                        <div class="price-wrapper">
                                           <p class="price product-page-price price-on-sale">
-                                             <del><span class="woocommerce-Price-amount amount">163.000<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></del> <ins><span class="woocommerce-Price-amount amount">140.000<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></ins>
+                                             @if($product->promotion_price != 0)
+                                 <del><span class="woocommerce-Price-amount amount">{{$product->unit_price}}<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></del> <ins><span class="woocommerce-Price-amount amount">{{$product->promotion_price}}<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></ins>
+								@else 
+								<del></del> <ins><span class="woocommerce-Price-amount amount">{{$product->unit_price}}<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></ins>
+                                 @endif
                                           </p>
                                        </div>
                                     </div>
                                     <div class="quantity buttons_added">
-                                       <input type="button" value="-" class="minus button is-form">		<label class="screen-reader-text" for="quantity_5e8ab1c68d112">Kem Nền Mịn Lì Fit Me Maybelline 130 Buff Beige 30ml Fit Me Matte + Poreless Foundation số lượng</label>
+                                       <input type="button" value="-" class="minus button is-form">		<label class="screen-reader-text" for="quantity_5e8ab1c68d112">{{$product->name}} số lượng</label>
                                        <input type="number" id="quantity_5e8ab1c68d112" class="input-text qty text" step="1" min="1" max="9999" name="quantity" value="1" title="SL" size="4" inputmode="numeric">
                                        <input type="button" value="+" class="plus button is-form">	
                                     </div>
