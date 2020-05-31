@@ -341,13 +341,25 @@
                         </ul>
                         <div class="tab-panels">
                            <div class="woocommerce-Tabs-panel woocommerce-Tabs-panel--description panel entry-content active" id="tab-description" role="tabpanel" aria-labelledby="tab-title-description">
-                              <p><strong style="opacity: .9">Màn hình:</strong>&emsp;&emsp;<span>{{$product->Screen}}</span></p>
-                              <p><strong style="opacity: .9">CPU:</strong>&emsp;&emsp;<span>{{$product->CPU}}</span></p>
-                              <p><strong style="opacity: .9">Bộ nhớ RAM:</strong>&emsp;&emsp;<span>{{$product->RAM}}</span></p>
-                              <p><strong style="opacity: .9">Camera sau:</strong>&emsp;&emsp;<span>{{$product->Camera}}</span></p>
-                              <p><strong style="opacity: .9">Camera trước:</strong>&emsp;&emsp;<span>{{$product->Selfie}}</span></p>
-                              <p><strong style="opacity: .9">Dung lượng pin:</strong>&emsp;&emsp;<span>{{$product->PIN}}</span></p>
+                           	<div class="row" style="margin: 0px;">
+                              <div class = "col-md" style="width: 15%;">
+                              	<p><strong style="opacity: .9">Màn hình :</strong></p>
+	                            <p><strong style="opacity: .9">CPU :</strong></p>
+	                            <p><strong style="opacity: .9">Bộ nhớ RAM :</strong></p>
+	                            <p><strong style="opacity: .9">Camera sau :</strong></p>
+	                            <p><strong style="opacity: .9">Camera trước :</strong></p>
+	                            <p><strong style="opacity: .9">Dung lượng pin :</strong></p>
+                              </div>
+                              <div class = "col-md">
+                              	<p><span>{{$product->Screen}}</span></p>
+                              <p><span>{{$product->CPU}}</span></p>
+                              <p><span>{{$product->RAM}}</span></p>
+                              <p><span>{{$product->Camera}}</span></p>
+                              <p><span>{{$product->Selfie}}</span></p>
+                              <p><span>{{$product->PIN}}</span></p>
+                              </div>
                            </div>
+                       </div>
                            <div class="woocommerce-Tabs-panel woocommerce-Tabs-panel--pwb_tab panel entry-content " id="tab-pwb_tab" role="tabpanel" aria-labelledby="tab-title-pwb_tab">
                               <h2>Thương hiệu</h2>
                               <div id="tab-pwb_tab-content">
