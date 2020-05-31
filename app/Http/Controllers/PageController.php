@@ -56,10 +56,11 @@ class PageController extends Controller
 
     public function getProductDetail(Request $req){
         $product = Product::WHERE('name',$req->name)->first();
-        $new_product = Product::WHERE('new',1)->paginate(4);
-        $other_product = Product::WHERE('id_type',$req->type)->WHERE('name','<>',$req->name)->paginate(6);
-        $top_product = Product::ORDERBY('unit_price','DESC')->WHERE('name','<>',$req->name)->paginate(4);//Lấy 4 sản phẩm có giá cao nhất giảm dần
-        return view('page.Product_detail',compact('product','new_product','other_product','top_product'));
+        $product->promotion_price = number_format($product->promotion_price, 0, '.', '.' );
+        $product->unit_price = number_format($product->unit_price, 0, '.', '.' );
+        $type = $req->type;
+        $brand = Brand::all();
+        return view('page.Product_detail',compact('product','type','brand'));
     }
 
     public function getContact(){
