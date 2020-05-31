@@ -7,7 +7,10 @@
       <div class="page-title-inner flex-row medium-flex-wrap container">
          <div class="flex-col flex-grow medium-text-center">
             <div class="is-small">
-               <nav class="woocommerce-breadcrumb breadcrumbs"><a href="{{route('HomePage')}}">Trang chủ</a> <span class="divider">&#47;</span> <a href="{{route('HomePage')}}">Điện thoại di động</a><span class="divider">&#47;</span><a href="{{route('ProductDetail',$params = ['type' => 'dtdd','name' => $product->name])}}">{{$product->name}}</a></nav>
+            	<?php 
+                     	$name = preg_replace('/\//', '-', $product->name);
+                     	?>
+               <nav class="woocommerce-breadcrumb breadcrumbs"><a href="{{route('HomePage')}}">Trang chủ</a> <span class="divider">&#47;</span> <a href="{{route('HomePage')}}">Điện thoại di động</a><span class="divider">&#47;</span><a href="{{route('ProductDetail',$params = ['type' => 'dtdd','name' => $name])}}">{{$product->name}}</a></nav>
             </div>
          </div>
          <!-- .flex-left -->
@@ -99,6 +102,8 @@
                      	<!-- new product here -->
                      	@foreach($new_product as $key)
                      	<?php 
+                     	$key->promotion_price = number_format($key->promotion_price, 0, '.', '.' );
+        				$key->unit_price = number_format($key->unit_price, 0, '.', '.' );
                      	$name = preg_replace('/\//', '-', $key->name);
                      	?>
                         <li>
@@ -106,9 +111,9 @@
                            <img width="100" height="100" src="{{$key->image}}" class="attachment-woocommerce_gallery_thumbnail size-woocommerce_gallery_thumbnail" alt="" srcset="{{$key->image}} 100w, {{$key->image}} 150w, {{$key->image}} 300w" sizes="(max-width: 100px) 100vw, 100px">		<span class="product-title">{{$key->name}}</span>
                            </a>
                            @if($product->promotion_price != 0)
-                                 <del><span class="woocommerce-Price-amount amount">{{$product->unit_price}}<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></del> <ins><span class="woocommerce-Price-amount amount">{{$product->promotion_price}}<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></ins>
+                                 <del><span class="woocommerce-Price-amount amount">{{$key->unit_price}}<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></del><br><ins><span class="woocommerce-Price-amount amount">{{$key->promotion_price}}<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></ins>
 								@else 
-								<del></del> <ins><span class="woocommerce-Price-amount amount">{{$product->unit_price}}<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></ins>
+								<del></del> <ins><span class="woocommerce-Price-amount amount">{{$key->unit_price}}<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></ins>
                                  @endif
                         </li>
                         @endforeach
@@ -400,6 +405,8 @@
                         	<?php 
                         	$name = preg_replace('/\//', '-', $key->name);
                         	$sale = (1-($key->promotion_price/$key->unit_price))*100;
+                        	$key->promotion_price = number_format($key->promotion_price, 0, '.', '.' );
+        				$key->unit_price = number_format($key->unit_price, 0, '.', '.' );
                         	?>
                            <div class="product-small col has-hover product type-product post-279 status-publish instock product_cat-cham-soc-toc product_cat-trang-diem has-post-thumbnail sale shipping-taxable purchasable product-type-simple">
                               <div class="col-inner">
@@ -434,10 +441,10 @@
                                        @endif
                                        @endforeach
                                        " class="attachment-thumbnail size-thumbnail" alt=""></a></span></div>
-                                          @if($product->promotion_price != 0)
-                                 <del><span class="woocommerce-Price-amount amount">{{$product->unit_price}}<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></del> <ins><span class="woocommerce-Price-amount amount" style="color: red;">{{$product->promotion_price}}<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></ins>
+                                          @if($key->promotion_price != 0)
+                                 <del><span class="woocommerce-Price-amount amount">{{$key->unit_price}}<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></del> <ins><span class="woocommerce-Price-amount amount" style="color: red;">{{$key->promotion_price}}<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></ins>
 								@else 
-								<del></del> <ins><span class="woocommerce-Price-amount amount" style="color: red;">{{$product->unit_price}}<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></ins>
+								<del></del> <ins><span class="woocommerce-Price-amount amount" style="color: red;">{{$key->unit_price}}<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></ins>
                                  @endif
                                        </div>
                                     </div>
