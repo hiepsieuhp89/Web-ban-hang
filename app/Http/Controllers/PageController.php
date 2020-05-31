@@ -55,7 +55,8 @@ class PageController extends Controller
     }
 
     public function getProductDetail(Request $req){
-        $product = Product::WHERE('name',$req->name)->first();
+        $name = preg_replace('/\-/', '/', $req->name);
+        $product = Product::WHERE('name',$req->name)->ORWHERE('name',$name)->first();
         $product->promotion_price = number_format($product->promotion_price, 0, '.', '.' );
         $product->unit_price = number_format($product->unit_price, 0, '.', '.' );
         $type = $req->type;

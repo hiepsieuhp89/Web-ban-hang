@@ -22,7 +22,7 @@ Route::get('product-type/{type}',[
 	'uses'=>'PageController@getProductType'
 ]);
 
-Route::get('/{type}/{name}',[
+Route::get('detail/{type}/{name}',[
 	'as'=>'ProductDetail',
 	'uses'=>'PageController@getProductDetail'
 ]);

@@ -7,7 +7,7 @@
       <div class="page-title-inner flex-row medium-flex-wrap container">
          <div class="flex-col flex-grow medium-text-center">
             <div class="is-small">
-               <nav class="woocommerce-breadcrumb breadcrumbs"><a href="index.htm">Trang chủ</a> <span class="divider">&#47;</span> <a href="danh-muc-san-pham\trang-diem\index.htm">Điện thoại di động</a><span class="divider">&#47;</span><a href="danh-muc-san-pham\trang-diem\index.htm">{{$product->name}}</a></nav>
+               <nav class="woocommerce-breadcrumb breadcrumbs"><a href="{{route('HomePage')}}">Trang chủ</a> <span class="divider">&#47;</span> <a href="{{route('HomePage')}}">Điện thoại di động</a><span class="divider">&#47;</span><a href="{{route('ProductDetail',$params = ['type' => 'dtdd','name' => $product->name])}}">{{$product->name}}</a></nav>
             </div>
          </div>
          <!-- .flex-left -->
@@ -55,7 +55,7 @@
                                     </div>
                                  </div>
                                  <div class="icon-box-text last-reset">
-                                    <p><span style="font-size: 90%;">Giao hàng miễn phí toàn HCM từ <strong>90K</strong>(huyện 200K).</span></p>
+                                    <p><span style="font-size: 90%;">Giao hàng miễn phí toàn Hà Nội từ <strong>90K</strong> (0k với nữ).</span></p>
                                  </div>
                               </div>
                               <!-- .icon-box -->
@@ -68,7 +68,7 @@
                                     </div>
                                  </div>
                                  <div class="icon-box-text last-reset">
-                                    <p><span style="font-size: 12.96px;">Được phép đổi trả hàng trong 14 ngày miễn phí</span></p>
+                                    <p><span style="font-size: 12.96px;">Được phép đổi trả hàng trong 14 ngày miễn phí (khách nữ)</span></p>
                                  </div>
                               </div>
                               <!-- .icon-box -->
@@ -81,7 +81,7 @@
                                     </div>
                                  </div>
                                  <div class="icon-box-text last-reset">
-                                    <p><span style="font-size: 12.96px;">Dịch vụ giao hàng dưới 120 phút tại Tp.HCM</span></p>
+                                    <p><span style="font-size: 12.96px;">Dịch vụ giao hàng dưới 120 phút cho khách nữ</span></p>
                                  </div>
                               </div>
                               <!-- .icon-box -->
@@ -265,7 +265,11 @@
                            </div>
                         </div>
                         <div class="product-info summary entry-summary col col-fit product-summary">
-                           <div class="pwb-single-product-brands pwb-clearfix"><a href="thuong-hieu\angela-gold\index.htm" title="Angela Gold"><img width="120" height="60" src="wp-content\uploads\2019\02\1476239990angelagold-logo_img_120x60_63ea52_fit_center.jpg" class="attachment-thumbnail size-thumbnail" alt=""></a></div>
+                           <div class="pwb-single-product-brands pwb-clearfix"><a href="thuong-hieu\angela-gold\index.htm" title="Angela Gold"><img width="120" height="60" src="@foreach($brand as $key)
+										@if($product->id_brand == $key->id)
+										{{$key->image}}
+										@endif
+									@endforeach" class="attachment-thumbnail size-thumbnail" alt=""></a></div>
                            <h1 class="product-title product_title entry-title">
                            	Điện thoại {{$product->name}}
                            </h1>
@@ -281,8 +285,8 @@
                            </div>
                            <div class="thong-bao">
                               <h4>Hỗ trợ khách hàng:</h4>
-                              <p>Quý khách vui lòng xem kỹ trước khi đặt hàng, sản phẩm không được đổi trả vì lý do không thích, không hợp.</p>
-                              <p>Hotline tư vấn: 0986.989.626</p>
+                              <p>Quý khách nam vui lòng xem kỹ trước khi đặt hàng, sản phẩm không được đổi trả vì lý do không thích, không hợp, máy lỗi vì chúng tôi chỉ bảo hành cho các khách hàng là nữ.</p>
+                              <p>Hotline tư vấn: 0348889995</p>
                            </div>
                            <form class="cart" action="https://shoplamdep.haiphongweb.com/san-pham/kem-nen-min-li-fit-me-maybelline-130-buff-beige-30ml-fit-me-matte-poreless-foundation/" method="post" enctype='multipart/form-data'>
                               <div class="sticky-add-to-cart-wrapper">
@@ -1081,7 +1085,7 @@
    <link rel="profile" href="http://gmpg.org/xfn/11">
    <link rel="pingback" href="https://shoplamdep.haiphongweb.com/xmlrpc.php">
    <script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
-   <title>Kem Nền Mịn Lì Fit Me Maybelline 130 Buff Beige 30ml Fit Me Matte + Poreless Foundation &#8211; Mẫu website shop mỹ phẩm làm đẹp chuẩn seo</title>
+   <title>{{$product->name}}</title>
    <link rel='dns-prefetch' href='//cdn.jsdelivr.net'>
    <link rel='dns-prefetch' href='//s.w.org'>
    <link rel="alternate" type="application/rss+xml" title="Dòng thông tin Mẫu website shop mỹ phẩm làm đẹp chuẩn seo &raquo;" href="feed\index.rss">
