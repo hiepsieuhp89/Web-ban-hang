@@ -15,12 +15,8 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 Route::get('/', function () {
-    return view('welcome');
+    return view('');
 });
-Route::get('test', function () {
-    echo "xin chao";
-});
-
 Route::get('product-type/{type}',[
 	'as'=>'ProductType',
 	'uses'=>'PageController@getProductType'
@@ -94,7 +90,6 @@ Route::get('seed',[
 	'as'=>'Seed',
 	'uses'=>'PageController@Seed'
 ]);
-
 Auth::routes();
 
 Route::get('home',[
@@ -104,3 +99,17 @@ Route::get('home',[
 Route::get('/auth/redirect/{provider}', 'SocialAuthController@redirect');
 Route::get('/home/callback/{provider}', 'SocialAuthController@callback');
 
+//admin
+Route::group(['prefix' =>'authenticate'], function() {
+    Route::get('/login',['as' => 'admin.login','uses' => 'AuthAdmin\LoginController@getLogin']);
+    Route::post('/login',['as' => 'admin.postlogin','uses' =>  'AuthAdmin\LoginController@postLogin']);
+    Route::get('/register','AuthAdmin\AuthController@getRegister');
+    Route::post('/register','AuthAdmin\AuthController@postRegister');
+    Route::get('/logout-admin',['as' => 'logout.admins','uses' => 'AuthAdmin\AuthController@logoutAdmin']);
+});
+
+
+Route::get('make',[
+	'as'=>'Make',
+	'uses'=>'PageController@make_promoprice'
+]);

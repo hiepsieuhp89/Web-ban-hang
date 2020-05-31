@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Slide;
 use App\Product;
+use App\Brand;
 use App\ProductType;
 use App\Cart;
 use App\Customer;
@@ -17,11 +18,32 @@ use Illuminate\Http\Request;
 class PageController extends Controller
 {
     public function getHomePage(){
-        $slide = Slide::all();
-    	//return view('page.trangchu',['slide'=>$slide]);
-        $new_product = Product::WHERE('new',1)->paginate(8);
-        $sale_product = Product::WHERE('promotion_price','<>',0)->paginate(8);
-        return view('page.HomePage',compact('slide','new_product','sale_product'));
+        $brand = Brand::all();
+        $samsung = Product::WHERE('brand','samsung')->WHERE('id_type','1')->get();
+        $iphone = Product::WHERE('brand','apple')->WHERE('id_type','1')->get();
+        $xiaomi = Product::WHERE('brand','xiaomi')->WHERE('id_type','1')->get();
+        $top_product = Product::ORDERBY('unit_price','DESC')->paginate(20);//Lấy 20 sản phẩm có giá cao nhất giảm dần
+        foreach ($samsung as $key => $value) {//5.69 into 5.690.000
+            $value['sale'] = (1-($value['promotion_price']/$value['unit_price']))*100;
+            $value['unit_price'] = number_format($value['unit_price'], 0, '.', '.' );
+            $value['promotion_price'] = number_format($value['promotion_price'], 0, '.', '.' );
+        }
+        foreach ($iphone as $key => $value) {//5.69 into 5.690.000
+            $value['sale'] = (1-($value['promotion_price']/$value['unit_price']))*100;
+            $value['unit_price'] = number_format($value['unit_price'], 0, '.', '.' );
+            $value['promotion_price'] = number_format($value['promotion_price'], 0, '.', '.' );
+        }
+        foreach ($xiaomi as $key => $value) {//5.69 into 5.690.000
+            $value['sale'] = (1-($value['promotion_price']/$value['unit_price']))*100;
+            $value['unit_price'] = number_format($value['unit_price'], 0, '.', '.' );
+            $value['promotion_price'] = number_format($value['promotion_price'], 0, '.', '.' );
+        }
+        foreach ($top_product as $key => $value) {//5.69 into 5.690.000
+            $value['sale'] = (1-($value['promotion_price']/$value['unit_price']))*100;
+            $value['unit_price'] = number_format($value['unit_price'], 0, '.', '.' );
+            $value['promotion_price'] = number_format($value['promotion_price'], 0, '.', '.' );
+        }
+        return view('page.HomePage',compact('samsung','iphone','xiaomi','top_product','brand'));
     }
 
     public function getProductType($type){
@@ -215,6 +237,22 @@ class PageController extends Controller
             echo "
                 'name2'=>'".strtolower($item->name)."',<br>";
             echo "
+                'brand'=>'".$item->brand."',<br>";
+            echo "
+                'id_brand'=>'".$item->id_brand."',<br>";
+            echo "
+                'Screen'=>'".$item->Screen."',<br>";
+            echo "
+                'CPU'=>'".$item->CPU."',<br>";
+            echo "
+                'RAM'=>'".$item->RAM."',<br>";
+            echo "
+                'Camera'=>'".$item->Camera."',<br>";
+            echo "
+                'Selfie'=>'".$item->Selfie."',<br>";
+            echo "
+                'PIN'=>'".$item->PIN."',<br>";
+            echo "
                 'description'=>'".$item->description."',<br>";
             echo "
                 'id_type'=>'".$item->id_type."',<br>";
@@ -224,6 +262,8 @@ class PageController extends Controller
                 'promotion_price'=>'".$item->promotion_price."',<br>";
             echo "
                 'image'=>'".$item->image."',<br>";
+            echo "
+                'count_bought'=>'".$item->count_bought."',<br>";
             echo "
                 'unit'=>'".$item->unit."',<br>";
             echo "
@@ -267,6 +307,23 @@ class PageController extends Controller
             //true
         } else {
             //false
+        }
+    }
+    public function make_promoprice(){
+        $product = Product::all();
+        foreach ($product as $key => $value) {
+            if($value['id_brand'] == 1){
+                $value['promotion_price'] = $value['unit_price'] * 0.8;
+                $product = Product::where('id',$value['id'])->update(['promotion_price'=>$value['promotion_price']]);
+            }
+            if($value['id_brand'] == 2){
+                $value['promotion_price'] = $value['unit_price'] * 0.5;
+                $product = Product::where('id',$value['id'])->update(['promotion_price'=>$value['promotion_price']]);
+            }
+            if($value['id_brand'] == 3){
+                $value['promotion_price'] = $value['unit_price'] * 0.4;
+                $product = Product::where('id',$value['id'])->update(['promotion_price'=>$value['promotion_price']]);
+            }
         }
     }
 }

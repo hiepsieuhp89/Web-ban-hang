@@ -1,147 +1,809 @@
 @extends('master')
 @section('content')
-<div class="rev-slider">
-<div class="fullwidthbanner-container">
-					<div class="fullwidthbanner">
-						<div class="bannercontainer" >
-					    <div class="banner" >
-								<ul>
-									@foreach($slide as $sl)
-									<li data-transition="boxfade" data-slotamount="20" class="active-revslide" style="width: 100%; height: 100%; overflow: hidden; z-index: 18; visibility: hidden; opacity: 0;">
-						            <div class="slotholder" style="width:100%;height:100%;" data-duration="undefined" data-zoomstart="undefined" data-zoomend="undefined" data-rotationstart="undefined" data-rotationend="undefined" data-ease="undefined" data-bgpositionend="undefined" data-bgposition="undefined" data-kenburns="undefined" data-easeme="undefined" data-bgfit="undefined" data-bgfitend="undefined" data-owidth="undefined" data-oheight="undefined">
-													<div class="tp-bgimg defaultimg" data-lazyload="undefined" data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat" data-lazydone="undefined" src="source/image/slide/{{$sl->image}}" data-src="source/image/slide/{{$sl->image}}" style="background-color: rgba(0, 0, 0, 0); background-repeat: no-repeat; background-image: url('source/image/slide/{{$sl->image}}'); background-size: cover; background-position: center center; width: 100%; height: 100%; opacity: 1; visibility: inherit;">
-													</div>
-												</div>
+<section class="section row-sp deal-hot" id="section_289245873">
+		<div class="bg section-bg fill bg-fill  bg-loaded">
 
-						        </li>
-								@endforeach
-								</ul>
+			
+			
+			
+
+		</div><!-- .section-bg -->
+
+		<div class="section-content relative">
+<div class="container section-title-container"><h3 class="section-title section-title-normal"><b></b><span class="section-title-main">Sản phẩm <strike>đắt nhất</strike> hot nhất</span><b></b><a href="#" target="">Xem thêm<i class="icon-angle-right"></i></a></h3></div><!-- .section-title -->
+
+    <div class="row large-columns-6 medium-columns-3 small-columns-2 row-collapse slider row-slider slider-nav-simple slider-nav-outside slider-nav-push" data-flickity-options='{"imagesLoaded": true, "groupCells": "100%", "dragThreshold" : 5, "cellAlign": "left","wrapAround": true,"prevNextButtons": true,"percentPosition": true,"pageDots": false, "rightToLeft": false, "autoPlay" : false}'>
+    	 <!--top product list start here -->
+    	 @foreach($top_product as $product)
+    	<div class="col">
+						<div class="col-inner">
+						
+							<div class="badge-container absolute left top z-1">
+									<div class="callout badge badge-square">
+										<div class="badge-inner secondary on-sale">
+											<span class="onsale">-{{$product->sale}}%</span>
+										</div>
+									</div>
 							</div>
-						</div>
+						<div class="product-small box has-hover box-normal box-text-bottom">
+							<div class="box-image">
+								<div class="image-overlay-add image-zoom image-cover" style="padding-top:100%;">
+									<a href="san-pham\mascara-lam-day-va-toi-mi-maybelline-lash-sensational-10ml-lash-sensational-waterproof-mascara\index.htm">
+										<img width="358" height="358" src="wp-content\themes\flatsome\assets\img\lazy.png" data-src="{{$product->image}}" class="lazy-load attachment-original size-original" alt="" srcset="" data-srcset="{{$product->image}} 358w, {{$product->image}} 150w, {{$product->image}} 300w, {{$product->image}} 100w" sizes="(max-width: 358px) 100vw, 358px">									</a>
+									<div class="overlay fill" style="background-color: rgba(255, 255, 255, 0.27)"></div>									 								</div>
+								<div class="image-tools top right show-on-hover">
+																	</div>
+																	<div class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover">
+																			</div>
+																							</div><!-- box-image -->
 
-						<div class="tp-bannertimer"></div>
-					</div>
-				</div>
-				<!--slider-->
+							<div class="box-text text-left" style="text-align: center;">
+								<div class="title-wrapper">
+									<p class="category uppercase is-smaller no-text-overflow product-cat op-7">{{$product->name}}</p>
+								</div>
+	<div class="price-wrapper">
+		<div class="pwb-brands-in-loop" style="margin-left: 0px;">
+			<span><a href="thuong-hieu\aleda\index.htm"><img width="120" height="60" src="wp-content\themes\flatsome\assets\img\lazy.png" data-src="
+			@foreach($brand as $key)
+				@if($product->id_brand == $key->id)
+				{{$key->image}}
+				@endif
+			@endforeach
+			" class="lazy-load attachment-thumbnail size-thumbnail" alt=""></a>
+			</span>
+		</div>
+		<p class="name product-title"><a href="san-pham\mascara-lam-day-va-toi-mi-maybelline-lash-sensational-10ml-lash-sensational-waterproof-mascara\index.htm">Siêu ngầu</a></p>
+	@if ($product->promotion_price != 0)
+	<span class="price"><del><span class="woocommerce-Price-amount amount">{{$product->unit_price}}<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></del> <ins><span class="woocommerce-Price-amount amount">{{$product->promotion_price}}<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></ins></span>
+	@else
+	<span class="price"><ins><span class="woocommerce-Price-amount amount">{{$product->unit_price}}<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></ins></span>
+	@endif
+</div>							</div><!-- box-text -->
+						</div><!-- box -->
+						</div><!-- .col-inner -->
+	</div><!-- col -->    
+
+	@endforeach
+	 <!--list end here -->    			            
 	</div>
-	<div class="container">
-		<div id="content" class="space-top-none">
-			<div class="main-content">
-				<div class="space60">&nbsp;</div>
-				<div class="row">
-					<div class="col-sm-12">
-						<div class="beta-products-list">
-							<h4>Sản phẩm mới</h4>
-							<div class="beta-products-details">
-								<p class="pull-left">{{count($new_product)}} sản phẩm được tìm thấy</p>
-								<div class="clearfix"></div>
-							</div>
+</div><!-- .section-content -->
 
-							<div class="row">
+		
+<style scope="scope">
 
-								@foreach($new_product as $newp)
-								<div class="col-sm-3">
-									<div class="single-item">
-										@if($newp->promotion_price!=0)
-										<div class="ribbon-wrapper"><div class="ribbon sale">Sale</div></div>
-										@endif
-										<div class="single-item-header">
-											<a href="{{route('ProductDetail',$params = ['type' => $newp->id_type,'name' => $newp->name])}}"><img src="source/image/product/{{$newp->image}}" height ="270px" alt=""></a>
-										</div>
-										<div class="single-item-body">
-											<p class="single-item-title">{{$newp->name}}</p>
-											<p class="single-item-price">
-												@if($newp->promotion_price==0) <!--Neu gia khuyen mai = 0-->
-												<span class="flash-sale">{{$newp->unit_price}}đ</span>
-												@else
-												<span class="flash-del">{{$newp->unit_price}}đ</span>
-												<span class="flash-sale">{{$newp->promotion_price}}đ</span>
-												@endif
-											</p>
-										</div>
-										<div class="single-item-caption">
-											<a class="add-to-cart pull-left" href="{{route('AddToCart',$params = ['id' => $newp->id,'qty' => '1'])}}"><i class="fa fa-shopping-cart"></i></a>
-											<a class="beta-btn primary" href="{{route('ProductDetail',$params = ['type' => $newp->id_type,'name' => $newp->name])}}">Chi tiết <i class="fa fa-chevron-right"></i></a>
-											<div class="clearfix"></div>
-										</div>
-									</div>
-								</div>
-								@endforeach
+#section_289245873 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: rgb(245, 251, 246);
+}
+</style>
+	</section>
+	
+	<section class="section row-sp thuong-hieu" id="section_1158551858">
+		<div class="bg section-bg fill bg-fill  bg-loaded"></div><!-- .section-bg -->
+		<div class="section-content relative">
+			
+<div class="container section-title-container"><h3 class="section-title section-title-normal"><b></b><span class="section-title-main">Thương hiệu nổi bật</span><b></b><a href="thuong-hieu\index.htm" target="">Xem thêm<i class="icon-angle-right"></i></a></h3></div><!-- .section-title -->
+<div class="row row-small row-thuong-hieu" id="row-457468224">
 
-							</div>
-							<div class="row" style="text-align:center;">{{$new_product->links()}}</div>
-						</div> <!-- .beta-products-list -->
-
-						<div class="space50">&nbsp;</div>
-
-						<div class="beta-products-list">
-							<h4>Sản phẩm khuyến mại</h4>
-							<div class="beta-products-details">
-								<p class="pull-left">{{count($sale_product)}} sản phẩm được tìm thấy</p>
-								<div class="clearfix"></div>
-							</div>
-							<div class="row">
-								@foreach($sale_product as $salep)
-								<div class="col-sm-3" style="margin-top:20px;">
-									<div class="single-item">
-										<div class="ribbon-wrapper"><div class="ribbon sale">Sale</div></div>
-										<div class="single-item-header">
-											<a href="{{route('ProductDetail',$params = ['type' => $salep->id_type,'name' => $salep->name])}}"><img src="source/image/product/{{$salep->image}}" height ="270px" alt=""></a>
-										</div>
-										<div class="single-item-body" style="padding-bottom: 5px;">
-											<p class="single-item-title">{{$salep->name}}</p>
-											<p class="single-item-price">
-												<span class="flash-del">{{$salep->unit_price}}đ</span>
-												<span class="flash-sale">{{$salep->promotion_price}}đ</span>
-											</p>
-										</div>
-										<div class="single-item-caption">
-											<a class="add-to-cart pull-left" href="{{route('AddToCart',$params = ['id' => $salep->id,'qty' => '1'])}}"><i class="fa fa-shopping-cart"></i></a>
-											<a class="beta-btn primary" href="{{route('ProductDetail',$params = ['type' => $salep->id_type,'name' => $salep->name])}}">Chi tiết <i class="fa fa-chevron-right"></i></a>
-											<div class="clearfix"></div>
-										</div>
-									</div>
-								</div>
-								@endforeach
-								
-							</div>
-							<div class="row" style="text-align:center;">{{$sale_product->links()}}</div>
-						</div> <!-- .beta-products-list -->
+  <!--brand list start here -->
+	@foreach($brand as $key)
+	<div class="col medium-3 small-6 large-3"><div class="col-inner">
+	<div class="img has-hover x md-x lg-x y md-y lg-y image_329986142">
+		<a class="" href="#" target="_blank" rel="noopener noreferrer">						<div class="img-inner image-color dark">
+			<img width="150" height="75" src="wp-content\themes\flatsome\assets\img\lazy.png" data-src="{{$key->image}}" class="lazy-load attachment-original size-original" alt="">						
 					</div>
-				</div> <!-- end section with sidebar and main content -->
-			</div> <!-- .main-content -->
-		</div> <!-- #content -->
-	</div> <!-- .container -->
+						</a>		
+		<style scope="scope">
+
+		.image_329986142 {
+		  width: 100%;
+		}
+		</style>
+			</div>
+			
+		</div>
+	</div>
+	@endforeach
+	<!--brand list end here -->
+<style scope="scope">
+
+</style>
+</div>
+		</div><!-- .section-content -->
+
+		
+<style scope="scope">
+
+#section_1158551858 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: rgb(245, 251, 246);
+}
+</style>
+	</section>
+	
+	<section class="section category-row" id="section_34774294">
+		<div class="bg section-bg fill bg-fill  bg-loaded">
+
+			
+			
+			
+
+		</div><!-- .section-bg -->
+
+		<div class="section-content relative">
+			
+<div class="row" id="row-2084844182">
+<div class="col small-12 large-12"><div class="col-inner">
+<div class="tieu-de-row">
+<div class="left">
+<h1><a href="#" target="blank" style="color: #f69;">Samsung</a></h1>
+</div>
+<div class="right">
+<ul>
+<li><a href="#" target="blank">+ Xem thêm</a></li>
+</ul>
+</div>
+<div class="clearboth"></div>
+</div>
+</div></div>
+</div>
+<div class="row row-collapse" id="row-197847448">
+<div class="col cot1 medium-2 small-12 large-2"><div class="col-inner">
+	<div class="img has-hover x md-x lg-x y md-y lg-y" id="image_1779448087">
+								<div class="img-inner dark">
+			<img width="220" height="350" src="wp-content\themes\flatsome\assets\img\lazy.png" data-src="https://cdn.24h.com.vn/upload/1-2019/images/2019-01-01/1546334082-244-2-1546271424-width660height885.jpg" class="lazy-load attachment-original size-original" alt="" srcset="" data-srcset="https://cdn.24h.com.vn/upload/1-2019/images/2019-01-01/1546334082-244-2-1546271424-width660height885.jpg 220w, https://cdn.24h.com.vn/upload/1-2019/images/2019-01-01/1546334082-244-2-1546271424-width660height885.jpg 189w" sizes="(max-width: 220px) 100vw, 220px">						
+					</div>
+								
+<style scope="scope">
+
+#image_1779448087 {
+  width: 100%;
+}
+</style>
+	</div>
+	
+<div class="cloud-tag">
+<ul>
+<li><a href="#" target="blank">sang trọng</a></li>
+<li><a href="#" target="blank">thời thượng</a></li>
+</ul>
+</div>
+</div></div>
+<div class="col cot2 row-sp medium-9 small-12 large-9"><div class="col-inner">
+<div class="row row-collapse" id="row-1088066314">
+	<!-- image brand start here-->
+<div class="col medium-4 small-12 large-4"><div class="col-inner">
+	<div class="img has-hover x md-x lg-x y md-y lg-y" id="image_1940431317">
+		<a class="" href="#" target="_blank" rel="noopener noreferrer">						<div class="img-inner image-zoom dark">
+			<img width="366" height="200" src="wp-content\themes\flatsome\assets\img\lazy.png" data-src="https://cafebiz.cafebizcdn.vn/thumb_w/600/2017/dsc-4389-1502180086536-1502180938181.jpg" class="lazy-load attachment-original size-original" alt="" srcset="" data-srcset="https://cafebiz.cafebizcdn.vn/thumb_w/600/2017/dsc-4389-1502180086536-1502180938181.jpg 366w, https://cafebiz.cafebizcdn.vn/thumb_w/600/2017/dsc-4389-1502180086536-1502180938181.jpg 300w" sizes="(max-width: 366px) 100vw, 366px">						
+					</div>
+						</a>		
+		<style scope="scope">
+
+		#image_1940431317 {
+		  width: 100%;
+		}
+		</style>
+			</div>
+			
+		</div>
+	</div>
+	<div class="col medium-4 small-12 large-4"><div class="col-inner">
+	<div class="img has-hover x md-x lg-x y md-y lg-y" id="image_1940431317">
+		<a class="" href="#" target="_blank" rel="noopener noreferrer">						<div class="img-inner image-zoom dark">
+			<img width="366" height="200" src="wp-content\themes\flatsome\assets\img\lazy.png" data-src="https://cafebiz.cafebizcdn.vn/thumb_w/600/2017/dsc-4389-1502180086536-1502180938181.jpg" class="lazy-load attachment-original size-original" alt="" srcset="" data-srcset="https://cafebiz.cafebizcdn.vn/thumb_w/600/2017/dsc-4389-1502180086536-1502180938181.jpg 366w, https://cafebiz.cafebizcdn.vn/thumb_w/600/2017/dsc-4389-1502180086536-1502180938181.jpg 300w" sizes="(max-width: 366px) 100vw, 366px">						
+					</div>
+						</a>		
+		<style scope="scope">
+
+		#image_1940431317 {
+		  width: 100%;
+		}
+		</style>
+			</div>
+			
+		</div>
+	</div>
+<!-- image brand end here-->
+
+<style scope="scope">
+
+</style>
+</div>
+<div class="container section-title-container"><h3 class="section-title section-title-normal"><b></b><span class="section-title-main">Nổi bật và bán chạy</span><b></b><a href="#" target="">+ Xem thêm<i class="icon-angle-right"></i></a></h3></div><!-- .section-title -->
+
+  
+    <div class="row large-columns-5 medium-columns-3 small-columns-2 row-collapse slider row-slider slider-nav-simple slider-nav-push" data-flickity-options='{"imagesLoaded": true, "groupCells": "100%", "dragThreshold" : 5, "cellAlign": "left","wrapAround": true,"prevNextButtons": true,"percentPosition": true,"pageDots": false, "rightToLeft": false, "autoPlay" : false}'>
+		<!--list start-->
+		@foreach($samsung as $phone)
+			<div class="col">
+						<div class="col-inner">
+						
+<div class="badge-container absolute left top z-1">
+		<div class="callout badge badge-square"><div class="badge-inner secondary on-sale"><span class="onsale">-{{$phone->sale}}%</span></div></div>
+</div>
+						<div class="product-small box has-hover box-normal box-text-bottom">
+							<div class="box-image">
+								<div class="image-overlay-add image-zoom image-cover" style="padding-top:100%;">
+									<a href="san-pham\mascara-lam-day-va-toi-mi-maybelline-lash-sensational-10ml-lash-sensational-waterproof-mascara\index.htm">
+										<img width="358" height="358" src="wp-content\themes\flatsome\assets\img\lazy.png" data-src="{{$phone->image}}" class="lazy-load attachment-original size-original" alt="">									</a>
+									<div class="overlay fill" style="background-color: rgba(255, 255, 255, 0.26)"></div>									 								</div>
+								<div class="image-tools top right show-on-hover">
+																	</div>
+																	<div class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover">
+																			</div>
+																							</div><!-- box-image -->
+
+							<div class="box-text text-left" style="text-align: center;">
+								<div class="title-wrapper">
+							<p class="category uppercase is-smaller no-text-overflow product-cat op-7">{{$phone->name}}</p>
+	<p class="name product-title"><a href="san-pham\mascara-lam-day-va-toi-mi-maybelline-lash-sensational-10ml-lash-sensational-waterproof-mascara\index.htm">Siêu điện thoại cực ngầu</a></p></div><div class="price-wrapper"><div class="pwb-brands-in-loop"><span><a href="thuong-hieu\aleda\index.htm"><img width="120" height="60" src="wp-content\themes\flatsome\assets\img\lazy.png" data-src="@foreach($brand as $key)
+		@if ($phone->id_brand == $key->id)
+			{{$key->image}}
+		@endif
+	@endforeach" class="lazy-load attachment-thumbnail size-thumbnail" alt=""></a></span></div>
+	@if ($phone->promotion_price != 0)
+	<span class="price"><del><span class="woocommerce-Price-amount amount">{{$phone->unit_price}}<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></del> <ins><span class="woocommerce-Price-amount amount">{{$phone->promotion_price}}<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></ins></span>
+	@else
+	<span class="price"><ins><span class="woocommerce-Price-amount amount">{{$phone->unit_price}}<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></ins></span>
+	@endif
+</div>							</div><!-- box-text -->
+						</div><!-- box -->
+						</div><!-- .col-inner -->
+					</div><!-- col -->
+					@endforeach
+  		<!--list end-->			            
+	   </div>
+	</div>
+</div>
+
+<style scope="scope">
+
+</style>
+</div>
+		</div><!-- .section-content -->
+
+		
+<style scope="scope">
+
+#section_34774294 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: rgb(245, 251, 246);
+}
+</style>
+	</section>
+	
+		<section class="section category-row" id="section_34774294">
+		<div class="bg section-bg fill bg-fill  bg-loaded">
+
+			
+			
+			
+
+		</div><!-- .section-bg -->
+
+		<div class="section-content relative">
+			
+<div class="row" id="row-2084844182">
+<div class="col small-12 large-12"><div class="col-inner">
+<div class="tieu-de-row">
+<div class="left">
+<h2><a href="#" target="blank">Iphone</a></h2>
+</div>
+<div class="right">
+<ul>
+<li><a href="#" target="blank">+ Xem thêm</a></li>
+</ul>
+</div>
+<div class="clearboth"></div>
+</div>
+</div></div>
+</div>
+<div class="row row-collapse" id="row-197847448">
+<div class="col cot1 medium-2 small-12 large-2"><div class="col-inner">
+	<div class="img has-hover x md-x lg-x y md-y lg-y" id="image_1779448087">
+								<div class="img-inner dark">
+			<img width="220" height="350" src="wp-content\themes\flatsome\assets\img\lazy.png" data-src="https://shoplamdep.haiphongweb.com/wp-content/uploads/2019/02/220-x-350.jpg" class="lazy-load attachment-original size-original" alt="" srcset="" data-srcset="https://shoplamdep.haiphongweb.com/wp-content/uploads/2019/02/220-x-350.jpg 220w, https://shoplamdep.haiphongweb.com/wp-content/uploads/2019/02/220-x-350-189x300.jpg 189w" sizes="(max-width: 220px) 100vw, 220px">						
+					</div>
+								
+<style scope="scope">
+
+#image_1779448087 {
+  width: 100%;
+}
+</style>
+	</div>
+	
+<div class="cloud-tag">
+<ul>
+<li><a href="#" target="blank">sang trọng</a></li>
+<li><a href="#" target="blank">thời thượng</a></li>
+</ul>
+</div>
+</div></div>
+<div class="col cot2 row-sp medium-9 small-12 large-9"><div class="col-inner">
+<div class="row row-collapse" id="row-1088066314">
+	<!-- image brand start here-->
+<div class="col medium-4 small-12 large-4"><div class="col-inner">
+	<div class="img has-hover x md-x lg-x y md-y lg-y" id="image_1940431317">
+		<a class="" href="#" target="_blank" rel="noopener noreferrer">						<div class="img-inner image-zoom dark">
+			<img width="366" height="200" src="wp-content\themes\flatsome\assets\img\lazy.png" data-src="https://shoplamdep.haiphongweb.com/wp-content/uploads/2019/02/omg-desktop_4.jpg" class="lazy-load attachment-original size-original" alt="" srcset="" data-srcset="https://shoplamdep.haiphongweb.com/wp-content/uploads/2019/02/omg-desktop_4.jpg 366w, https://shoplamdep.haiphongweb.com/wp-content/uploads/2019/02/omg-desktop_4-300x164.jpg 300w" sizes="(max-width: 366px) 100vw, 366px">						
+					</div>
+						</a>		
+		<style scope="scope">
+
+		#image_1940431317 {
+		  width: 100%;
+		}
+		</style>
+			</div>
+			
+		</div>
+	</div>
+<!-- image brand end here-->
+
+<style scope="scope">
+
+</style>
+</div>
+<div class="container section-title-container"><h3 class="section-title section-title-normal"><b></b><span class="section-title-main">Nổi bật và bán chạy</span><b></b><a href="#" target="">+ Xem thêm<i class="icon-angle-right"></i></a></h3></div><!-- .section-title -->
+
+  
+    <div class="row large-columns-5 medium-columns-3 small-columns-2 row-collapse slider row-slider slider-nav-simple slider-nav-push" data-flickity-options='{"imagesLoaded": true, "groupCells": "100%", "dragThreshold" : 5, "cellAlign": "left","wrapAround": true,"prevNextButtons": true,"percentPosition": true,"pageDots": false, "rightToLeft": false, "autoPlay" : false}'>
+		<!--list start-->
+		@foreach($iphone as $phone)
+			<div class="col">
+						<div class="col-inner">
+						
+<div class="badge-container absolute left top z-1">
+		<div class="callout badge badge-square"><div class="badge-inner secondary on-sale"><span class="onsale">-{{$phone->sale}}%</span></div></div>
+</div>
+						<div class="product-small box has-hover box-normal box-text-bottom">
+							<div class="box-image">
+								<div class="image-overlay-add image-zoom image-cover" style="padding-top:100%;">
+									<a href="san-pham\mascara-lam-day-va-toi-mi-maybelline-lash-sensational-10ml-lash-sensational-waterproof-mascara\index.htm">
+										<img width="358" height="358" src="wp-content\themes\flatsome\assets\img\lazy.png" data-src="{{$phone->image}}" class="lazy-load attachment-original size-original" alt="">									</a>
+									<div class="overlay fill" style="background-color: rgba(255, 255, 255, 0.26)"></div>									 								</div>
+								<div class="image-tools top right show-on-hover">
+																	</div>
+																	<div class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover">
+																			</div>
+																							</div><!-- box-image -->
+
+							<div class="box-text text-left" style="text-align: center;">
+								<div class="title-wrapper">
+							<p class="category uppercase is-smaller no-text-overflow product-cat op-7">{{$phone->name}}</p>
+	<p class="name product-title"><a href="san-pham\mascara-lam-day-va-toi-mi-maybelline-lash-sensational-10ml-lash-sensational-waterproof-mascara\index.htm">Siêu điện thoại cực ngầu</a></p></div><div class="price-wrapper"><div class="pwb-brands-in-loop"><span><a href="thuong-hieu\aleda\index.htm"><img width="120" height="60" src="wp-content\themes\flatsome\assets\img\lazy.png" data-src="@foreach($brand as $key)
+		@if ($phone->id_brand == $key->id)
+			{{$key->image}}
+		@endif
+	@endforeach" class="lazy-load attachment-thumbnail size-thumbnail" alt=""></a></span></div>
+	@if ($phone->promotion_price != 0)
+	<span class="price"><del><span class="woocommerce-Price-amount amount">{{$phone->unit_price}}<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></del> <ins><span class="woocommerce-Price-amount amount">{{$phone->promotion_price}}<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></ins></span>
+	@else
+	<span class="price"><ins><span class="woocommerce-Price-amount amount">{{$phone->unit_price}}<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></ins></span>
+	@endif
+</div>							</div><!-- box-text -->
+						</div><!-- box -->
+						</div><!-- .col-inner -->
+					</div><!-- col -->
+					@endforeach
+  		<!--list end-->		            
+	   </div>
+	</div>
+</div>
+
+<style scope="scope">
+
+</style>
+</div>
+		</div><!-- .section-content -->
+
+		
+<style scope="scope">
+
+#section_34774294 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: rgb(245, 251, 246);
+}
+</style>
+	</section>
+		<section class="section category-row" id="section_34774294">
+		<div class="bg section-bg fill bg-fill  bg-loaded">
+
+			
+			
+			
+
+		</div><!-- .section-bg -->
+
+		<div class="section-content relative">
+			
+<div class="row" id="row-2084844182">
+<div class="col small-12 large-12"><div class="col-inner">
+<div class="tieu-de-row">
+<div class="left">
+<h2><a href="#" target="blank">Xiaomi</a></h2>
+</div>
+<div class="right">
+<ul>
+<li><a href="#" target="blank">+ Xem thêm</a></li>
+</ul>
+</div>
+<div class="clearboth"></div>
+</div>
+</div></div>
+</div>
+<div class="row row-collapse" id="row-197847448">
+<div class="col cot1 medium-2 small-12 large-2"><div class="col-inner">
+	<div class="img has-hover x md-x lg-x y md-y lg-y" id="image_1779448087">
+								<div class="img-inner dark">
+			<img width="220" height="350" src="wp-content\themes\flatsome\assets\img\lazy.png" data-src="https://shoplamdep.haiphongweb.com/wp-content/uploads/2019/02/220-x-350.jpg" class="lazy-load attachment-original size-original" alt="" srcset="" data-srcset="https://shoplamdep.haiphongweb.com/wp-content/uploads/2019/02/220-x-350.jpg 220w, https://shoplamdep.haiphongweb.com/wp-content/uploads/2019/02/220-x-350-189x300.jpg 189w" sizes="(max-width: 220px) 100vw, 220px">						
+					</div>
+								
+<style scope="scope">
+
+#image_1779448087 {
+  width: 100%;
+}
+</style>
+	</div>
+	
+<div class="cloud-tag">
+<ul>
+<li><a href="#" target="blank">sang trọng</a></li>
+<li><a href="#" target="blank">thời thượng</a></li>
+</ul>
+</div>
+</div></div>
+<div class="col cot2 row-sp medium-9 small-12 large-9"><div class="col-inner">
+<div class="row row-collapse" id="row-1088066314">
+	<!-- image brand start here-->
+<div class="col medium-4 small-12 large-4"><div class="col-inner">
+	<div class="img has-hover x md-x lg-x y md-y lg-y" id="image_1940431317">
+		<a class="" href="#" target="_blank" rel="noopener noreferrer">						<div class="img-inner image-zoom dark">
+			<img width="366" height="200" src="wp-content\themes\flatsome\assets\img\lazy.png" data-src="https://shoplamdep.haiphongweb.com/wp-content/uploads/2019/02/omg-desktop_4.jpg" class="lazy-load attachment-original size-original" alt="" srcset="" data-srcset="https://shoplamdep.haiphongweb.com/wp-content/uploads/2019/02/omg-desktop_4.jpg 366w, https://shoplamdep.haiphongweb.com/wp-content/uploads/2019/02/omg-desktop_4-300x164.jpg 300w" sizes="(max-width: 366px) 100vw, 366px">						
+					</div>
+						</a>		
+		<style scope="scope">
+
+		#image_1940431317 {
+		  width: 100%;
+		}
+		</style>
+			</div>
+			
+		</div>
+	</div>
+<!-- image brand end here-->
+
+<style scope="scope">
+
+</style>
+</div>
+<div class="container section-title-container"><h3 class="section-title section-title-normal"><b></b><span class="section-title-main">Nổi bật và bán chạy</span><b></b><a href="#" target="">+ Xem thêm<i class="icon-angle-right"></i></a></h3></div><!-- .section-title -->
+
+  
+    <div class="row large-columns-5 medium-columns-3 small-columns-2 row-collapse slider row-slider slider-nav-simple slider-nav-push" data-flickity-options='{"imagesLoaded": true, "groupCells": "100%", "dragThreshold" : 5, "cellAlign": "left","wrapAround": true,"prevNextButtons": true,"percentPosition": true,"pageDots": false, "rightToLeft": false, "autoPlay" : false}'>
+		<!--list start-->
+		@foreach($xiaomi as $phone)
+			<div class="col">
+						<div class="col-inner">
+						
+<div class="badge-container absolute left top z-1">
+		<div class="callout badge badge-square"><div class="badge-inner secondary on-sale"><span class="onsale">-{{$phone->sale}}%</span></div></div>
+</div>
+						<div class="product-small box has-hover box-normal box-text-bottom">
+							<div class="box-image">
+								<div class="image-overlay-add image-zoom image-cover" style="padding-top:100%;">
+									<a href="san-pham\mascara-lam-day-va-toi-mi-maybelline-lash-sensational-10ml-lash-sensational-waterproof-mascara\index.htm">
+										<img width="358" height="358" src="wp-content\themes\flatsome\assets\img\lazy.png" data-src="{{$phone->image}}" class="lazy-load attachment-original size-original" alt="">									</a>
+									<div class="overlay fill" style="background-color: rgba(255, 255, 255, 0.26)"></div>									 								</div>
+								<div class="image-tools top right show-on-hover">
+																	</div>
+																	<div class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover">
+																			</div>
+																							</div><!-- box-image -->
+
+							<div class="box-text text-left" style="text-align: center;">
+								<div class="title-wrapper">
+							<p class="category uppercase is-smaller no-text-overflow product-cat op-7">{{$phone->name}}</p>
+	<p class="name product-title"><a href="san-pham\mascara-lam-day-va-toi-mi-maybelline-lash-sensational-10ml-lash-sensational-waterproof-mascara\index.htm">Siêu điện thoại cực ngầu</a></p></div><div class="price-wrapper"><div class="pwb-brands-in-loop"><span><a href="thuong-hieu\aleda\index.htm"><img width="120" height="60" src="wp-content\themes\flatsome\assets\img\lazy.png" data-src="@foreach($brand as $key)
+		@if ($phone->id_brand == $key->id)
+			{{$key->image}}
+		@endif
+	@endforeach" class="lazy-load attachment-thumbnail size-thumbnail" alt=""></a></span></div>
+	@if ($phone->promotion_price != 0)
+	<span class="price"><del><span class="woocommerce-Price-amount amount">{{$phone->unit_price}}<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></del> <ins><span class="woocommerce-Price-amount amount">{{$phone->promotion_price}}<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></ins></span>
+	@else
+	<span class="price"><ins><span class="woocommerce-Price-amount amount">{{$phone->unit_price}}<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></ins></span>
+	@endif
+</div>							</div><!-- box-text -->
+						</div><!-- box -->
+						</div><!-- .col-inner -->
+					</div><!-- col -->
+					@endforeach
+  		<!--list end-->		            
+	   </div>
+	</div>
+</div>
+
+<style scope="scope">
+
+</style>
+</div>
+		</div><!-- .section-content -->
+
+		
+<style scope="scope">
+
+#section_34774294 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: rgb(245, 251, 246);
+}
+</style>
+	</section>
+		<section class="section category-row" id="section_34774294">
+		<div class="bg section-bg fill bg-fill  bg-loaded">
+
+			
+			
+			
+
+		</div><!-- .section-bg -->
+
+		<div class="section-content relative">
+			
+<div class="row" id="row-2084844182">
+<div class="col small-12 large-12"><div class="col-inner">
+<div class="tieu-de-row">
+<div class="left">
+<h2><a href="#" target="blank">Vinsmart</a></h2>
+</div>
+<div class="right">
+<ul>
+<li><a href="#" target="blank">+ Xem thêm</a></li>
+</ul>
+</div>
+<div class="clearboth"></div>
+</div>
+</div></div>
+</div>
+<div class="row row-collapse" id="row-197847448">
+<div class="col cot1 medium-2 small-12 large-2"><div class="col-inner">
+	<div class="img has-hover x md-x lg-x y md-y lg-y" id="image_1779448087">
+								<div class="img-inner dark">
+			<img width="220" height="350" src="wp-content\themes\flatsome\assets\img\lazy.png" data-src="https://shoplamdep.haiphongweb.com/wp-content/uploads/2019/02/220-x-350.jpg" class="lazy-load attachment-original size-original" alt="" srcset="" data-srcset="https://shoplamdep.haiphongweb.com/wp-content/uploads/2019/02/220-x-350.jpg 220w, https://shoplamdep.haiphongweb.com/wp-content/uploads/2019/02/220-x-350-189x300.jpg 189w" sizes="(max-width: 220px) 100vw, 220px">						
+					</div>
+								
+<style scope="scope">
+
+#image_1779448087 {
+  width: 100%;
+}
+</style>
+	</div>
+	
+<div class="cloud-tag">
+<ul>
+<li><a href="#" target="blank">sang trọng</a></li>
+<li><a href="#" target="blank">thời thượng</a></li>
+</ul>
+</div>
+</div></div>
+<div class="col cot2 row-sp medium-9 small-12 large-9"><div class="col-inner">
+<div class="row row-collapse" id="row-1088066314">
+	<!-- image brand start here-->
+<div class="col medium-4 small-12 large-4"><div class="col-inner">
+	<div class="img has-hover x md-x lg-x y md-y lg-y" id="image_1940431317">
+		<a class="" href="#" target="_blank" rel="noopener noreferrer">						<div class="img-inner image-zoom dark">
+			<img width="366" height="200" src="wp-content\themes\flatsome\assets\img\lazy.png" data-src="https://shoplamdep.haiphongweb.com/wp-content/uploads/2019/02/omg-desktop_4.jpg" class="lazy-load attachment-original size-original" alt="" srcset="" data-srcset="https://shoplamdep.haiphongweb.com/wp-content/uploads/2019/02/omg-desktop_4.jpg 366w, https://shoplamdep.haiphongweb.com/wp-content/uploads/2019/02/omg-desktop_4-300x164.jpg 300w" sizes="(max-width: 366px) 100vw, 366px">						
+					</div>
+						</a>		
+		<style scope="scope">
+
+		#image_1940431317 {
+		  width: 100%;
+		}
+		</style>
+			</div>
+			
+		</div>
+	</div>
+<!-- image brand end here-->
+
+<style scope="scope">
+
+</style>
+</div>
+<div class="container section-title-container"><h3 class="section-title section-title-normal"><b></b><span class="section-title-main">Nổi bật và bán chạy</span><b></b><a href="#" target="">+ Xem thêm<i class="icon-angle-right"></i></a></h3></div><!-- .section-title -->
+
+  
+    <div class="row large-columns-5 medium-columns-3 small-columns-2 row-collapse slider row-slider slider-nav-simple slider-nav-push" data-flickity-options='{"imagesLoaded": true, "groupCells": "100%", "dragThreshold" : 5, "cellAlign": "left","wrapAround": true,"prevNextButtons": true,"percentPosition": true,"pageDots": false, "rightToLeft": false, "autoPlay" : false}'>
+		<!--list start-->
+			<div class="col">
+						<div class="col-inner">
+						
+<div class="badge-container absolute left top z-1">
+		<div class="callout badge badge-square"><div class="badge-inner secondary on-sale"><span class="onsale">-19%</span></div></div>
+</div>
+						<div class="product-small box has-hover box-normal box-text-bottom">
+							<div class="box-image">
+								<div class="image-overlay-add image-zoom image-cover" style="padding-top:100%;">
+									<a href="san-pham\mascara-lam-day-va-toi-mi-maybelline-lash-sensational-10ml-lash-sensational-waterproof-mascara\index.htm">
+										<img width="358" height="358" src="wp-content\themes\flatsome\assets\img\lazy.png" data-src="https://shoplamdep.haiphongweb.com/wp-content/uploads/2019/02/mascara-maybelline-lam-day-va-toi-mi-10ml_1__img_358x358_843626_fit_center.jpg" class="lazy-load attachment-original size-original" alt="" srcset="" data-srcset="https://shoplamdep.haiphongweb.com/wp-content/uploads/2019/02/mascara-maybelline-lam-day-va-toi-mi-10ml_1__img_358x358_843626_fit_center.jpg 358w, https://shoplamdep.haiphongweb.com/wp-content/uploads/2019/02/mascara-maybelline-lam-day-va-toi-mi-10ml_1__img_358x358_843626_fit_center-150x150.jpg 150w, https://shoplamdep.haiphongweb.com/wp-content/uploads/2019/02/mascara-maybelline-lam-day-va-toi-mi-10ml_1__img_358x358_843626_fit_center-300x300.jpg 300w, https://shoplamdep.haiphongweb.com/wp-content/uploads/2019/02/mascara-maybelline-lam-day-va-toi-mi-10ml_1__img_358x358_843626_fit_center-100x100.jpg 100w" sizes="(max-width: 358px) 100vw, 358px">									</a>
+									<div class="overlay fill" style="background-color: rgba(255, 255, 255, 0.26)"></div>									 								</div>
+								<div class="image-tools top right show-on-hover">
+																	</div>
+																	<div class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover">
+																			</div>
+																							</div><!-- box-image -->
+
+							<div class="box-text text-left">
+								<div class="title-wrapper">		<p class="category uppercase is-smaller no-text-overflow product-cat op-7">
+			Chăm sóc da mặt		</p>
+	<p class="name product-title"><a href="san-pham\mascara-lam-day-va-toi-mi-maybelline-lash-sensational-10ml-lash-sensational-waterproof-mascara\index.htm">Mascara Làm Dày Và Tơi Mi Maybelline Lash Sensation...</a></p></div><div class="price-wrapper"><div class="pwb-brands-in-loop"><span><a href="thuong-hieu\aleda\index.htm"><img width="120" height="60" src="wp-content\themes\flatsome\assets\img\lazy.png" data-src="https://shoplamdep.haiphongweb.com/wp-content/uploads/2019/02/1538456535ALEDA_img_120x60_63ea52_fit_center.jpg" class="lazy-load attachment-thumbnail size-thumbnail" alt=""></a></span></div>
+	<span class="price"><del><span class="woocommerce-Price-amount amount">148.000<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></del> <ins><span class="woocommerce-Price-amount amount">120.000<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></ins></span>
+</div>							</div><!-- box-text -->
+						</div><!-- box -->
+						</div><!-- .col-inner -->
+					</div><!-- col -->
+  		<!--list end-->			            
+	   </div>
+	</div>
+</div>
+
+<style scope="scope">
+
+</style>
+</div>
+		</div><!-- .section-content -->
+
+		
+<style scope="scope">
+
+#section_34774294 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: rgb(245, 251, 246);
+}
+</style>
+	</section>
+	
+		
+				
+</div>
+
+
+
+</main><!-- #main -->
+
 @endsection
 @section('script')
-<!-- include js files -->
-	<script src="source/assets/dest/js/jquery.js"></script>
-	<script src="source/assets/dest/vendors/jqueryui/jquery-ui-1.10.4.custom.min.js"></script>
-	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
-	<script src="source/assets/dest/vendors/bxslider/jquery.bxslider.min.js"></script>
-	<script src="source/assets/dest/vendors/colorbox/jquery.colorbox-min.js"></script>
-	<script src="source/assets/dest/vendors/animo/Animo.js"></script>
-	<script src="source/assets/dest/vendors/dug/dug.js"></script>
-	<script src="source/assets/dest/js/scripts.min.js"></script>
-	<script src="source/assets/dest/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
-	<script src="source/assets/dest/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
-	<script src="source/assets/dest/js/waypoints.min.js"></script>
-	<script src="source/assets/dest/js/wow.min.js"></script>
-	<!--customjs-->
-	<script src="source/assets/dest/js/custom2.js"></script>
-	@if(Session::has('thong bao'))
-	<script type="text/javascript">
-		var x = document.getElementById("body1");
-		var y = document.getElementById("popup_noti");
-		y.style.opacity = "1";
-		y.style.zIndex = "1000";
-		x.style.filter = "blur(5px)";
-		y.style.filter = "blur(0px)";
-		function stop_noti(){
-			x.style.filter = "blur(0px)";
-			y.style.opacity = "0";
-		}
-		setTimeout(stop_noti, 3000);
+ <script type="text/javascript">
+		var c = document.body.className;
+		c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
+		document.body.className = c;
 	</script>
-	@endif
+	<script type='text/javascript' src='wp-content\plugins\devvn-quick-buy\js\jquery.validate.min.js?ver=2.0.0'></script>
+<script type='text/javascript' src='wp-content\plugins\devvn-quick-buy\js\jquery.bpopup.min.js?ver=2.0.0'></script>
+<script type='text/javascript' src='wp-includes\js\underscore.min.js?ver=1.8.3'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var _wpUtilSettings = {"ajax":{"url":"\/wp-admin\/admin-ajax.php"}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='wp-includes\js\wp-util.min.js?ver=5.2.1'></script>
+<script type='text/javascript' src='wp-content\plugins\woocommerce\assets\js\jquery-blockui\jquery.blockUI.min.js?ver=2.70'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wc_add_to_cart_variation_params = {"wc_ajax_url":"\/?wc-ajax=%%endpoint%%","i18n_no_matching_variations_text":"R\u1ea5t ti\u1ebfc, kh\u00f4ng c\u00f3 s\u1ea3n ph\u1ea9m n\u00e0o ph\u00f9 h\u1ee3p v\u1edbi l\u1ef1a ch\u1ecdn c\u1ee7a b\u1ea1n. H\u00e3y ch\u1ecdn m\u1ed9t ph\u01b0\u01a1ng th\u1ee9c k\u1ebft h\u1ee3p kh\u00e1c.","i18n_make_a_selection_text":"Ch\u1ecdn c\u00e1c t\u00f9y ch\u1ecdn cho s\u1ea3n ph\u1ea9m tr\u01b0\u1edbc khi cho s\u1ea3n ph\u1ea9m v\u00e0o gi\u1ecf h\u00e0ng c\u1ee7a b\u1ea1n.","i18n_unavailable_text":"R\u1ea5t ti\u1ebfc, s\u1ea3n ph\u1ea9m n\u00e0y hi\u1ec7n kh\u00f4ng t\u1ed3n t\u1ea1i. H\u00e3y ch\u1ecdn m\u1ed9t ph\u01b0\u01a1ng th\u1ee9c k\u1ebft h\u1ee3p kh\u00e1c."};
+/* ]]> */
+</script>
+<script type='text/javascript' src='wp-content\plugins\woocommerce\assets\js\frontend\add-to-cart-variation.min.js?ver=3.6.4'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var devvn_quickbuy_array = {"ajaxurl":"https:\/\/shoplamdep.haiphongweb.com\/wp-admin\/admin-ajax.php","siteurl":"https:\/\/shoplamdep.haiphongweb.com","popup_error":"\u0110\u1eb7t h\u00e0ng th\u1ea5t b\u1ea1i. Vui l\u00f2ng \u0111\u1eb7t h\u00e0ng l\u1ea1i. Xin c\u1ea3m \u01a1n!","out_of_stock_mess":"H\u1ebft h\u00e0ng!","price_decimal":".","num_decimals":"0","currency_format":"\u20ab"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='wp-content\plugins\devvn-quick-buy\js\devvn-quick-buy.js?ver=2.0.0'></script>
+<script type='text/javascript' src='wp-content\plugins\ot-flatsome-vertical-menu\assets\js\ot-vertical-menu.js?ver=1.1.0'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var pwb_ajax_object = {"carousel_prev":"<","carousel_next":">"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='wp-content\plugins\perfect-woocommerce-brands\assets\js\functions-frontend.min.js?ver=1.7.6'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wc_add_to_cart_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%","i18n_view_cart":"Xem gi\u1ecf h\u00e0ng","cart_url":"https:\/\/shoplamdep.haiphongweb.com\/gio-hang\/","is_cart":"","cart_redirect_after_add":"no"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='wp-content\plugins\woocommerce\assets\js\frontend\add-to-cart.min.js?ver=3.6.4'></script>
+<script type='text/javascript' src='wp-content\plugins\woocommerce\assets\js\js-cookie\js.cookie.min.js?ver=2.1.4'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var woocommerce_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='wp-content\plugins\woocommerce\assets\js\frontend\woocommerce.min.js?ver=3.6.4'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wc_cart_fragments_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%","cart_hash_key":"wc_cart_hash_025ce6b2ff7afa0426b00a51009431d2","fragment_name":"wc_fragments_025ce6b2ff7afa0426b00a51009431d2","request_timeout":"5000"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='wp-content\plugins\woocommerce\assets\js\frontend\cart-fragments.min.js?ver=3.6.4'></script>
+<script type='text/javascript' src='wp-includes\js\hoverIntent.min.js?ver=1.8.1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var flatsomeVars = {"ajaxurl":"https:\/\/shoplamdep.haiphongweb.com\/wp-admin\/admin-ajax.php","rtl":"","sticky_height":"45","user":{"can_edit_pages":false}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='wp-content\themes\flatsome\assets\js\flatsome.js?ver=3.8.3'></script>
+<script type='text/javascript' src='wp-content\themes\flatsome\inc\extensions\flatsome-lazy-load\flatsome-lazy-load.js?ver=1.0'></script>
+<script type='text/javascript' src='wp-content\themes\flatsome\assets\js\woocommerce.js?ver=3.8.3'></script>
+<script type='text/javascript' src='wp-includes\js\wp-embed.min.js?ver=5.2.1'></script>
+<script type='text/javascript' src='wp-content\plugins\woocommerce-products-filter\js\icheck\icheck.min.js?ver=5.2.1'></script>
+<script type='text/javascript' src='wp-content\plugins\woocommerce-products-filter\js\front.js?ver=5.2.1'></script>
+<script type='text/javascript' src='wp-content\plugins\woocommerce-products-filter\js\html_types\radio.js?ver=5.2.1'></script>
+<script type='text/javascript' src='wp-content\plugins\woocommerce-products-filter\js\html_types\checkbox.js?ver=5.2.1'></script>
+<script type='text/javascript' src='wp-content\plugins\woocommerce-products-filter\js\html_types\select.js?ver=5.2.1'></script>
+<script type='text/javascript' src='wp-content\plugins\woocommerce-products-filter\js\html_types\mselect.js?ver=5.2.1'></script>
+<script type='text/javascript' src='wp-content\plugins\woocommerce-products-filter\js\chosen\chosen.jquery.min.js?ver=5.2.1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var _zxcvbnSettings = {"src":"https:\/\/shoplamdep.haiphongweb.com\/wp-includes\/js\/zxcvbn.min.js"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='wp-includes\js\zxcvbn-async.min.js?ver=1.0'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var pwsL10n = {"unknown":"M\u1eadt kh\u1ea9u m\u1ea1nh kh\u00f4ng x\u00e1c \u0111\u1ecbnh","short":"R\u1ea5t y\u1ebfu","bad":"Y\u1ebfu","good":"Trung b\u00ecnh","strong":"M\u1ea1nh","mismatch":"M\u1eadt kh\u1ea9u kh\u00f4ng kh\u1edbp"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='wp-admin\js\password-strength-meter.min.js?ver=5.2.1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wc_password_strength_meter_params = {"min_password_strength":"3","i18n_password_error":"Vui l\u00f2ng nh\u1eadp m\u1eadt kh\u1ea9u kh\u00f3 h\u01a1n.","i18n_password_hint":"G\u1ee3i \u00fd: M\u1eadt kh\u1ea9u ph\u1ea3i c\u00f3 \u00edt nh\u1ea5t 12 k\u00fd t\u1ef1. \u0110\u1ec3 n\u00e2ng cao \u0111\u1ed9 b\u1ea3o m\u1eadt, s\u1eed d\u1ee5ng ch\u1eef in hoa, in th\u01b0\u1eddng, ch\u1eef s\u1ed1 v\u00e0 c\u00e1c k\u00fd t\u1ef1 \u0111\u1eb7c bi\u1ec7t nh\u01b0 ! \" ? $ % ^ & )."};
+/* ]]> */
+</script>
+<script type='text/javascript' src='wp-content\plugins\woocommerce\assets\js\frontend\password-strength-meter.min.js?ver=3.6.4'></script>
+
+		<style type="text/css">
+	
+	
+
+
+	
+
+	        /***** START: hiding submit button of the price slider ******/
+	        .woof_price_search_container .price_slider_amount button.button{
+	    	display: none;
+	        }
+
+	        .woof_price_search_container .price_slider_amount .price_label{
+	    	text-align: left !important;
+	        }
+
+	        .woof .widget_price_filter .price_slider_amount .button {
+	    	float: left;
+	        }
+
+	        /***** END: hiding submit button of the price slider ******/
+
+
+	
+
+
+
+		        .woof_edit_view{
+	    	display: none;
+	        }
+	
+	</style>
 @endsection
