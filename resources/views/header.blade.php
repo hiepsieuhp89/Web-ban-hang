@@ -176,7 +176,7 @@
                     <i class="icon-menu"></i> DANH MỤC SẢN PHẨM                </div>
                 <ul id="mega_menu" class="menu">
 <li id="menu-item-31" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-31"><a href="danh-muc-san-pham\cham-soc-da-mat\index.htm">Điện thoại thông minh</a>
-<ul style="margin-top: -10px;" class="sub-menu">
+<ul class="sub-menu" style="margin-top: -5px;">
 	<li id="menu-item-109" class="sp-ban-chay menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-109"><a href="#">Samsung</a>
 	<ul class="sub-menu">
 		<li id="menu-item-54" class="menu-cha menu-item menu-item-type-custom menu-item-object-custom menu-item-54"><a href="#">Kem dưỡng da</a></li>
