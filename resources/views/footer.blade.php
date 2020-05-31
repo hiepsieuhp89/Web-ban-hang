@@ -143,17 +143,20 @@
 
 <div class="col medium-8 small-12 large-8"><div class="col-inner">
 
-<p><span style="font-size: 85%;"><strong>ĐẸP</strong></span></p>
-<p><span style="font-size: 85%;">Đẹp - Là một từ mà mọi người đều khát khao cả nam lẫn nữ. Đẹp đi đôi với khỏe mạnh, đẹp đi đôi với sự lựa chọn thông minh. Đẹp toát ra từ vẻ ngoài tươi tắn tràn đầy năng lượng sống. Chính vì vậy sức khỏe và làm đẹp ngày càng được nhiều người quan để hướng đến cuộc sống tươi vui, hạnh phúc hơn. Sức khỏe tốt được biểu hiện qua làn da hồng hào,mịn màng, vóc dáng cân đối, mái tóc bồng bềnh và hàm răng chắc khỏe. Thấu hiểu nhu cầu đó, các hãng mỹ phẩm không ngừng nghiên cứu và cho ra đời hàng nghìn loại mỹ phẩm làm đẹp đa dạng chủng loại. Nhiều nhóm hàng mỹ phẩm bao gồm chăm sóc da, chăm sóc tóc, chăm sóc toàn thân, chăm sóc cá nhân, nước hoa lần lượt ra đời và đa dạng hóa để đáp ứng nhu cầu làm đẹp của con người.</span></p>
-<p><span style="font-size: 85%;">Hasaki luôn tôn trọng khách hàng, lấy niềm vui, sự hài lòng của khách hàng để làm động lực, không ngừng tìm kiếm các sản phẩm tốt nhất để mỗi khách hàng đều có thể trở nên tự tin và xinh đẹp hơn. Các hãng thương hiệu mỹ phẩm ở Hasaki luôn là các thương hiệu uy tín, được mọi người tin dùng như : Secret Key, Laneige, Vichy, Avène, Yves Rocher, Laroche Posay, Lancôme,...Bên cạnh đó khi mua hàng ở Hasaki, khách luôn được giá ưu đãi tốt nhất, dịch vụ nhanh chóng &amp; nhiều chương trình Khuyến Mãi khác.</span></p>
+<p><span style="font-size: 85%;"><strong>Wibu</strong></span></p>
+<p><span style="font-size: 85%;">Wibu là cách đọc tiếng Việt của cộng đồng mạng Việt Nam dành cho từ gốc Weeaboo. Nhìn chung, bản chất và ý nghĩa thuật ngữ Wibu ở Việt Nam và Weeaboo là một, chỉ khác ở chỗ Weeaboo được dùng với người phương Tây với nghĩa “Người Nhật Da Trắng” như đã được giải thích ở trên còn Wibu chỉ được dùng cho người Việt Nam mà thôi.
+
+Dù hướng tới đối tượng khác nhưng Wibu khi được sử dụng ở Việt Nam vẫn mang tính mỉa mai và khá tiêu cực như từ gốc của nó. Ngoài việc ám chỉ những người Việt Nam hâm mộ văn hóa Nhật một cách quá mức, mất kiểm soát, Wibu còn được dùng cho những người chẳng hiểu gì về Nhật Bản và văn hóa Nhật Bản mà luôn tự nhận bản thân là có hiểu biết và thích thể hiện.
+</span></p>
+<p><span style="font-size: 85%;">
+Thật ra, gọi một số thành phần trên là Wibu cũng chả gì xấu, có xấu chỉ là dùng từ này một cách bất hợp lý ngay khi những người bị gọi họ chả làm gì sai.</span></p>
 <p> </p>
 
 </div></div>
 <div class="col medium-4 small-12 large-4"><div class="col-inner">
 
 <div class="item_footer_right">
-<div class=""><span style="font-size: 85%; color: #000000;"><b>Bản quyền © 2016 Hasaki.vn</b></span></div>
-<p><strong><span style="font-size: 85%;">Công Ty TNHH HASAKI BEAUTY &amp; S.P.A</span></strong></p>
+<p><strong><span style="font-size: 85%;">Công Ty Wibshop &amp; CXT</span></strong></p>
 </div>
 <ul>
 <li class="item_footer_right"><span style="font-size: 85%;">Địa chỉ giao dịch:</span></li>
@@ -165,7 +168,6 @@
 <li class="item_footer_right"><span style="font-size: 85%;">CN 4: 94 Lê Văn Việt, Phường Hiệp Phú, Quận 9.</span></li>
 <li class="item_footer_right"><span style="font-size: 85%;">Hotline: 1900 636 900</span></li>
 </ul>
-<div class="item_footer_right"><span style="font-size: 85%;">Giấy chứng nhận Đăng ký Kinh doanh số 0313612829 do Sở Kế hoạch và Đầu tư Thành phố Hồ Chí Minh cấp ngày 13/01/2016</span></div>
 
 </div></div>
 
@@ -391,9 +393,9 @@
 </ul>
 </div>
 <div class="float-contact">
-<button class="chat-zalo"><a href="http://zalo.me/0986.989.626">Chat Zalo</a></button>
-<button class="chat-face"><a href="http://m.me/topweb.com.vn">Chat Facebook</a></button>
-<button class="hotline"><a href="tel:0986.989.626">Hotline: 0986.989.626</a></button>
+<button class="chat-zalo"><a href="http://zalo.me/0348889995">Chat Zalo</a></button>
+<button class="chat-face"><a href="http://m.me/CXTBB">Chat Facebook</a></button>
+<button class="hotline"><a href="tel:0348889995">Hotline: 0348889995</a></button>
 </div>    <div id="login-form-popup" class="lightbox-content mfp-hide">
             <div class="woocommerce-notices-wrapper"></div>
 <div class="account-container lightbox-inner">

@@ -138,7 +138,7 @@
 <div class="col small-12 large-12"><div class="col-inner">
 <div class="tieu-de-row">
 <div class="left">
-<h1><a href="#" target="blank" style="color: #f69;">Samsung</a></h1>
+<h2><a href="#" target="blank">Samsung</a></h2>
 </div>
 <div class="right">
 <ul>
@@ -556,108 +556,6 @@
 			
 
 		</div><!-- .section-bg -->
-
-		<div class="section-content relative">
-			
-<div class="row" id="row-2084844182">
-<div class="col small-12 large-12"><div class="col-inner">
-<div class="tieu-de-row">
-<div class="left">
-<h2><a href="#" target="blank">Vinsmart</a></h2>
-</div>
-<div class="right">
-<ul>
-<li><a href="#" target="blank">+ Xem thêm</a></li>
-</ul>
-</div>
-<div class="clearboth"></div>
-</div>
-</div></div>
-</div>
-<div class="row row-collapse" id="row-197847448">
-<div class="col cot1 medium-2 small-12 large-2"><div class="col-inner">
-	<div class="img has-hover x md-x lg-x y md-y lg-y" id="image_1779448087">
-								<div class="img-inner dark">
-			<img width="220" height="350" src="wp-content\themes\flatsome\assets\img\lazy.png" data-src="https://shoplamdep.haiphongweb.com/wp-content/uploads/2019/02/220-x-350.jpg" class="lazy-load attachment-original size-original" alt="" srcset="" data-srcset="https://shoplamdep.haiphongweb.com/wp-content/uploads/2019/02/220-x-350.jpg 220w, https://shoplamdep.haiphongweb.com/wp-content/uploads/2019/02/220-x-350-189x300.jpg 189w" sizes="(max-width: 220px) 100vw, 220px">						
-					</div>
-								
-<style scope="scope">
-
-#image_1779448087 {
-  width: 100%;
-}
-</style>
-	</div>
-	
-<div class="cloud-tag">
-<ul>
-<li><a href="#" target="blank">sang trọng</a></li>
-<li><a href="#" target="blank">thời thượng</a></li>
-</ul>
-</div>
-</div></div>
-<div class="col cot2 row-sp medium-9 small-12 large-9"><div class="col-inner">
-<div class="row row-collapse" id="row-1088066314">
-	<!-- image brand start here-->
-<div class="col medium-4 small-12 large-4"><div class="col-inner">
-	<div class="img has-hover x md-x lg-x y md-y lg-y" id="image_1940431317">
-		<a class="" href="#" target="_blank" rel="noopener noreferrer">						<div class="img-inner image-zoom dark">
-			<img width="366" height="200" src="wp-content\themes\flatsome\assets\img\lazy.png" data-src="https://shoplamdep.haiphongweb.com/wp-content/uploads/2019/02/omg-desktop_4.jpg" class="lazy-load attachment-original size-original" alt="" srcset="" data-srcset="https://shoplamdep.haiphongweb.com/wp-content/uploads/2019/02/omg-desktop_4.jpg 366w, https://shoplamdep.haiphongweb.com/wp-content/uploads/2019/02/omg-desktop_4-300x164.jpg 300w" sizes="(max-width: 366px) 100vw, 366px">						
-					</div>
-						</a>		
-		<style scope="scope">
-
-		#image_1940431317 {
-		  width: 100%;
-		}
-		</style>
-			</div>
-			
-		</div>
-	</div>
-<!-- image brand end here-->
-
-<style scope="scope">
-
-</style>
-</div>
-<div class="container section-title-container"><h3 class="section-title section-title-normal"><b></b><span class="section-title-main">Nổi bật và bán chạy</span><b></b><a href="#" target="">+ Xem thêm<i class="icon-angle-right"></i></a></h3></div><!-- .section-title -->
-
-  
-    <div class="row large-columns-5 medium-columns-3 small-columns-2 row-collapse slider row-slider slider-nav-simple slider-nav-push" data-flickity-options='{"imagesLoaded": true, "groupCells": "100%", "dragThreshold" : 5, "cellAlign": "left","wrapAround": true,"prevNextButtons": true,"percentPosition": true,"pageDots": false, "rightToLeft": false, "autoPlay" : false}'>
-		<!--list start-->
-			<div class="col">
-						<div class="col-inner">
-						
-<div class="badge-container absolute left top z-1">
-		<div class="callout badge badge-square"><div class="badge-inner secondary on-sale"><span class="onsale">-19%</span></div></div>
-</div>
-						<div class="product-small box has-hover box-normal box-text-bottom">
-							<div class="box-image">
-								<div class="image-overlay-add image-zoom image-cover" style="padding-top:100%;">
-									<a href="san-pham\mascara-lam-day-va-toi-mi-maybelline-lash-sensational-10ml-lash-sensational-waterproof-mascara\index.htm">
-										<img width="358" height="358" src="wp-content\themes\flatsome\assets\img\lazy.png" data-src="https://shoplamdep.haiphongweb.com/wp-content/uploads/2019/02/mascara-maybelline-lam-day-va-toi-mi-10ml_1__img_358x358_843626_fit_center.jpg" class="lazy-load attachment-original size-original" alt="" srcset="" data-srcset="https://shoplamdep.haiphongweb.com/wp-content/uploads/2019/02/mascara-maybelline-lam-day-va-toi-mi-10ml_1__img_358x358_843626_fit_center.jpg 358w, https://shoplamdep.haiphongweb.com/wp-content/uploads/2019/02/mascara-maybelline-lam-day-va-toi-mi-10ml_1__img_358x358_843626_fit_center-150x150.jpg 150w, https://shoplamdep.haiphongweb.com/wp-content/uploads/2019/02/mascara-maybelline-lam-day-va-toi-mi-10ml_1__img_358x358_843626_fit_center-300x300.jpg 300w, https://shoplamdep.haiphongweb.com/wp-content/uploads/2019/02/mascara-maybelline-lam-day-va-toi-mi-10ml_1__img_358x358_843626_fit_center-100x100.jpg 100w" sizes="(max-width: 358px) 100vw, 358px">									</a>
-									<div class="overlay fill" style="background-color: rgba(255, 255, 255, 0.26)"></div>									 								</div>
-								<div class="image-tools top right show-on-hover">
-																	</div>
-																	<div class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover">
-																			</div>
-																							</div><!-- box-image -->
-
-							<div class="box-text text-left">
-								<div class="title-wrapper">		<p class="category uppercase is-smaller no-text-overflow product-cat op-7">
-			Chăm sóc da mặt		</p>
-	<p class="name product-title"><a href="san-pham\mascara-lam-day-va-toi-mi-maybelline-lash-sensational-10ml-lash-sensational-waterproof-mascara\index.htm">Mascara Làm Dày Và Tơi Mi Maybelline Lash Sensation...</a></p></div><div class="price-wrapper"><div class="pwb-brands-in-loop"><span><a href="thuong-hieu\aleda\index.htm"><img width="120" height="60" src="wp-content\themes\flatsome\assets\img\lazy.png" data-src="https://shoplamdep.haiphongweb.com/wp-content/uploads/2019/02/1538456535ALEDA_img_120x60_63ea52_fit_center.jpg" class="lazy-load attachment-thumbnail size-thumbnail" alt=""></a></span></div>
-	<span class="price"><del><span class="woocommerce-Price-amount amount">148.000<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></del> <ins><span class="woocommerce-Price-amount amount">120.000<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></ins></span>
-</div>							</div><!-- box-text -->
-						</div><!-- box -->
-						</div><!-- .col-inner -->
-					</div><!-- col -->
-  		<!--list end-->			            
-	   </div>
-	</div>
-</div>
-
 <style scope="scope">
 
 </style>
