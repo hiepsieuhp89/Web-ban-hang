@@ -200,7 +200,7 @@ Thật ra, gọi một số thành phần trên là Wibu cũng chả gì xấu, 
     
     <div class="footer-primary pull-left">
             <div class="copyright-footer">
-        <div style="padding-top: 5px"><strong>Copyright 2020 © <a href="https://topweb.com.vn">Thiết kế website Hà Nội</a> bởi Topweb.com.vn</strong></div>
+        <div style="padding-top: 5px"><strong> Project web bán hàng bởi <a href="https://www.facebook.com/CXTBB">Xuân Tùng</a></strong></div>
       </div>
           </div><!-- .left -->
   </div><!-- .container -->
