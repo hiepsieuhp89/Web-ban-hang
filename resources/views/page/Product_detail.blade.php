@@ -89,8 +89,7 @@
                                     <p><span style="font-size: 12.96px;">Dịch vụ giao hàng dưới 120 phút cho khách nữ</span></p>
                                  </div>
                               </div>
-                              <!-- .icon-box -->
-                              <p><a href="#" target="blank" rel="noopener noreferrer">Xem thêm</a></p>
+                              
                            </div>
                         </div>
                         <style scope="scope">
