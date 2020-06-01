@@ -217,11 +217,7 @@
          <div class="row large-columns-6 medium-columns-3 small-columns-2 row-collapse slider row-slider slider-nav-simple slider-nav-outside slider-nav-push" data-flickity-options='{"imagesLoaded": true, "groupCells": "100%", "dragThreshold" : 5, "cellAlign": "left","wrapAround": true,"prevNextButtons": true,"percentPosition": true,"pageDots": false, "rightToLeft": false, "autoPlay" : false}'>
             <!--top product list start here -->
             @foreach($top_product as $product)
-            <?php
-                                    $entities = array(' ',"/","  ");
-                                    $replacements = array('-',"*","");
-                                    $name = str_replace($entities, $replacements,$product->name);
-                                ?> 
+            
             <div class="col">
                <div class="col-inner">
                   <div class="badge-container absolute left top z-1">
