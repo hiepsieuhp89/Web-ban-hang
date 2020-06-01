@@ -8,7 +8,9 @@
          <div class="flex-col flex-grow medium-text-center">
             <div class="is-small">
             	<?php 
-                     	$name = preg_replace('/\//', '-', $product->name);
+                     	$entities = array(' ',"/");
+                                    $replacements = array('-',"*");
+                                    $name = str_replace($entities, $replacements,$product->name);
                      	?>
                <nav class="woocommerce-breadcrumb breadcrumbs"><a href="{{route('HomePage')}}">Trang chủ</a> <span class="divider">&#47;</span> <a href="{{route('HomePage')}}">Điện thoại di động</a><span class="divider">&#47;</span><a href="{{route('ProductDetail',$params = ['type' => 'dtdd','name' => $name])}}">{{$product->name}}</a></nav>
             </div>
@@ -104,7 +106,9 @@
                      	<?php 
                      	$key->promotion_price = number_format($key->promotion_price, 0, '.', '.' );
         				$key->unit_price = number_format($key->unit_price, 0, '.', '.' );
-                     	$name = preg_replace('/\//', '-', $key->name);
+                     	$entities = array(' ',"/");
+                                    $replacements = array('-',"*");
+                                    $name = str_replace($entities, $replacements,$key->name);
                      	?>
                         <li>
                            <a href="{{route('ProductDetail',$params = ['type' => 'dtdd','name' => $name])}}">
@@ -403,7 +407,9 @@
                         <div class="row large-columns-5 medium-columns-3 small-columns-2 row-small slider row-slider slider-nav-reveal slider-nav-push" data-flickity-options='{"imagesLoaded": true, "groupCells": "100%", "dragThreshold" : 5, "cellAlign": "left","wrapAround": true,"prevNextButtons": true,"percentPosition": true,"pageDots": false, "rightToLeft": false, "autoPlay" : false}'>
                         @foreach($other_product as $key)
                         	<?php 
-                        	$name = preg_replace('/\//', '-', $key->name);
+                        	$entities = array(' ',"/");
+                                    $replacements = array('-',"*");
+                                    $name = str_replace($entities, $replacements,$key->name);
                         	$sale = (1-($key->promotion_price/$key->unit_price))*100;
                         	$key->promotion_price = number_format($key->promotion_price, 0, '.', '.' );
         				$key->unit_price = number_format($key->unit_price, 0, '.', '.' );

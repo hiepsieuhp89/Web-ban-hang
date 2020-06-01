@@ -4,12 +4,12 @@
 <!--[if (gte IE 9)|!(IE)]><!--><html lang="vi-VN" class="loading-site no-js"> <!--<![endif]-->
 <head>
 	<base href="{{asset('')}}">
-	@yield('style')
+		@yield('style')
 </head>
 		@yield('body_type')
 		@include('header')
 		@yield('content')
 		@include('footer')
 		@yield('script')
-</body>
+		</body>
 </html>

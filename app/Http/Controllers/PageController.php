@@ -47,16 +47,16 @@ class PageController extends Controller
         return view('page.HomePage',compact('samsung','iphone','xiaomi','top_product','brand'));
     }
 
-    public function getProductType($type){
-        $product = Product::WHERE('id_type',$type)->get();
-        $other_product = Product::WHERE('id_type','<>',$type)->paginate(3);
-        $all_type = ProductType::all();
-        $type_product = ProductType::WHERE('id',$type)->first();
-    	return view('page.ProductType',compact('product','other_product','all_type','type_product'));
+    public function getProductType(){
+        $brand = Brand::all();
+    	return view('page.ProductType',compact('brand'));
     }
 
     public function getProductDetail(Request $req){
-        $name = preg_replace('/\-/', '/', $req->name);
+        $entities = array('-',"*");
+        $replacements = array(' ',"/");
+        $name = str_replace($entities, $replacements, $req->name);
+        //dd($name);
         $product = Product::WHERE('name',$req->name)->ORWHERE('name',$name)->first();
         //lay ngau nhien 8 san pham moi: 
         $new_product = Product::WHERE('new','1')->ORDERBY(DB::raw('RAND()'))->paginate(8);

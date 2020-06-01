@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use Illuminate\Support\Facades\URL;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,21 +12,19 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 Auth::routes();
 Route::get('/', function () {
     return view('');
 });
-Route::get('product-type/{type}',[
+Route::get('product-type',[
 	'as'=>'ProductType',
 	'uses'=>'PageController@getProductType'
 ]);
 
-Route::get('detail/{type}/{name}',[
+Route::get('{type}/{name}',[
 	'as'=>'ProductDetail',
 	'uses'=>'PageController@getProductDetail'
 ]);
-
 Route::get('contact',[
 	'as'=>'Contact',
 	'uses'=>'PageController@getContact'

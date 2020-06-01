@@ -217,6 +217,11 @@
          <div class="row large-columns-6 medium-columns-3 small-columns-2 row-collapse slider row-slider slider-nav-simple slider-nav-outside slider-nav-push" data-flickity-options='{"imagesLoaded": true, "groupCells": "100%", "dragThreshold" : 5, "cellAlign": "left","wrapAround": true,"prevNextButtons": true,"percentPosition": true,"pageDots": false, "rightToLeft": false, "autoPlay" : false}'>
             <!--top product list start here -->
             @foreach($top_product as $product)
+            <?php
+                                    $entities = array(' ',"/");
+                                    $replacements = array('-',"*");
+                                    $name = str_replace($entities, $replacements,$product->name);
+                                ?> 
             <div class="col">
                <div class="col-inner">
                   <div class="badge-container absolute left top z-1">
@@ -229,7 +234,7 @@
                   <div class="product-small box has-hover box-normal box-text-bottom">
                      <div class="box-image">
                         <div class="image-overlay-add image-zoom image-cover" style="padding-top:100%;">
-                           <a href="{{route('ProductDetail',$params = ['type' => 'dtdd','name' => $product->name])}}">
+                           <a href="{{route('ProductDetail',$params = ['type' => 'dtdd','name' => $name])}}">
                            <img width="358" height="358" src="wp-content\themes\flatsome\assets\img\lazy.png" data-src="{{$product->image}}" class="lazy-load attachment-original size-original" alt="" srcset="" data-srcset="{{$product->image}} 358w, {{$product->image}} 150w, {{$product->image}} 300w, {{$product->image}} 100w" sizes="(max-width: 358px) 100vw, 358px">									</a>
                            <div class="overlay fill" style="background-color: rgba(255, 255, 255, 0.27)"></div>
                         </div>
@@ -415,7 +420,9 @@
                      <!--list start-->
                      @foreach($samsung as $phone)
                      <?php
-                                    $name = preg_replace('/\//', '-', $phone->name); 
+                                     $entities = array(' ',"/");
+                                    $replacements = array('-',"*");
+                                    $name = str_replace($entities, $replacements,$phone->name);
                                 ?> 
                      <div class="col">
                         <div class="col-inner">
@@ -555,8 +562,10 @@
                      <!--list start-->
                      @foreach($iphone as $phone)
                      <?php
-                                    $name = preg_replace('/\//', '-', $phone->name); 
-                                ?> 
+                                    $entities = array(' ',"/");
+                                    $replacements = array('-',"*");
+                                    $name = str_replace($entities, $replacements,$phone->name);
+                                ?>  
                      <div class="col">
                         <div class="col-inner">
                            <div class="badge-container absolute left top z-1">
@@ -704,7 +713,9 @@
                            <div class="product-small box has-hover box-normal box-text-bottom">
                               <div class="box-image">
                               	<?php
-                                    $name = preg_replace('/\//', '-', $phone->name); 
+                                     $entities = array(' ',"/");
+                                    $replacements = array('-',"*");
+                                    $name = str_replace($entities, $replacements,$phone->name);
                                 ?> 
                                  <div class="image-overlay-add image-zoom image-cover" style="padding-top:100%;">
                                     <a href="{{route('ProductDetail',$params = ['type' => 'dtdd','name' => $name])}}">
