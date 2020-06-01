@@ -211,11 +211,11 @@
                                     $replacements = array('-',"*");
 
                                     //truong khi format
-                                    echo $product->name.'<br>';
+                                    echo 'trước khi chuyển:'.$product->name.'<br>';
                                     //chuyen dau cach thanh dau '-'
                                     $product->name = str_replace($entities, $replacements,$product->name);
                                     //sau khi format
-                                    echo $product->name;
+                                    echo 'sau khi chuyển:'.$product->name;
                                  ?> 
    <section class="section row-sp deal-hot" id="section_289245873">
       <div class="bg section-bg fill bg-fill  bg-loaded">
