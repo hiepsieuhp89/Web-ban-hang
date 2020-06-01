@@ -205,13 +205,17 @@
          }
       </style>
    </section>
-   <?php
+                                 <?php
                                     $product = $top_product->first();
                                     $entities = array(' ',"/");
                                     $replacements = array('-',"*");
-                                    $name = str_replace($entities, $replacements,$product->name);
-                                    //in ra 2 bien
-                                    echo $name.'<br>'.$product->name;
+
+                                    //truong khi format
+                                    echo $product->name.'<br>';
+                                    //chuyen dau cach thanh dau '-'
+                                    $product->name = str_replace($entities, $replacements,$product->name);
+                                    //sau khi format
+                                    echo $product->name;
                                  ?> 
    <section class="section row-sp deal-hot" id="section_289245873">
       <div class="bg section-bg fill bg-fill  bg-loaded">
