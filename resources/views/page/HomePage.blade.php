@@ -221,8 +221,8 @@
                                     //$entities = array(' ',"/");
                                     //$replacements = array('-',"*");
                                     //$name = str_replace($entities, $replacements,$product->name);
-            $name = preg_replace('/\//', '*', {{$product->name}});
-             $name = preg_replace('/\s/', '*', {{$name}});                   
+            $name = preg_replace('/\//', '*', $product->name);
+             $name = preg_replace('/\s/', '*', $name);                   
              ?> 
             <div class="col">
                <div class="col-inner">
