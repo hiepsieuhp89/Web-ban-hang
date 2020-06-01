@@ -227,7 +227,7 @@
                   <div class="badge-container absolute left top z-1">
                      <div class="callout badge badge-square">
                         <div class="badge-inner secondary on-sale">
-                           <span class="onsale">-{$name}%</span>
+                           <span class="onsale">-{{$name}}%</span>
                         </div>
                      </div>
                   </div>
