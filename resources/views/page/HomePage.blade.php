@@ -205,6 +205,14 @@
          }
       </style>
    </section>
+   <?php
+                                    $product = $top_product->first();
+                                    $entities = array(' ',"/");
+                                    $replacements = array('-',"*");
+                                    $name = str_replace($entities, $replacements,$product->name);
+                                    //in ra 2 bien
+                                    echo $name.'<br>'.$product->name;
+                                 ?> 
    <section class="section row-sp deal-hot" id="section_289245873">
       <div class="bg section-bg fill bg-fill  bg-loaded">
       </div>
@@ -216,12 +224,13 @@
          <!-- .section-title -->
          <div class="row large-columns-6 medium-columns-3 small-columns-2 row-collapse slider row-slider slider-nav-simple slider-nav-outside slider-nav-push" data-flickity-options='{"imagesLoaded": true, "groupCells": "100%", "dragThreshold" : 5, "cellAlign": "left","wrapAround": true,"prevNextButtons": true,"percentPosition": true,"pageDots": false, "rightToLeft": false, "autoPlay" : false}'>
             <!--top product list start here -->
-            @foreach($top_product as $product)
-            <?php
+                                 <?php
+                                    $product = $top_product->first();
                                     $entities = array(' ',"/");
                                     $replacements = array('-',"*");
                                     $name = str_replace($entities, $replacements,$product->name);
-                                ?> 
+                                    echo $name.'<br>'.$product->name;
+                                 ?> 
             <div class="col">
                <div class="col-inner">
                   <div class="badge-container absolute left top z-1">
@@ -274,7 +283,7 @@
                <!-- .col-inner -->
             </div>
             <!-- col -->    
-            @endforeach
+
             <!--list end here -->    			            
          </div>
       </div>
