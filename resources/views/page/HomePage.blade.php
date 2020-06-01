@@ -218,8 +218,8 @@
             <!--top product list start here -->
             @foreach($top_product as $product)
             <?php
-                                    $entities = array(' ',"/");
-                                    $replacements = array('-',"*");
+                                    $entities = array(' ',"/","  ");
+                                    $replacements = array('-',"*","");
                                     $name = str_replace($entities, $replacements,$product->name);
                                 ?> 
             <div class="col">
