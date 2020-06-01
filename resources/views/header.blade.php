@@ -177,44 +177,17 @@
                 <ul id="mega_menu" class="menu">
 <li id="menu-item-31" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-31"><a href="danh-muc-san-pham\cham-soc-da-mat\index.htm">Điện thoại thông minh</a>
 <ul class="sub-menu" style="margin-top: -5px;">
-	<li id="menu-item-109" class="sp-ban-chay menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-109"><a href="#">Samsung</a>
-	<ul class="sub-menu">
-		<li id="menu-item-54" class="menu-cha menu-item menu-item-type-custom menu-item-object-custom menu-item-54"><a href="#">Kem dưỡng da</a></li>
-		<li id="menu-item-55" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-55"><a href="#">Kem dưỡng cho mọi loại da</a></li>
-		<li id="menu-item-56" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-56"><a href="#">Kem làm sáng da mặt</a></li>
-		<li id="menu-item-60" class="menu-cha menu-item menu-item-type-custom menu-item-object-custom menu-item-60"><a href="#">Xịt khoáng &#8211; nước hoa hồng</a></li>
-		<li id="menu-item-61" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-61"><a href="#">Xịt khoáng</a></li>
-		<li id="menu-item-63" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-63"><a href="#">Nước hoa hồng cho mọi loại da</a></li>
-		<li id="menu-item-62" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-62"><a href="#">Nước hoa hồng làm sáng da</a></li>
-		<li id="menu-item-76" class="menu-cha menu-item menu-item-type-custom menu-item-object-custom menu-item-76"><a href="#">Tẩy tế bào chết mặt</a></li>
-		<li id="menu-item-77" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-77"><a href="#">Tẩy tế bào chết mọi loại da</a></li>
-		<li id="menu-item-78" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-78"><a href="#">Tẩy tế bào chết da thường</a></li>
-		<li id="menu-item-79" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-79"><a href="#">Tẩy tế bào chết cho da mụn</a></li>
-		<li id="menu-item-80" class="menu-cha menu-item menu-item-type-custom menu-item-object-custom menu-item-80"><a href="#">Bộ sản phẩm chăm sóc da</a></li>
-	</ul>
-</li>
-	<li id="menu-item-110" class="sp-mua-nhieu menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-110"><a href="#">Iphone</a>
-	<ul class="sub-menu">
-		<li id="menu-item-84" class="menu-cha menu-item menu-item-type-custom menu-item-object-custom menu-item-84"><a href="#">Serum &#8211; tinh chất dưỡng da</a></li>
-		<li id="menu-item-85" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-85"><a href="#">Chống lão hóa da</a></li>
-		<li id="menu-item-87" class="menu-cha menu-item menu-item-type-custom menu-item-object-custom menu-item-87"><a href="#">Chống nắng da mặt</a></li>
-		<li id="menu-item-86" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-86"><a href="#">Làm trắng da</a></li>
-		<li id="menu-item-88" class="menu-cha menu-item menu-item-type-custom menu-item-object-custom menu-item-88"><a href="#">Phụ kiện chăm sóc da</a></li>
-		<li id="menu-item-57" class="menu-cha menu-item menu-item-type-custom menu-item-object-custom menu-item-57"><a href="#">Sữa rửa mặt</a></li>
-		<li id="menu-item-58" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-58"><a href="#">Sữa rửa mặt cho da mụn</a></li>
-		<li id="menu-item-59" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-59"><a href="#">Sữa rửa mặt cho mọi loại da</a></li>
-		<li id="menu-item-81" class="menu-cha menu-item menu-item-type-custom menu-item-object-custom menu-item-81"><a href="#">Mặt nạ</a></li>
-		<li id="menu-item-82" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-82"><a href="#">Mặt nạ chống lão hóa</a></li>
-		<li id="menu-item-83" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-83"><a href="#">Mặt nạ cho mọi loại da</a></li>
-	</ul>
-</li>
-	<li id="menu-item-111" class="giam-gia-hot-nhat menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-111"><a href="#">Xiaomi</a>
-	<ul class="sub-menu">
-		<li id="menu-item-106" class="menu-cha menu-item menu-item-type-custom menu-item-object-custom menu-item-106"><a href="#">Sub-menu 1</a></li>
-		<li id="menu-item-107" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-107"><a href="#">Sub-menu 2</a></li>
-		<li id="menu-item-108" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-108"><a href="#">Sub-menu 3</a></li>
-	</ul>
-</li>
+	<!-- brand list here-->
+	@foreach($brand as $key)
+	<li id="menu-item-109" class="sp-ban-chay menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-109"><a href="#" style="text-transform: uppercase; color: #ff6600;">{{$key->name}}</a>
+		<ul class="sub-menu">
+			<li id="menu-item-54" class="menu-cha menu-item menu-item-type-custom menu-item-object-custom menu-item-54"><a href="#">Loại đắt nhất</a></li>
+			<li id="menu-item-55" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-55"><a href="#">Loại Rẻ nhất</a></li>
+			<li id="menu-item-56" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-56"><a href="#">Loại bán ế</a></li>
+		</ul>
+	</li>
+	@endforeach
+	<!-- brand list here-->
 </ul>
 </li>
 <li id="menu-item-27" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-27"><a href="danh-muc-san-pham\be-do-choi\index.htm">Máy tính bảng</a></li>
