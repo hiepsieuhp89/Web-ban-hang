@@ -218,12 +218,10 @@
             <!--top product list start here -->
             @foreach($top_product as $product)
             <?php
-                                    //$entities = array(' ',"/");
-                                    //$replacements = array('-',"*");
-                                    //$name = str_replace($entities, $replacements,$product->name);
-            $name = preg_replace('/\//', '*', $product->name);
-             $name = preg_replace('/\s/', '*', $name);                   
-             ?> 
+                                    $entities = array(' ',"/");
+                                    $replacements = array('-',"*");
+                                    $name = str_replace($entities, $replacements,$product->name);
+                                ?> 
             <div class="col">
                <div class="col-inner">
                   <div class="badge-container absolute left top z-1">
@@ -249,7 +247,6 @@
                      <div class="box-text text-left" style="text-align: center;">
                         <div class="title-wrapper">
                            <p class="category uppercase is-smaller no-text-overflow product-cat op-7">{{$product->name}}</p>
-                           <p class="category uppercase is-smaller no-text-overflow product-cat op-7">{{$name}}</p>
                         </div>
                         <div class="price-wrapper">
                            <div class="pwb-brands-in-loop" style="margin-left: 0px;">
