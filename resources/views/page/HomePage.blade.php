@@ -227,7 +227,7 @@
                   <div class="badge-container absolute left top z-1">
                      <div class="callout badge badge-square">
                         <div class="badge-inner secondary on-sale">
-                           <span class="onsale">-{{$product->name}}%</span>
+                           <span class="onsale">-{{$product->sale}}%</span>
                         </div>
                      </div>
                   </div>
@@ -247,6 +247,7 @@
                      <div class="box-text text-left" style="text-align: center;">
                         <div class="title-wrapper">
                            <p class="category uppercase is-smaller no-text-overflow product-cat op-7">{{$product->name}}</p>
+                           <p class="category uppercase is-smaller no-text-overflow product-cat op-7">{{$name}}</p>
                         </div>
                         <div class="price-wrapper">
                            <div class="pwb-brands-in-loop" style="margin-left: 0px;">
