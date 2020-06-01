@@ -53,8 +53,8 @@ class PageController extends Controller
     }
 
     public function getProductDetail(Request $req){
-        $entities = array("*");
-        $replacements = array("/");
+        $entities = array('-',"*");
+        $replacements = array(' ',"/");
         $name = str_replace($entities, $replacements, $req->name);
         //dd($name);
         $product = Product::WHERE('name',$req->name)->ORWHERE('name',$name)->first();
