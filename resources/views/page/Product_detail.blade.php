@@ -14,7 +14,7 @@
                                     $name = trim($name,'-');
 
                      	?>
-               <nav class="woocommerce-breadcrumb breadcrumbs"><a href="{{route('HomePage')}}">Trang chủ</a> <span class="divider">&#47;</span> <a href="{{route('HomePage')}}">Điện thoại di động</a><span class="divider">&#47;</span><a href="{{route('ProductDetail',$params = ['type' => 'dtdd','name' => $name])}}">{{$product->name}}</a></nav>
+               <nav class="woocommerce-breadcrumb breadcrumbs"><a href="{{route('HomePage')}}">Trang chủ</a> <span class="divider">&#47;</span> <a href="{{route('ProductType','dtdd')}}">Điện thoại di động</a><span class="divider">&#47;</span><a href="{{route('ProductDetail',$params = ['type' => 'dtdd','name' => $name])}}">{{$product->name}}</a></nav>
             </div>
          </div>
          <!-- .flex-left -->
