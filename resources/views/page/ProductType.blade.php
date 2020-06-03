@@ -96,21 +96,21 @@
         		<option value="{{$pricerange}}">
         			    <?php 
 							if($pricerange == '0-999.999.999') echo 'Mọi khoảng giá';
-							if($pricerange == '0-5.999.990') echo '<span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol"></span></span><span class="woocommerce-Price-amount amount">Dưới 5.000.000<span class="woocommerce-Price-currencySymbol">&#8363;</span></span> (2)';
-							if($pricerange == '5.000.000-15.999.999') echo '<span class="woocommerce-Price-amount amount">5.000.000<span class="woocommerce-Price-currencySymbol">&#8363;</span></span> - <span class="woocommerce-Price-amount amount">15.999.999<span class="woocommerce-Price-currencySymbol">&#8363;</span></span> (2)';
-							if($pricerange == '16.000.000-50.999.999') echo '<span class="woocommerce-Price-amount amount">16.000.000<span class="woocommerce-Price-currencySymbol">&#8363;</span></span> - <span class="woocommerce-Price-amount amount">50.999.999<span class="woocommerce-Price-currencySymbol">&#8363;</span></span> (4)';
+							if($pricerange == '0-5.999.990') echo '<span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol"></span></span><span class="woocommerce-Price-amount amount">Dưới 5.000.000<span class="woocommerce-Price-currencySymbol">&#8363;</span></span> ';
+							if($pricerange == '5.000.000-15.999.999') echo '<span class="woocommerce-Price-amount amount">5.000.000<span class="woocommerce-Price-currencySymbol">&#8363;</span></span> - <span class="woocommerce-Price-amount amount">15.999.999<span class="woocommerce-Price-currencySymbol">&#8363;</span></span> ';
+							if($pricerange == '16.000.000-50.999.999') echo '<span class="woocommerce-Price-amount amount">Giá cho Rich kid<span class="woocommerce-Price-currencySymbol"></span></span><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol"></span></span>';
 						?></option>
            		 	@if($pricerange!='0-999.999.999')
 					<option value="0-999.999.999">Mọi khoảng giá</option>
 					@endif
 					@if($pricerange!='0-5.999.990')
-					<option value="0-5.999.990"><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol"></span></span><span class="woocommerce-Price-amount amount">Dưới 5.000.000<span class="woocommerce-Price-currencySymbol">&#8363;</span></span> (2)</option>
+					<option value="0-5.999.990"><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol"></span></span><span class="woocommerce-Price-amount amount">Dưới 5.000.000<span class="woocommerce-Price-currencySymbol">&#8363;</span></span> </option>
 					@endif
 					@if($pricerange!='5.000.000-15.999.999')
-					<option value="5.000.000-15.999.999"><span class="woocommerce-Price-amount amount">5.000.000<span class="woocommerce-Price-currencySymbol">&#8363;</span></span> - <span class="woocommerce-Price-amount amount">15.999.999<span class="woocommerce-Price-currencySymbol">&#8363;</span></span> (2)</option>
+					<option value="5.000.000-15.999.999"><span class="woocommerce-Price-amount amount">5.000.000<span class="woocommerce-Price-currencySymbol">&#8363;</span></span> - <span class="woocommerce-Price-amount amount">15.999.999<span class="woocommerce-Price-currencySymbol">&#8363;</span></span> </option>
 					@endif
 					@if($pricerange!='16.000.000-50.999.999')
-					<option value="16.000.000-50.999.999"><span class="woocommerce-Price-amount amount">16.000.000<span class="woocommerce-Price-currencySymbol">&#8363;</span></span> - <span class="woocommerce-Price-amount amount">50.999.999<span class="woocommerce-Price-currencySymbol">&#8363;</span></span> (4)</option>
+					<option value="16.000.000-50.999.999"><span class="woocommerce-Price-amount amount">Giá cho Rich kid<span class="woocommerce-Price-currencySymbol"></span></span><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol"></span></span></option>
 					@endif
     </select>
 </div>
@@ -150,7 +150,7 @@
 			@foreach($brand as $key)
             <li class="woof_term_36 ">
             	<input type="checkbox" id="woof_36_5e8ab1a8a2ac5" class="woof_checkbox_term woof_checkbox_term_36" data-tax="pwb-brand" name="{{$key->name}}" data-term-id="36" value="true">
-            	<label class="woof_checkbox_label " for="woof_36_5e8ab1a8a2ac5" style="text-transform: uppercase;">{{$key->name}}<span class="woof_checkbox_count">(2)</span></label>
+            	<label class="woof_checkbox_label " for="woof_36_5e8ab1a8a2ac5" style="text-transform: uppercase;">{{$key->name}}<span class="woof_checkbox_count"></span></label>
 
             </li>
             @endforeach
