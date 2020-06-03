@@ -99,18 +99,6 @@
    </div>
    </form>
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-   <script>
-      $(function(){
-      	$('.orderby').change(function(){
-      		$(".woocommerce-ordering").submit() ;
-      	})
-      	/*
-      	$('.woof_checkbox_term').change(function(){
-      		$(".woocommerce-ordering").submit() ;
-      	})*/
-      })
-   </script>
-
    <div data-css-class="woof_container_pwb-brand" class="woof_container woof_container_checkbox woof_container_pwb-brand woof_container_2 woof_container_thnghiu">
    <div class="woof_container_overlay_item"></div>
    <div class="woof_container_inner woof_container_inner_thnghiu">
@@ -139,6 +127,15 @@
 	</div>
    @endforeach
    <script>
+   		$(function(){
+      	$('.orderby').change(function(){
+      		$(".woocommerce-ordering").submit() ;
+      	})
+      	
+      	$('.pricerange').change(function(){
+      		$(".woocommerce-ordering").submit() ;
+      	})
+      })
    		 $('.btn').css({
 	          	"border-radius" : "10px",
 	          	"margin-bottom"  : "10px"
