@@ -207,6 +207,8 @@
 	.hashover:hover {
 		box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
 	}
+	.hashover:hover a.name{
+      color: #ff6600;
 </style>
 @foreach($product as $key)
                         	<?php 
@@ -606,12 +608,4 @@ var wc_password_strength_meter_params = {"min_password_strength":"3","i18n_passw
       jQuery(document).trigger('woof_ajax_done');
        }
    </script>
-   <style>
-   		a {
-   		text-decoration: none;
-   	}
-      .col.product-small:hover a.name{
-      color: #ff6600;
-      }
-   </style>
 @endsection
