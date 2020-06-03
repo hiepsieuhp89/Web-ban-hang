@@ -215,7 +215,7 @@
                         	$entities = array(' ',"/");
                                     $replacements = array('-',"*");
                                     $name = str_replace($entities, $replacements,$key->name);
-                                    $name = trim($name);
+                                    $name = trim($name,' ');
                                     dd($name);
                         	$sale = (1-($key->promotion_price/$key->unit_price))*100;
                         	$key->promotion_price = number_format($key->promotion_price, 0, '.', '.' );
