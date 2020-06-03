@@ -92,15 +92,26 @@
 
 <div class="woof_price_filter_dropdown_container">
     <select class = "pricerange" name="pricerange" class="woof_price_filter_dropdown">
-        		<option value="-1">Lọc theo giá</option>
-            
-                <option value="0-5.999.990"><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol"></span></span><span class="woocommerce-Price-amount amount">Dưới 5.000.000<span class="woocommerce-Price-currencySymbol">&#8363;</span></span> (2)</option>
-            
-                
-                <option value="5.000.000-15.999.999"><span class="woocommerce-Price-amount amount">5.000.000<span class="woocommerce-Price-currencySymbol">&#8363;</span></span> - <span class="woocommerce-Price-amount amount">15.999.999<span class="woocommerce-Price-currencySymbol">&#8363;</span></span> (2)</option>
-            
-                
-                <option value="16.000.000-50.999.999"><span class="woocommerce-Price-amount amount">16.000.000<span class="woocommerce-Price-currencySymbol">&#8363;</span></span> - <span class="woocommerce-Price-amount amount">50.999.999<span class="woocommerce-Price-currencySymbol">&#8363;</span></span> (4)</option>
+
+        		<option value="{{$pricerange}}">
+        			    <?php 
+							if($pricerange == '0-999.999.999') echo 'Mọi khoảng giá';
+							if($pricerange == '0-5.999.990') echo '<span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol"></span></span><span class="woocommerce-Price-amount amount">Dưới 5.000.000<span class="woocommerce-Price-currencySymbol">&#8363;</span></span> (2)';
+							if($pricerange == '5.000.000-15.999.999') echo '<span class="woocommerce-Price-amount amount">5.000.000<span class="woocommerce-Price-currencySymbol">&#8363;</span></span> - <span class="woocommerce-Price-amount amount">15.999.999<span class="woocommerce-Price-currencySymbol">&#8363;</span></span> (2)';
+							if($pricerange == '16.000.000-50.999.999') echo '<span class="woocommerce-Price-amount amount">16.000.000<span class="woocommerce-Price-currencySymbol">&#8363;</span></span> - <span class="woocommerce-Price-amount amount">50.999.999<span class="woocommerce-Price-currencySymbol">&#8363;</span></span> (4)';
+						?></option>
+           		 	@if($pricerange!='0-999.999.999')
+					<option value="0-999.999.999">Mọi khoảng giá</option>
+					@endif
+					@if($pricerange!='0-5.999.990')
+					<option value="0-5.999.990"><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol"></span></span><span class="woocommerce-Price-amount amount">Dưới 5.000.000<span class="woocommerce-Price-currencySymbol">&#8363;</span></span> (2)</option>
+					@endif
+					@if($pricerange!='5.000.000-15.999.999')
+					<option value="5.000.000-15.999.999"><span class="woocommerce-Price-amount amount">5.000.000<span class="woocommerce-Price-currencySymbol">&#8363;</span></span> - <span class="woocommerce-Price-amount amount">15.999.999<span class="woocommerce-Price-currencySymbol">&#8363;</span></span> (2)</option>
+					@endif
+					@if($pricerange!='16.000.000-50.999.999')
+					<option value="16.000.000-50.999.999"><span class="woocommerce-Price-amount amount">16.000.000<span class="woocommerce-Price-currencySymbol">&#8363;</span></span> - <span class="woocommerce-Price-amount amount">50.999.999<span class="woocommerce-Price-currencySymbol">&#8363;</span></span> (4)</option>
+					@endif
     </select>
 </div>
 
@@ -192,6 +203,11 @@
 	<div class="woof_products_top_panel"></div>
 		<div class="products row row-small large-columns-6 medium-columns-3 small-columns-2 has-equal-box-heights equalize-box">
 <!--product here-->
+<style type="text/css">
+	.hashover:hover {
+		box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+	}
+</style>
 @foreach($product as $key)
                         	<?php 
                         	$entities = array(' ',"/");
@@ -201,7 +217,7 @@
                         	$key->promotion_price = number_format($key->promotion_price, 0, '.', '.' );
         				$key->unit_price = number_format($key->unit_price, 0, '.', '.' );
                         	?>
-                           <div class="product-small col has-hover product type-product post-279 status-publish instock product_cat-cham-soc-toc product_cat-trang-diem has-post-thumbnail sale shipping-taxable purchasable product-type-simple">
+                           <div class="col-md-3 hashover" style="margin-bottom: 20px;">
                               <div class="col-inner">
                                  <div class="badge-container absolute left top z-1" style="margin-top:10px;">
                                     <div class="callout badge badge-square" style="height: 35px; width: 50px;">
@@ -255,7 +271,7 @@
 	<div class="product-small col"></div>
 	<div class="product-small col"></div>
 	<div class="product-small col">
-	{{ $product->appends(['orderby' => $orderby, 'pricerange' => -1])->links() }}
+	{{ $product->appends(['orderby' => $orderby, 'pricerange' => $pricerange])->links() }}
 	</div>
 	<div class="product-small col"></div>
 	<div class="product-small col"></div>

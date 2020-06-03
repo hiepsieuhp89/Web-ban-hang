@@ -23,7 +23,7 @@ class PageController extends Controller
         $samsung = Product::WHERE('brand','samsung')->WHERE('id_type','1')->get();
         $iphone = Product::WHERE('brand','apple')->WHERE('id_type','1')->get();
         $xiaomi = Product::WHERE('brand','xiaomi')->WHERE('id_type','1')->get();
-        $top_product = Product::ORDERBY('unit_price','DESC')->paginate(20);//Lấy 20 sản phẩm có giá cao nhất giảm dần
+        $top_product = Product::ORDERBY('unit_price','DESC')->get();//Lấy 20 sản phẩm có giá cao nhất giảm dần
         foreach ($samsung as $key => $value) {//5.69 into 5.690.000
             $value['sale'] = (1-($value['promotion_price']/$value['unit_price']))*100;
             $value['unit_price'] = number_format($value['unit_price'], 0, '.', '.' );
@@ -49,34 +49,71 @@ class PageController extends Controller
 
     public function getProductType($type, Request $request){
         $orderby = 'default';
+        $pricerange = '0-999.999.999';
         if($request->orderby){
             $orderby = $request->orderby;
+            $pricerange = $request->pricerange;
+            $rangeformat = $request->pricerange;
+            $rangeformat = str_replace('.','',$rangeformat);
+            $position = strpos($rangeformat,'-');
+            $min = substr ( $rangeformat ,0, $position); //lay gia thap nhat
+            $max = substr ( $rangeformat ,$position+1); //lay gia cao nhat
+            //$max = preg_match("/0-5/",$pricerange);
             switch($orderby){
                 case 'popularity':
-                    $product = Product::ORDERBY('count_bought','DESC')->paginate(20);
+                    $product = Product::ORDERBY('count_bought','DESC')->WHERE('promotion_price','<=',$max)->WHERE('promotion_price','>=',$min)->paginate(20);
                     break;
                 case 'rating':
-                    $product = Product::ORDERBY('count_bought','DESC')->paginate(20);
+                    $product = Product::ORDERBY('count_bought','DESC')->WHERE('promotion_price','<=',$max)->WHERE('promotion_price','>=',$min)->paginate(20);
                     break;
                 case 'date':
-                    $product = Product::ORDERBY('new','DESC')->paginate(20);
+                    $product = Product::ORDERBY('new','DESC')->WHERE('promotion_price','<=',$max)->WHERE('promotion_price','>=',$min)->paginate(20);
                     break;
                 case 'price-desc':
-                    $product = Product::ORDERBY('promotion_price','DESC')->ORDERBY('unit_price','DESC')->paginate(20);
+                    $product = Product::ORDERBY('promotion_price','DESC')->ORDERBY('unit_price','DESC')->WHERE('promotion_price','<=',$max)->WHERE('promotion_price','>=',$min)->paginate(20);
                     break;
                 case 'price':
-                    $product = Product::ORDERBY('promotion_price','ASC')->ORDERBY('unit_price','ASC')->paginate(20);
+                    $product = Product::ORDERBY('promotion_price','ASC')->ORDERBY('unit_price','ASC')->WHERE('promotion_price','<=',$max)->WHERE('promotion_price','>=',$min)->paginate(20);
                     break;
                 case 'default':
-                    $product = Product::paginate(20);
+                    $product = Product::WHERE('promotion_price','<=',$max)->WHERE('promotion_price','>=',$min)->paginate(20);;
                     break;
             }
         }
         else{
             $product = Product::paginate(20);
         }
+        /*
+        if($request->pricerange){
+            $pricerange = $request->pricerange;
+            switch($pricerange){
+                case '0-5.999.990':
+                    foreach($product as $key => $value){
+                        if(($value['promotion_price'] >= 6000000)||($value['unit_price'] >= 6000000)){
+                            unset($product[$key]);
+                        }
+                    }
+                    break;
+                case '5.000.000-15.999.999':
+                    foreach($product as $key=>$value){
+                        if(($value['promotion_price'] <5000000 && $value['promotion_price'] >= 16000000)||($value['unit_price'] <5000000 && $value['unit_price'] >= 16000000)){
+                            unset($product[$key]);
+                        }
+                    }
+                    break;
+                case '16.000.000-50.999.999':
+                    foreach($product as $key=>$value){
+                        if(($value['promotion_price'] < 16000000 && $value['promotion_price'] >= 60000000)||($value['unit_price'] <16000000 && $value['unit_price'] >= 60000000)){
+                            unset($product[$key]);
+                        }
+                    }
+                    break;
+            }
+        }
+        */
+        //dd($product);
         $brand = Brand::all();
-    	return view('page.ProductType',compact('brand','product','orderby'));
+    	return view('page.ProductType',compact('brand','product','orderby','pricerange'));
     }
 
     public function getProductDetail(Request $req){
