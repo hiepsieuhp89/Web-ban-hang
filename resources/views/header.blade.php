@@ -39,7 +39,7 @@
 <div class="searchform-wrapper ux-search-box relative is-normal"><form role="search" method="get" class="searchform" action="https://shoplamdep.haiphongweb.com/">
 		<div class="flex-row relative">
 						<div class="flex-col search-form-categories">
-			<select class="search_categories resize-select mb-0" name="product_cat"><option value="" selected='selected'>All</option><option value="cham-soc-da-mat">Chăm sóc da mặt</option><option value="cham-soc-toc">Chăm sóc tóc</option><option value="clinic-spa">Clinic &amp; Spa</option><option value="giam-beo">Giảm béo</option><option value="trang-diem">Trang điểm</option><option value="triet-long">Triệt lông</option></select>			</div><!-- .flex-col -->
+			<select class="search_categories resize-select mb-0" name="product_cat"><option value="" selected='selected'>All</option><option value="dttm">Điện thoại thông minh</option><option value="mtb">Máy tính bảng</option><option value="laptop">Laptop</option><option value="pkmt">Phụ kiện máy tính & Laptop</option><option value="pkdt">Phụ kiện điện thoại</option></select>			</div><!-- .flex-col -->
 									<div class="flex-col flex-grow">
 			  <input type="search" class="search-field mb-0" name="s" value="" placeholder="Tìm kiếm sản phẩm, danh mục...">
 		    <input type="hidden" name="post_type" value="product">
@@ -179,38 +179,37 @@
 <ul class="sub-menu" style="margin-top: -5px;">
 	<!-- brand list here-->
 	@foreach($brand as $key)
-	<li id="menu-item-109" class="sp-ban-chay menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-109"><a style="text-decoration: none;" href="#" style="text-transform: uppercase; color: #ff6600;">{{$key->name}}</a>
+	<li id="menu-item-109" class="sp-ban-chay menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-109"><a style="text-decoration: none;text-transform: uppercase; color: #ff6600; font-weight: 500;" href="#">{{$key->name}}</a>
 		<ul class="sub-menu">
 			<li id="menu-item-54" class="menu-cha menu-item menu-item-type-custom menu-item-object-custom menu-item-54"><a style="text-decoration: none;" href="#">Loại đắt nhất</a></li>
-			<li id="menu-item-55" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-55"><a style="text-decoration: none;" href="#">Loại Rẻ nhất</a></li>
-			<li id="menu-item-56" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-56"><a style="text-decoration: none;" href="#">Loại bán ế</a></li>
+			<li id="menu-item-55" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-55"><a style="text-decoration: none;" href="">Loại Rẻ nhất</a></li>
+			<li id="menu-item-56" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-56"><a style="text-decoration: none;" href="">Loại bán ế</a></li>
 		</ul>
 	</li>
 	@endforeach
 	<!-- brand list here-->
 </ul>
 </li>
-<li id="menu-item-27" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-27"><a style="text-decoration: none;" href="danh-muc-san-pham\be-do-choi\index.htm">Máy tính bảng</a></li>
-<li id="menu-item-28" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-28"><a style="text-decoration: none;" href="danh-muc-san-pham\be-an\index.htm">Laptop</a></li>
-<li id="menu-item-29" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-29"><a style="text-decoration: none;" href="danh-muc-san-pham\be-ve-sinh\index.htm">Phụ kiện điện tử</a></li>
-<li id="menu-item-30" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-30"><a style="text-decoration: none;" href="danh-muc-san-pham\cham-soc-co-the\index.htm">Chăm sóc cơ thể</a></li>
-<li id="menu-item-32" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-32"><a style="text-decoration: none;" href="danh-muc-san-pham\cham-soc-toc\index.htm">Chăm sóc tóc</a></li>
-<li id="menu-item-33" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-33"><a style="text-decoration: none;" href="danh-muc-san-pham\clinic-spa\index.htm">Clinic &#038; Spa</a></li>
-<li id="menu-item-34" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-34"><a style="text-decoration: none;" href="danh-muc-san-pham\giam-beo\index.htm">Giảm béo</a></li>
-<li id="menu-item-35" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-35"><a style="text-decoration: none;" href="danh-muc-san-pham\trang-diem\index.htm">Trang điểm</a></li>
-<li id="menu-item-36" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-36"><a style="text-decoration: none;" href="danh-muc-san-pham\triet-long\index.htm">Triệt lông</a></li>
+<li id="menu-item-27" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-27"><a style="text-decoration: none;" href="">Máy tính bảng</a></li>
+<li id="menu-item-28" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-28"><a style="text-decoration: none;" href="">Laptop</a></li>
+<li id="menu-item-30" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-30"><a style="text-decoration: none;" href="">Phụ kiện máy tính</a></li>
+<li id="menu-item-32" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-32"><a style="text-decoration: none;" href="">Phụ kiện điện tử</a></li>
+<li id="menu-item-33" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-33"><a style="text-decoration: none;" href="">Dịch vụ &#038; Hậu mãi</a></li>
+<li id="menu-item-34" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-34"><a style="text-decoration: none;" href="">Tin tức</a></li>
+<li id="menu-item-35" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-35"><a style="text-decoration: none;" href="">Máy đổi trả</a></li>
+<li id="menu-item-36" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-36"><a style="text-decoration: none;" href="">Phụ kiện đổi trả</a></li>
 </ul>            </div>
                             </ul>
             </div><!-- flex-col -->
             
                         <div class="flex-col hide-for-medium flex-center">
 <ul class="nav header-nav header-bottom-nav nav-center  nav-uppercase">
-<li id="menu-item-37" class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-38"><a style="text-decoration: none;" href="#" class="nav-top-link">Deals hấp dẫn</a></li>
-<li id="menu-item-38" class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-38"><a style="text-decoration: none;" href="#" class="nav-top-link">Thương hiệu</a></li>
-<li id="menu-item-39" class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-39"><a style="text-decoration: none;" href="#" class="nav-top-link">Hàng mới về</a></li>
-<li id="menu-item-40" class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-40"><a style="text-decoration: none;" href="#" class="nav-top-link">Sản phẩm bán chạy</a></li>
-<li id="menu-item-41" class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-41"><a style="text-decoration: none;" href="#" class="nav-top-link">Sản phẩm bán ế</a></li>
-<li id="menu-item-900" class="menu-item menu-item-type-taxonomy menu-item-object-category  menu-item-900"><a style="text-decoration: none;" href="bai-viet\tin-tuc\index.htm" class="nav-top-link">Tin tức</a></li>
+<li id="menu-item-37" class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-38"><a style="text-decoration: none;" href="" class="nav-top-link">Deals hấp dẫn</a></li>
+<li id="menu-item-38" class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-38"><a style="text-decoration: none;" href="" class="nav-top-link">Thương hiệu</a></li>
+<li id="menu-item-39" class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-39"><a style="text-decoration: none;" href="" class="nav-top-link">Hàng mới về</a></li>
+<li id="menu-item-40" class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-40"><a style="text-decoration: none;" href="" class="nav-top-link">Sản phẩm bán chạy</a></li>
+<li id="menu-item-41" class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-41"><a style="text-decoration: none;" href="" class="nav-top-link">Sản phẩm bán ế</a></li>
+<li id="menu-item-900" class="menu-item menu-item-type-taxonomy menu-item-object-category  menu-item-900"><a style="text-decoration: none;" href="" class="nav-top-link">Tin tức</a></li>
                 </ul>
             </div><!-- flex-col -->
             
@@ -218,7 +217,7 @@
               <ul class="nav header-nav header-bottom-nav nav-right  nav-uppercase">
                    <li class="html header-button-1">
 	<div class="header-button">
-	<a style="text-decoration: none;" href="#" class="button plain is-outline" style="border-radius:5px;">
+	<a style="text-decoration: none;" href="" class="button plain is-outline" style="border-radius:5px;">
     <span>Tra cứu đơn hàng</span>
   </a>
 	</div>

@@ -3,7 +3,7 @@ jQuery(document).ready(function () {
 
         jQuery("#mega_menu").toggleClass("active")
 
-    }),
+        }),
         jQuery("body").click(function (e) {
 
             var i = jQuery(e.target);

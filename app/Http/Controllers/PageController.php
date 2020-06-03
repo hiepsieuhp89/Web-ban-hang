@@ -48,6 +48,7 @@ class PageController extends Controller
     }
 
     public function getProductType($type, Request $request){
+
         $orderby = 'default';
         $pricerange = '0-999.999.999';
         if($request->orderby){
