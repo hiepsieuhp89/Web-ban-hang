@@ -11,6 +11,8 @@
                      	$entities = array(' ',"/");
                                     $replacements = array('-',"*");
                                     $name = str_replace($entities, $replacements,$product->name);
+                                    $name = trim($name,'-');
+
                      	?>
                <nav class="woocommerce-breadcrumb breadcrumbs"><a href="{{route('HomePage')}}">Trang chủ</a> <span class="divider">&#47;</span> <a href="{{route('HomePage')}}">Điện thoại di động</a><span class="divider">&#47;</span><a href="{{route('ProductDetail',$params = ['type' => 'dtdd','name' => $name])}}">{{$product->name}}</a></nav>
             </div>
@@ -108,6 +110,8 @@
                      	$entities = array(' ',"/");
                                     $replacements = array('-',"*");
                                     $name = str_replace($entities, $replacements,$key->name);
+                                    $name = trim($name,'-');
+
                      	?>
                         <li>
                            <a href="{{route('ProductDetail',$params = ['type' => 'dtdd','name' => $name])}}">
@@ -409,6 +413,8 @@
                         	$entities = array(' ',"/");
                                     $replacements = array('-',"*");
                                     $name = str_replace($entities, $replacements,$key->name);
+                                    $name = trim($name,'-');
+
                         	$sale = (1-($key->promotion_price/$key->unit_price))*100;
                         	$key->promotion_price = number_format($key->promotion_price, 0, '.', '.' );
         				$key->unit_price = number_format($key->unit_price, 0, '.', '.' );

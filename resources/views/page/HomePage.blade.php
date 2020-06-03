@@ -221,6 +221,7 @@
                                     $entities = array(' ',"/");
                                     $replacements = array('-',"*");
                                     $name = str_replace($entities, $replacements,$product->name);
+                                    $name = trim($name,'-');
                                  ?> 
             <div class="col">
                <div class="col-inner">
@@ -423,6 +424,7 @@
                                      $entities = array(' ',"/");
                                     $replacements = array('-',"*");
                                     $name = str_replace($entities, $replacements,$phone->name);
+                                    $name = trim($name,'-');
                                 ?> 
                      <div class="col">
                         <div class="col-inner">
@@ -565,6 +567,7 @@
                                     $entities = array(' ',"/");
                                     $replacements = array('-',"*");
                                     $name = str_replace($entities, $replacements,$phone->name);
+                                    $name = trim($name,'-');
                                 ?>  
                      <div class="col">
                         <div class="col-inner">
@@ -716,6 +719,7 @@
                                      $entities = array(' ',"/");
                                     $replacements = array('-',"*");
                                     $name = str_replace($entities, $replacements,$phone->name);
+                                    $name = trim($name,'-');
                                 ?> 
                                  <div class="image-overlay-add image-zoom image-cover" style="padding-top:100%;">
                                     <a href="{{route('ProductDetail',$params = ['type' => 'dtdd','name' => $name])}}">
