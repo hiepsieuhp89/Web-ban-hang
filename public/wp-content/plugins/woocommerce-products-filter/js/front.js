@@ -283,11 +283,14 @@ function woof_redirect_init() {
 }
 
 function woof_init_orderby() {
-    jQuery('form.woocommerce-ordering').life('submit', function () {
-	return false;
-    });
     jQuery('form.woocommerce-ordering select.orderby').life('change', function () {
 	woof_current_values.orderby = jQuery(this).val();
+	woof_ajax_page_num = 1;
+	woof_submit_link(woof_get_submit_link());
+	return false;
+    });
+    jQuery('form.woocommerce-ordering select.pricerange').life('change', function () {
+	woof_current_values.pricerange = jQuery(this).val();
 	woof_ajax_page_num = 1;
 	woof_submit_link(woof_get_submit_link());
 	return false;

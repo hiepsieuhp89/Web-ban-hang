@@ -47,9 +47,36 @@ class PageController extends Controller
         return view('page.HomePage',compact('samsung','iphone','xiaomi','top_product','brand'));
     }
 
-    public function getProductType(){
+    public function getProductType($type, Request $request){
+        $orderby = 'default';
+        if($request->orderby){
+            $orderby = $request->orderby;
+            switch($orderby){
+                case 'popularity':
+                    $product = Product::ORDERBY('count_bought','DESC')->paginate(20);
+                    break;
+                case 'rating':
+                    $product = Product::ORDERBY('count_bought','DESC')->paginate(20);
+                    break;
+                case 'date':
+                    $product = Product::ORDERBY('new','DESC')->paginate(20);
+                    break;
+                case 'price-desc':
+                    $product = Product::ORDERBY('promotion_price','DESC')->ORDERBY('unit_price','DESC')->paginate(20);
+                    break;
+                case 'price':
+                    $product = Product::ORDERBY('promotion_price','ASC')->ORDERBY('unit_price','ASC')->paginate(20);
+                    break;
+                case 'default':
+                    $product = Product::paginate(20);
+                    break;
+            }
+        }
+        else{
+            $product = Product::paginate(20);
+        }
         $brand = Brand::all();
-    	return view('page.ProductType',compact('brand'));
+    	return view('page.ProductType',compact('brand','product','orderby'));
     }
 
     public function getProductDetail(Request $req){

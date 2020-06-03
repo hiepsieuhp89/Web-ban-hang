@@ -16,12 +16,12 @@ Auth::routes();
 Route::get('/', function () {
     return view('');
 });
-Route::get('product-type',[
+Route::get('the-loai/{type}',[
 	'as'=>'ProductType',
 	'uses'=>'PageController@getProductType'
 ]);
 
-Route::get('{type}/{name}',[
+Route::get('chi-tiet/{type}/{name}',[
 	'as'=>'ProductDetail',
 	'uses'=>'PageController@getProductDetail'
 ]);

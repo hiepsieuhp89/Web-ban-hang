@@ -1,4 +1,4 @@
-<a class="skip-link screen-reader-text" href="#main">Skip to content</a>
+<a style="text-decoration: none;" class="skip-link screen-reader-text" href="#main">Skip to content</a>
 
 <div id="wrapper">
 
@@ -11,7 +11,7 @@
           <!-- Logo -->
           <div id="logo" class="flex-col logo">
             <!-- Header logo -->
-<a href="{{route('HomePage')}}" title="Công nghệ và sinh lý" rel="home">
+<a style="text-decoration: none;" href="{{route('HomePage')}}" title="Công nghệ và sinh lý" rel="home">
     <img width="221" height="70" src="wp-content\uploads\2019\05\shop3.jpg" class="header_logo header-logo" alt="Công nghệ và sinh lý"><img width="221" height="70" src="wp-content\uploads\2019\05\shop3.jpg" class="header-logo-dark" alt="Công nghệ và sinh lý"></a>
           </div>
 
@@ -19,7 +19,7 @@
           <div class="flex-col show-for-medium flex-left">
             <ul class="mobile-nav nav nav-left ">
               <li class="nav-icon has-icon">
-  		<a href="#" data-open="#main-menu" data-pos="left" data-bg="main-menu-overlay" data-color="" class="is-small" aria-controls="main-menu" aria-expanded="false">
+  		<a style="text-decoration: none;" href="#" data-open="#main-menu" data-pos="left" data-bg="main-menu-overlay" data-color="" class="is-small" aria-controls="main-menu" aria-expanded="false">
 		
 		  <i class="icon-menu"></i>
 		  		</a>
@@ -91,7 +91,7 @@
             <ul class="header-nav header-nav-main nav nav-right  nav-uppercase">
               <li class="cart-item has-icon has-dropdown">
 
-<a href="gio-hang\index.htm" title="Giỏ hàng" class="header-cart-link is-small">
+<a style="text-decoration: none;" href="gio-hang\index.htm" title="Giỏ hàng" class="header-cart-link is-small">
 
 
 <span class="header-cart-title">
@@ -118,7 +118,7 @@
 <li class="account-item has-icon
     ">
 
-<a href="tai-khoan\index.htm" class="nav-top-link nav-top-not-logged-in " data-open="#login-form-popup">
+<a style="text-decoration: none;" href="tai-khoan\index.htm" class="nav-top-link nav-top-not-logged-in " data-open="#login-form-popup">
     <span>
     Đăng nhập     / Đăng ký  </span>
   
@@ -135,7 +135,7 @@
             <ul class="mobile-nav nav nav-right ">
               <li class="cart-item has-icon">
 
-      <a href="gio-hang\index.htm" class="header-cart-link off-canvas-toggle nav-top-link is-small" data-open="#cart-popup" data-class="off-canvas-cart" title="Giỏ hàng" data-pos="right">
+      <a style="text-decoration: none;" href="gio-hang\index.htm" class="header-cart-link off-canvas-toggle nav-top-link is-small" data-open="#cart-popup" data-class="off-canvas-cart" title="Giỏ hàng" data-pos="right">
   
   <span class="image-icon header-cart-icon" data-icon-label="0">
     <img class="cart-img-icon" alt="Giỏ hàng" src="wp-content\uploads\2019\02\icon_01.png"> 
@@ -175,42 +175,42 @@
                 <div id="mega-menu-title">
                     <i class="icon-menu"></i> DANH MỤC SẢN PHẨM                </div>
                 <ul id="mega_menu" class="menu">
-<li id="menu-item-31" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-31"><a href="danh-muc-san-pham\cham-soc-da-mat\index.htm">Điện thoại thông minh</a>
+<li id="menu-item-31" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-31"><a style="text-decoration: none;" href="{{route('ProductType','dtdd')}}">Điện thoại thông minh</a>
 <ul class="sub-menu" style="margin-top: -5px;">
 	<!-- brand list here-->
 	@foreach($brand as $key)
-	<li id="menu-item-109" class="sp-ban-chay menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-109"><a href="#" style="text-transform: uppercase; color: #ff6600;">{{$key->name}}</a>
+	<li id="menu-item-109" class="sp-ban-chay menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-109"><a style="text-decoration: none;" href="#" style="text-transform: uppercase; color: #ff6600;">{{$key->name}}</a>
 		<ul class="sub-menu">
-			<li id="menu-item-54" class="menu-cha menu-item menu-item-type-custom menu-item-object-custom menu-item-54"><a href="#">Loại đắt nhất</a></li>
-			<li id="menu-item-55" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-55"><a href="#">Loại Rẻ nhất</a></li>
-			<li id="menu-item-56" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-56"><a href="#">Loại bán ế</a></li>
+			<li id="menu-item-54" class="menu-cha menu-item menu-item-type-custom menu-item-object-custom menu-item-54"><a style="text-decoration: none;" href="#">Loại đắt nhất</a></li>
+			<li id="menu-item-55" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-55"><a style="text-decoration: none;" href="#">Loại Rẻ nhất</a></li>
+			<li id="menu-item-56" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-56"><a style="text-decoration: none;" href="#">Loại bán ế</a></li>
 		</ul>
 	</li>
 	@endforeach
 	<!-- brand list here-->
 </ul>
 </li>
-<li id="menu-item-27" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-27"><a href="danh-muc-san-pham\be-do-choi\index.htm">Máy tính bảng</a></li>
-<li id="menu-item-28" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-28"><a href="danh-muc-san-pham\be-an\index.htm">Laptop</a></li>
-<li id="menu-item-29" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-29"><a href="danh-muc-san-pham\be-ve-sinh\index.htm">Phụ kiện điện tử</a></li>
-<li id="menu-item-30" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-30"><a href="danh-muc-san-pham\cham-soc-co-the\index.htm">Chăm sóc cơ thể</a></li>
-<li id="menu-item-32" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-32"><a href="danh-muc-san-pham\cham-soc-toc\index.htm">Chăm sóc tóc</a></li>
-<li id="menu-item-33" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-33"><a href="danh-muc-san-pham\clinic-spa\index.htm">Clinic &#038; Spa</a></li>
-<li id="menu-item-34" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-34"><a href="danh-muc-san-pham\giam-beo\index.htm">Giảm béo</a></li>
-<li id="menu-item-35" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-35"><a href="danh-muc-san-pham\trang-diem\index.htm">Trang điểm</a></li>
-<li id="menu-item-36" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-36"><a href="danh-muc-san-pham\triet-long\index.htm">Triệt lông</a></li>
+<li id="menu-item-27" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-27"><a style="text-decoration: none;" href="danh-muc-san-pham\be-do-choi\index.htm">Máy tính bảng</a></li>
+<li id="menu-item-28" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-28"><a style="text-decoration: none;" href="danh-muc-san-pham\be-an\index.htm">Laptop</a></li>
+<li id="menu-item-29" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-29"><a style="text-decoration: none;" href="danh-muc-san-pham\be-ve-sinh\index.htm">Phụ kiện điện tử</a></li>
+<li id="menu-item-30" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-30"><a style="text-decoration: none;" href="danh-muc-san-pham\cham-soc-co-the\index.htm">Chăm sóc cơ thể</a></li>
+<li id="menu-item-32" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-32"><a style="text-decoration: none;" href="danh-muc-san-pham\cham-soc-toc\index.htm">Chăm sóc tóc</a></li>
+<li id="menu-item-33" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-33"><a style="text-decoration: none;" href="danh-muc-san-pham\clinic-spa\index.htm">Clinic &#038; Spa</a></li>
+<li id="menu-item-34" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-34"><a style="text-decoration: none;" href="danh-muc-san-pham\giam-beo\index.htm">Giảm béo</a></li>
+<li id="menu-item-35" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-35"><a style="text-decoration: none;" href="danh-muc-san-pham\trang-diem\index.htm">Trang điểm</a></li>
+<li id="menu-item-36" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-36"><a style="text-decoration: none;" href="danh-muc-san-pham\triet-long\index.htm">Triệt lông</a></li>
 </ul>            </div>
                             </ul>
             </div><!-- flex-col -->
             
                         <div class="flex-col hide-for-medium flex-center">
 <ul class="nav header-nav header-bottom-nav nav-center  nav-uppercase">
-<li id="menu-item-37" class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-38"><a href="#" class="nav-top-link">Deals hấp dẫn</a></li>
-<li id="menu-item-38" class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-38"><a href="#" class="nav-top-link">Thương hiệu</a></li>
-<li id="menu-item-39" class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-39"><a href="#" class="nav-top-link">Hàng mới về</a></li>
-<li id="menu-item-40" class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-40"><a href="#" class="nav-top-link">Sản phẩm bán chạy</a></li>
-<li id="menu-item-41" class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-41"><a href="#" class="nav-top-link">Sản phẩm bán ế</a></li>
-<li id="menu-item-900" class="menu-item menu-item-type-taxonomy menu-item-object-category  menu-item-900"><a href="bai-viet\tin-tuc\index.htm" class="nav-top-link">Tin tức</a></li>
+<li id="menu-item-37" class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-38"><a style="text-decoration: none;" href="#" class="nav-top-link">Deals hấp dẫn</a></li>
+<li id="menu-item-38" class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-38"><a style="text-decoration: none;" href="#" class="nav-top-link">Thương hiệu</a></li>
+<li id="menu-item-39" class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-39"><a style="text-decoration: none;" href="#" class="nav-top-link">Hàng mới về</a></li>
+<li id="menu-item-40" class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-40"><a style="text-decoration: none;" href="#" class="nav-top-link">Sản phẩm bán chạy</a></li>
+<li id="menu-item-41" class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-41"><a style="text-decoration: none;" href="#" class="nav-top-link">Sản phẩm bán ế</a></li>
+<li id="menu-item-900" class="menu-item menu-item-type-taxonomy menu-item-object-category  menu-item-900"><a style="text-decoration: none;" href="bai-viet\tin-tuc\index.htm" class="nav-top-link">Tin tức</a></li>
                 </ul>
             </div><!-- flex-col -->
             
@@ -218,7 +218,7 @@
               <ul class="nav header-nav header-bottom-nav nav-right  nav-uppercase">
                    <li class="html header-button-1">
 	<div class="header-button">
-	<a href="#" class="button plain is-outline" style="border-radius:5px;">
+	<a style="text-decoration: none;" href="#" class="button plain is-outline" style="border-radius:5px;">
     <span>Tra cứu đơn hàng</span>
   </a>
 	</div>
