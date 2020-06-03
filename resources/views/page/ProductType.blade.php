@@ -9,7 +9,7 @@
 	  <div class="flex-col flex-grow medium-text-center">
 	  	 	 		<h1 class="shop-page-title is-xlarge">Điện thoại thông minh</h1>
 		<div class="is-small">
-	<nav class="woocommerce-breadcrumb breadcrumbs"><a style="text-decoration: none;"href="{{route('HomePage')}}">Trang chủ</a> <span class="divider">&#47;</span>Điện thoại thông minh</nav></div>
+	<nav class="woocommerce-breadcrumb breadcrumbs"><a style="text-decoration: none;"href="{{route('HomePage')}}">Trang chủ</a> <span class="divider">&#47;<a style="text-decoration: none;"href="{{route('ProductType','dtdd')}}"></span>Điện thoại thông minh</a></nav></div>
 <div class="category-filtering category-filter-row show-for-medium">
 	<a style="text-decoration: none;"href="#" data-open="#shop-sidebar" data-visible-after="true" data-pos="left" class="filter-button uppercase plain">
 		<i class="icon-menu"></i>
