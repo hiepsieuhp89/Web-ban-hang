@@ -266,7 +266,7 @@
                            <div class="thong-bao">
                               <h4>Hỗ trợ khách hàng:</h4>
                               <p>Quý khách nam vui lòng xem kỹ trước khi đặt hàng, sản phẩm không được đổi trả vì lý do không thích, không hợp, máy lỗi vì chúng tôi chỉ bảo hành cho các khách hàng là nữ.</p>
-                              <p>Hotline tư vấn: 0348889995</p>
+                              <p>Hotline tư vấn: 034888999X</p>
                            </div>
                            <form class="cart" action="https://shoplamdep.haiphongweb.com/san-pham/kem-nen-min-li-fit-me-maybelline-130-buff-beige-30ml-fit-me-matte-poreless-foundation/" method="post" enctype='multipart/form-data'>
                               <div class="sticky-add-to-cart-wrapper">
