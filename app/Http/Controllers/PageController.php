@@ -49,18 +49,21 @@ class PageController extends Controller
 
     public function getProductType($type, Request $request){
         $brand = Brand::all();
+        $brand_filter = 'none';
         $orderby = 'default';
         $pricerange = '0-999.999.999';
-        if($request->orderby||$request->brand){
-            $orderby = $request->orderby;
-            $brand_filter = $request->brand;
-            $pricerange = $request->pricerange;
+        if($request->orderby||$request->brand||$request->pricerange){
+            if($request->orderby) $orderby = $request->orderby;
+            if($request->brand) $brand_filter = $request->brand;
+            if($request->pricerange){
+                $pricerange = $request->pricerange;
+            }
             $rangeformat = $request->pricerange;
-            $rangeformat = str_replace('.','',$rangeformat);
-            $position = strpos($rangeformat,'-');
-            $min = substr ( $rangeformat ,0, $position); //lay gia thap nhat
-            $max = substr ( $rangeformat ,$position+1); //lay gia cao nhat
-            //$max = preg_match("/0-5/",$pricerange);
+                $rangeformat = str_replace('.','',$rangeformat);
+                $position = strpos($rangeformat,'-');
+                $min = substr ( $rangeformat ,0, $position); //lay gia thap nhat
+                $max = substr ( $rangeformat ,$position+1); //lay gia cao nhat
+                //$max = preg_match("/0-5/",$pricerange);
             switch($orderby){
                 case 'popularity':
                     $product = Product::ORDERBY('count_bought','DESC')->WHERE('promotion_price','<=',$max)->WHERE('promotion_price','>=',$min)->paginate(20);
