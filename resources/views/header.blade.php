@@ -179,7 +179,7 @@
 <ul class="sub-menu" style="margin-top: -5px;">
 	<!-- brand list here-->
 	@foreach($brand as $key)
-	<li id="menu-item-109" class="sp-ban-chay menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-109"><a style="text-decoration: none;text-transform: uppercase; color: #ff6600; font-weight: 500;" href="#">{{$key->name}}</a>
+	<li id="menu-item-109" class="sp-ban-chay menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-109"><a style="text-decoration: none;text-transform: uppercase; color: #ff6600; font-weight: 500;" href="{{route('ProductType','dtdd')}}?brand={{$key->name}}">{{$key->name}}</a>
 		<ul class="sub-menu">
 			<li id="menu-item-54" class="menu-cha menu-item menu-item-type-custom menu-item-object-custom menu-item-54"><a style="text-decoration: none;" href="#">Loại đắt nhất</a></li>
 			<li id="menu-item-55" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-55"><a style="text-decoration: none;" href="">Loại Rẻ nhất</a></li>

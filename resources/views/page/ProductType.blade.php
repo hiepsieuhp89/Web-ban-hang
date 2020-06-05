@@ -252,7 +252,7 @@
    <div class="product-small col"></div>
    <div class="product-small col"></div>
    <div class="product-small col">
-   {{ $product->appends(['orderby' => $orderby, 'pricerange' => $pricerange])->links() }}
+   {{ $product->appends(['orderby' => $orderby, 'pricerange' => $pricerange,'brand' => $brand_filter])->links() }}
    </div>
    <div class="product-small col"></div>
    <div class="product-small col"></div>

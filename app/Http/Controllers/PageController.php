@@ -48,11 +48,12 @@ class PageController extends Controller
     }
 
     public function getProductType($type, Request $request){
-         
+        $brand = Brand::all();
         $orderby = 'default';
         $pricerange = '0-999.999.999';
-        if($request->orderby){
+        if($request->orderby||$request->brand){
             $orderby = $request->orderby;
+            $brand_filter = $request->brand;
             $pricerange = $request->pricerange;
             $rangeformat = $request->pricerange;
             $rangeformat = str_replace('.','',$rangeformat);
@@ -80,6 +81,11 @@ class PageController extends Controller
                     $product = Product::WHERE('promotion_price','<=',$max)->WHERE('promotion_price','>=',$min)->paginate(20);;
                     break;
             }
+                foreach($brand as $value){
+                    if($brand_filter == $value->name){
+                        $product = Product::WHERE('brand',$brand_filter)->paginate(20);
+                    }
+                }
         }
         else{
             $product = Product::paginate(20);
@@ -113,8 +119,7 @@ class PageController extends Controller
         }
         */
         //dd($product);
-        $brand = Brand::all();
-    	return view('page.ProductType',compact('brand','product','orderby','pricerange'));
+    	return view('page.ProductType',compact('brand','product','orderby','pricerange','brand_filter'));
     }
 
     public function getProductDetail(Request $req){
