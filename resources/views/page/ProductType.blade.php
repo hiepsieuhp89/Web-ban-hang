@@ -111,9 +111,12 @@
    			background-color: #ff6600;
    			border-radius: 10px;
    		}
-   		.active .woof_checkbox_label{
+   		.active{
    			color: white;
    		}
+   		.active.btn:hover {
+		    color: white;
+		}
    	</style>                      
    <!-- brand list here-->
    @foreach($brand as $key)
@@ -122,29 +125,9 @@
    		$url =  url()->full();
    		$pos = strpos($url, $key->name);
    ?>
-   <div class="col-sm-12 {{ $pos == false ? '' : 'active' }} btn" id="togglebtn">
-   <label class="woof_checkbox_label " for="woof_36_5e8ab1a8a2ac5" style="text-transform: uppercase; font-weight: 500;">{{$key->name}}<span class="woof_checkbox_count"></span></label>
+   <div class="col-sm-12 {{ $pos == false ? '' : 'active' }} btn woof_checkbox_label" id="togglebtn" name="{{$key->name}}" style="text-transform: uppercase; font-weight: 500;">{{$key->name}}
 	</div>
    @endforeach
-   <script>
-   		$(function(){
-      	$('.orderby').change(function(){
-      		$(".woocommerce-ordering").submit() ;
-      	})
-      	
-      	$('.pricerange').change(function(){
-      		$(".woocommerce-ordering").submit() ;
-      	})
-      })
-   		 $('.btn').css({
-	          	"border-radius" : "10px",
-	          	"margin-bottom"  : "10px"
-	          });
-		 
-		 $('.btn').click(function(){ 
-		 	$(this).toggleClass('active');
-		 });
-   </script>  
    <!-- brand list here--> 
 </div>
    </div>
@@ -162,8 +145,32 @@
    <div class="woof_submit_search_form_container">
    <button type="submit" style="float: left;" class="button woof_submit_search_form">Lọc tìm sản phẩm</button>
    </div>
-
-
+	<script>
+   		$(function(){
+      	$('.orderby').change(function(){// submit khi thay doi bo loc
+      		$(".woocommerce-ordering").submit() ;
+      	})
+      	$('.pricerange').change(function(){// submit khi thay doi khoang gia
+      		$(".woocommerce-ordering").submit() ;
+      	})
+      })
+   		 $('.btn').css({
+	          	"border-radius" : "10px",
+	          	"margin-bottom"  : "10px"
+	          });
+		 
+		 $('.btn').click(function(){ //khi nhan vao nut 
+		 	$(this).toggleClass('active');
+		 });
+		$('.woof_submit_search_form').click(function(){
+			var url  = window.location.href;
+			var name = document.querySelectorAll('div.active');
+			for(var i=0;i<name.length;i++){
+				var brand = name[i].innerText.toLowerCase();
+				console.log(brand);
+			}
+      	})
+   </script>  
    </div>
    </div>
    </div>

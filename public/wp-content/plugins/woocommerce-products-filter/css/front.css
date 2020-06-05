@@ -525,7 +525,7 @@ p:hover.woof_tooltip span.woof_tooltip_data {
 }
 
 .woof_checkbox_label{
-    margin-left: 7px;
+    margin-left: 0px;
 }
 
 .woof_checkbox_label_selected{

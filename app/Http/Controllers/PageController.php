@@ -48,7 +48,7 @@ class PageController extends Controller
     }
 
     public function getProductType($type, Request $request){
-
+         
         $orderby = 'default';
         $pricerange = '0-999.999.999';
         if($request->orderby){
@@ -124,9 +124,9 @@ class PageController extends Controller
         //dd($name);
         $product = Product::WHERE('name',$req->name)->ORWHERE('name',$name)->first();
         //lay ngau nhien 8 san pham moi: 
-        $new_product = Product::WHERE('new','1')->ORDERBY(DB::raw('random()'))->paginate(8);
+        $new_product = Product::WHERE('new','1')->ORDERBY(DB::raw('rand()'))->paginate(8);
         //lay ngau nhien 10 san pham cung loai:
-        $other_product = Product::WHERE('id_brand',$product->id_brand)->ORDERBY(DB::raw('random()'))->paginate(10);
+        $other_product = Product::WHERE('id_brand',$product->id_brand)->ORDERBY(DB::raw('rand()'))->paginate(10);
         $sale = (1-($product->promotion_price/$product->unit_price))*100;
         $product->promotion_price = number_format($product->promotion_price, 0, '.', '.' );
         $product->unit_price = number_format($product->unit_price, 0, '.', '.' );
